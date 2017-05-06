@@ -4,7 +4,6 @@ import IconButton from 'material-ui/IconButton';
 import Logo from 'material-ui/svg-icons/social/whatshot';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
-import RaisedButton from 'material-ui/RaisedButton';
 
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 
@@ -22,7 +21,11 @@ function handleTouchTap() {
 
 const styles = {
   title: {
+    cursor: 'pointer'
+  },
+  subtitle: {
     cursor: 'pointer',
+    paddingLeft: 15
   },
   container: {
     textAlign: 'center',
@@ -39,7 +42,6 @@ const muiTheme = getMuiTheme({
 const avatarStyle = {
   right: 1
 };
-// https://dummyimage.com/600x400/cccccc/000010'
 
 const AppUserInfo = () => (
    <ListItem
@@ -65,18 +67,17 @@ class Header extends Component{
       </MuiThemeProvider>
       <MuiThemeProvider muiTheme={muiTheme}>
         <Toolbar>
-          <ToolbarGroup firstChild={true}>
+          <ToolbarGroup firstChild={true} style={styles.subtitle}>
             <ToolbarTitle text={this.props.title} />
-            <ToolbarSeparator />
+            <ToolbarSeparator/>
           </ToolbarGroup>
           <ToolbarGroup>
             <TextField
-              floatingLabelText={this.props.searchLabel}
+              floatingLabelText="Search"
               type="text"
               value={this.props.searchString}
               onChange={this.props.handleSearch}
             />
-            <RaisedButton label="Primary" primary={true}/>
           </ToolbarGroup>
         </Toolbar>
       </MuiThemeProvider >

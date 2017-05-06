@@ -44,7 +44,6 @@ const iconButtonElement = (
 const HomeContent = (props) => (
   <MuiThemeProvider muiTheme={muiTheme}>
     <List>
-      <Subheader>Available News Sources</Subheader>
       {props.sources.map((source) => (
          <ListItem
          key={source.id}

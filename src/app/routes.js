@@ -1,18 +1,19 @@
 import React from 'react';
-import Router, { DefaultRoute }, { Route } from 'react-router';
-
+import {Route } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import Headlines from './pages/Headlines';
 import NewsSources from './pages/NewsSources';
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
 
 
-const routes = (
-	<Route name="app" path='/' handler={LoginPage}>
-		<DefaultRoute handler={Home}/>
-		<Route name='headlines' handler={Headlines} />
-		<Route name='newssources' handler={NewsSources} />
-	</Route>
-);
+const Routes = () => {
+	return (
+		<main>
+			<Route exact path='/' component={LoginPage} />
+			<Route name='asedeyhot' path="/asedeyhot" component={HomePage} />
+			<Route name='headlines' path='/asedeyhot/:sourceId' component={Headlines}/>
+		</main>
+	);
+}
 
-export deafult routes;
+export default Routes;

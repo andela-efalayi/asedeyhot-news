@@ -65,7 +65,7 @@ class Home extends Component{
 		return(
 			<div>
 				<Header 
-					title="Home" searchLabel="Search" 
+					title="All News Sources" searchLabel="Search" 
 					searchString={this.state.searchString} 
 					handleSearch={this.handleSearch}  
 				/>
