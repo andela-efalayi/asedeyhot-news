@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
-import Content from '../components/Content';
+import Article from '../components/Article';
 
-class Headlines extends Component{
+const styles = {
+  container: {
+    width: 500,
+    margin: 'auto'
+  }
+};
 
-	render(){
-		return(
-			 <div>
-			 	<Header title="Headlines" searchLabel="Search for major headlines..."/>
-			 	<Content />
-			 </div>
-		);
-	}
+class Headlines extends Component {
+  render() {
+    return (
+      <div style={styles.container}>
+        {this.props.headlines.articles.map((article) => (
+          <Article
+            key={article.url}
+            title={article.title}
+            description={article.description}
+            url={article.url}
+          />
+        ))}
+      </div>
+    );
+  }
 }
 
 export default Headlines;
