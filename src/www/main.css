@@ -6,3 +6,11 @@ body {
   font-size: 13px;
   line-height: 20px;
 }
+
+body > div {
+  transition:all 0.5s ease;
+}
+
+.filter svg{
+  color: red;
+}

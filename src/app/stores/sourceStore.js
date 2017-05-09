@@ -4,16 +4,16 @@ import assign from 'object-assign';
 
 const CHANGE_EVENT = 'change';
 let sources = [];
-const headlines = {};
-
+let headlines = [];
+let sourceSortBys = '';
 function setSources(payload) {
   sources = payload;
 }
 function setHeadlines(payload) {
-  headlines.articles = payload;
+  headlines = payload;
 }
-function setSourceName(payload) {
-  headlines.sourceName = payload;
+function setSourceSortBys(payload){
+  sourceSortBys = payload;
 }
 
 const AppStore = assign({}, EventEmitter.prototype, {
@@ -35,7 +35,11 @@ const AppStore = assign({}, EventEmitter.prototype, {
 
   getHeadlines() {
     return headlines;
+  },
+  getSourceSortBys() {
+    return sourceSortBys;
   }
+
 });
 
 AppDispatcher.register((action) => {
@@ -46,7 +50,7 @@ AppDispatcher.register((action) => {
       break;
     case 'GET_HEADLINES':
       setHeadlines(action.articles);
-      setSourceName(action.source);
+      setSourceSortBys(action.sorts);
       AppStore.emitChange();
       break;
     default:

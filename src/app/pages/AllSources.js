@@ -40,12 +40,12 @@ const styles = {
   }
 };
 
+const test = ["1", "2"];
+
 class AllSources extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      headlines: [],
-      subtitle: '',
       sources: [],
       filteredList: []
     };
@@ -63,15 +63,19 @@ class AllSources extends Component {
 
   onChange() {
     this.setState({
-      headlines: SourceStore.getHeadlines(),
       sources: this.props.sources,
-      subtitle: this.state.headlines.sourceName
     });
   }
 
   displayHeadlines(event, value) {
     if (typeof value === 'object') {
-      AppActions.getHeadlines(value);
+      //console.log(value.id)
+      // sortBysAvailable
+
+      localStorage.setItem('sourceId', value.id);
+      localStorage.setItem('sourceName', value.name);
+      localStorage.setItem('sourceSortBys', value.sortBysAvailable);
+      window.location.reload();
     }
   }
 
@@ -84,23 +88,20 @@ class AllSources extends Component {
   }
 
   render() {
+    // localStorage.removeItem('sourceId');
+    // localStorage.removeItem('sourceName');
+    // localStorage.removeItem('sourceSortBys');
+    
     let body = null;
     let sources = null;
     let subheader = null;
-    if (this.state.headlines.hasOwnProperty('articles')) {
-      subheader = (<SubHeader
-        title="Back"
-        subtitle={this.state.subtitle}
-        displaySearchResult={this.displaySearchResult}/>);
+    if (localStorage.sourceId) {
       body = (
-        <HeadlinesPage
-          headlines={this.state.headlines}
-          />
+        <HeadlinesPage />
       );
     } else {
-      subheader = <SubHeader
-      title="Sources"
-      displaySearchResult={this.displaySearchResult}/>;
+      subheader = <SubHeader all title='News Sources'
+        displaySearchResult={this.displaySearchResult}/>;
       if (this.state.filteredList.length === 0) {
         sources = this.state.sources;
       } else {
@@ -119,7 +120,7 @@ class AllSources extends Component {
                     <MenuItem
                       primaryText="View Headlines"
                       rightIcon={<Explore />}
-                      value={[source.name, source.id]}
+                      value={source}
                     />
                     <MenuItem
                       primaryText="Add To Favourites"
@@ -129,11 +130,7 @@ class AllSources extends Component {
                   </IconMenu>
               }
               primaryText={source.name}
-              secondaryText={
-                <a href={source.url} target="_blank">
-                  <span style={{color: darkBlack }}>{source.url}</span><br />
-                </a>
-              }
+              secondaryText={<span style={{color: darkBlack }}>{source.url}</span>}
               secondaryTextLines={2}
             />
           ))}
