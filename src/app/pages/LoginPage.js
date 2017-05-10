@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
-import { deepOrange500 } from 'material-ui/styles/colors';
+import GoogleLogin from 'react-google-login';
+
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import GoogleLogin from 'react-google-login';
+import { deepOrange500 } from 'material-ui/styles/colors';
 import MainHeader from '../components/MainHeader';
+
+const muiTheme = getMuiTheme({
+  palette: {
+    accent1Color: deepOrange500,
+  },
+});
 
 const styles = {
   container: {
@@ -12,19 +19,16 @@ const styles = {
   },
 };
 
-const muiTheme = getMuiTheme({
-  palette: {
-    accent1Color: deepOrange500,
-  },
-});
+const authFail = (response) => {
+  console.log('User Authentication Failed: ', response);
+};
 
 const authSuccess = (response) => {
   localStorage.setItem('userName', response.profileObj.name);
   localStorage.setItem('userImg', response.profileObj.imageUrl);
-};
-
-const authFail = (response) => {
-  console.log('User Authentication Failed: ', response);
+  setTimeout(() => {
+    window.location.reload();
+  }, 3000);
 };
 
 class LoginPage extends Component {

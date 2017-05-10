@@ -1,22 +1,22 @@
 import React from 'react';
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import Logo from 'material-ui/svg-icons/social/whatshot';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { deepOrange500 } from 'material-ui/styles/colors';
-
-const styles = {
-  title: {
-    cursor: 'pointer'
-  }
-};
+import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+import Logo from 'material-ui/svg-icons/social/whatshot';
 
 const muiTheme = getMuiTheme({
   palette: {
     accent1Color: deepOrange500,
   },
 });
+
+const styles = {
+  title: {
+    cursor: 'pointer'
+  }
+};
 
 const MainHeader = (props) => {
   return (

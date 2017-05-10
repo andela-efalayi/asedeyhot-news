@@ -1,15 +1,14 @@
 import React from 'react';
-import { Toolbar, ToolbarGroup, ToolbarTitle, ToolbarSeparator } from 'material-ui/Toolbar';
-import FlatButton from 'material-ui/FlatButton';
-import TextField from 'material-ui/TextField';
+
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { deepOrange500 } from 'material-ui/styles/colors';
-import Subheader from 'material-ui/Subheader';
+import { Toolbar, ToolbarGroup, ToolbarTitle } from 'material-ui/Toolbar';
+import TextField from 'material-ui/TextField';
+import MenuItem from 'material-ui/MenuItem';
+import SelectField from 'material-ui/SelectField';
 import IconButton from 'material-ui/IconButton';
 import ActionHome from 'material-ui/svg-icons/action/home';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -24,12 +23,12 @@ const styles = {
 };
 
 const SubHeader = (props) => {
-	if(props.all){
+	if (props.all) {
 		 return (
 			<MuiThemeProvider muiTheme={muiTheme}>
 			<Toolbar>
 				<ToolbarGroup firstChild={true}>
-					<ToolbarTitle text={props.title} />
+					<ToolbarTitle text="News Sources" />
 				</ToolbarGroup>
 				<ToolbarGroup lastChild={true}>
 					<TextField
@@ -57,6 +56,7 @@ const SubHeader = (props) => {
 						<SelectField
 							floatingLabelText="Sort By"
 							style={styles.select}
+							onChange={props.showSortedResult}
 						>
 						{props.sorts.map(sort => (
   						<MenuItem key={sort} value={sort} primaryText={sort}/>

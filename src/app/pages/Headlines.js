@@ -4,29 +4,23 @@ import AppActions from '../actions/appActions';
 import SourceStore from '../stores/sourceStore';
 import SubHeader from '../components/SubHeader';
 
-const styles = {
-  container: {
-    width: 500,
-    margin: 'auto'
-  }
-};
+if (localStorage.sourceId) {
+  AppActions.getHeadlines(localStorage.sourceId, localStorage.sortBys);
+}
 
 class Headlines extends Component {
   constructor(props) {
     super(props);
     this.state = {
       headlines: [],
-      sortBys: ''
+      sortBys: '',
+      sortResult: [],
+      sortHeadlines: false
     };
     this.onChange = this.onChange.bind(this);
     this.goToHome = this.goToHome.bind(this);
+  }
 
-  }
-  componentWillMount() {
-    if (localStorage.sourceId) {
-      AppActions.getHeadlines(localStorage.sourceId, localStorage.sourceSortBys);
-    }
-  }
   componentDidMount() {
     SourceStore.addChangeListener(this.onChange);
   }
@@ -38,34 +32,52 @@ class Headlines extends Component {
   onChange() {
     this.setState({
       headlines: SourceStore.getHeadlines(),
-      sortBys: SourceStore.getSourceSortBys()
+      sortBys: SourceStore.getSourceSortBys(),
+      sortResult: SourceStore.getSortResult()
+    });
+  }
+  showSortedResult = (event, index, value) => {
+    AppActions.getParticularSort(localStorage.sourceId, value);
+    this.setState({
+      sortHeadlines: true,
+      sortResult: SourceStore.getSortResult()
     });
   }
 
   goToHome() {
-     localStorage.removeItem('sourceId');
-     localStorage.removeItem('sourceName');
-     localStorage.removeItem('sourceSortBys');
-     window.location.reload();
-   }
+    localStorage.removeItem('sourceId');
+    localStorage.removeItem('sourceName');
+    localStorage.removeItem('sourceSortBys');
+    this.setState({
+      sortHeadlines: false
+    });
+    window.location.reload();
+  }
 
   render() {
-    let sourceSorts = this.state.sortBys.split(',');
-    console.log(sourceSorts);
+    const sourceSorts = this.state.sortBys.split(',');
+    let sourceHeadlines = null;
+    if (this.state.sortHeadlines === true) {
+      sourceHeadlines = this.state.sortResult;
+    } else {
+      sourceHeadlines = this.state.headlines;
+    }
     return (
       <div>
-       <SubHeader 
+       <SubHeader
         title={localStorage.sourceName}
         sorts={sourceSorts}
         goToHome={this.goToHome}
+        showSortedResult={this.showSortedResult}
        />
-        <div style={styles.container}>
-          {this.state.headlines.map(article => (
+        <div classID="headlines">
+          {sourceHeadlines.map(article => (
             <Article
               key={article.url}
               title={article.title}
               description={article.description}
               url={article.url}
+              image={article.urlToImage}
             />
           ))}
         </div>

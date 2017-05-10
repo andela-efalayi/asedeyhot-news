@@ -6,14 +6,22 @@ const CHANGE_EVENT = 'change';
 let sources = [];
 let headlines = [];
 let sourceSortBys = '';
+let sortResult = [];
+
 function setSources(payload) {
   sources = payload;
 }
+
 function setHeadlines(payload) {
   headlines = payload;
 }
-function setSourceSortBys(payload){
+
+function setSourceSortBys(payload) {
   sourceSortBys = payload;
+}
+
+function setSortResult(payload) {
+  sortResult = payload;
 }
 
 const AppStore = assign({}, EventEmitter.prototype, {
@@ -38,8 +46,10 @@ const AppStore = assign({}, EventEmitter.prototype, {
   },
   getSourceSortBys() {
     return sourceSortBys;
+  },
+  getSortResult() {
+    return sortResult;
   }
-
 });
 
 AppDispatcher.register((action) => {
@@ -51,6 +61,10 @@ AppDispatcher.register((action) => {
     case 'GET_HEADLINES':
       setHeadlines(action.articles);
       setSourceSortBys(action.sorts);
+      AppStore.emitChange();
+      break;
+     case 'GET_HEADLINES_BY_A_SORT':
+      setSortResult(action.articles);
       AppStore.emitChange();
       break;
     default:
