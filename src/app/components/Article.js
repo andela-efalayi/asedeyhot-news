@@ -5,25 +5,25 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 const Article = props => (
   <Card className="article">
-      <CardHeader
-        title={props.title}
+    <CardHeader
+      title={props.title}
+    />
+    <CardMedia
+      >
+      <img src={props.image} />
+    </CardMedia>
+    <CardText>
+      {props.description}
+    </CardText>
+    <CardActions>
+      <RaisedButton
+        label="Read more"
+        href={props.url}
+        target="_blank"
+        primary
       />
-      <CardMedia
-        >
-        <img src={props.image} />
-      </CardMedia>
-      <CardText>
-        {props.description}
-      </CardText>
-      <CardActions>
-        <RaisedButton
-          label="Read more"
-          href={props.url}
-          target="_blank"
-          primary
-        />
-      </CardActions>
-    </Card>
+    </CardActions>
+  </Card>
 );
 
 export default Article;

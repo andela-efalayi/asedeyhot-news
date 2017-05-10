@@ -11,11 +11,10 @@ import Public from 'material-ui/svg-icons/social/public';
 import SubHeader from '../components/SubHeader';
 
 const NewsSources = (props) => {
-	return(
-		<div>
-			<SubHeader all
-				displaySearchResult={props.displaySearchResult}/>
-			<div classID="list-container">
+  return (
+	<div>
+		<SubHeader all displaySearchResult={props.displaySearchResult}/>
+		<div classID="list-container">
 			{props.sources.map(source => (
 				<Card key={source.id}
 					className="item">
@@ -25,8 +24,8 @@ const NewsSources = (props) => {
 					</CardText>
 					<CardActions>
 						 <IconMenu
-							iconButtonElement={<IconButton 
-							tooltip="view headlines" touch={true} 
+							iconButtonElement={<IconButton
+							tooltip="view headlines" touch={true}
 							tooltipPosition="top-center"><Public /></IconButton>}
 							onChange={props.showHeadlines}>
 							<MenuItem

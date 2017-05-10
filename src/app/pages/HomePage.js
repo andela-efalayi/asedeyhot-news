@@ -46,11 +46,11 @@ class HomePage extends Component {
     SourceStore.addChangeListener(this.onChange);
     let title = null;
     if (this.props.allSources) {
-  	  title = 'News Sources';
-  	}
-  	this.setState({
-    title
-  });
+      title = 'News Sources';
+    }
+    this.setState({
+      title
+    });
   }
 
   componentWillUnmount() {
@@ -58,19 +58,19 @@ class HomePage extends Component {
   }
 
   changeTab = (value) => {
-     this.setState({
-      value: value,
+    this.setState({
+      value,
     });
-     if (value === 'signout') {
+    if (value === 'signout') {
       localStorage.removeItem('userName');
       localStorage.removeItem('userImg');
       setTimeout(() => {
         window.location.reload();
       }, 3000);
     }
-   };
+  };
 
-  displaySearchResult(event, value) {
+  displaySearchResult(event) {
     const key = event.target.value.toLowerCase();
     const filtered = _.filter(this.state.sources, source => _.startsWith(source.name.toLowerCase(), key));
     this.setState({
@@ -109,27 +109,19 @@ class HomePage extends Component {
       );
     }
     return (
-		<MuiThemeProvider muiTheme={muiTheme}>
-		  <div>
-        <MainHeader
-        userAvatar={<UserAvatar
-        userName={localStorage.userName}
-        userImg={localStorage.userImg}/>}/>
-        <Tabs
-          value={this.state.value}
-          onChange={this.changeTab}>
-          <Tab
-            icon={<Public />}
-            value="home"
-            label="Home">
-            <div>
-              {home}
-            </div>
+<MuiThemeProvider muiTheme={muiTheme}>
+<div>
+  <MainHeader userAvatar={<UserAvatar userName={localStorage.userName}
+    userImg={localStorage.userImg}/>}/>
+      <Tabs
+        value={this.state.value}
+        onChange={this.changeTab}>
+        <Tab icon={<Public />} value="home" label="Home">
+          <div>
+            {home}
+          </div>
           </Tab>
-          <Tab
-            icon={<FavoriteBorder />}
-            value="favourites"
-            label="Favorites">
+          <Tab icon={<FavoriteBorder />} value="favourites" label="Favorites">
             <MuiThemeProvider muiTheme={muiTheme}>
               <div>
                 <div style={styles.container}>
@@ -138,10 +130,7 @@ class HomePage extends Component {
               </div>
             </MuiThemeProvider>
           </Tab>
-          <Tab
-            icon={<PowerSettingNew />}
-            value="signout"
-            label="SignOut">
+          <Tab icon={<PowerSettingNew />} value="signout" label="SignOut">
              <MuiThemeProvider muiTheme={muiTheme}>
               <div>
                 <div style={styles.container}>
@@ -152,7 +141,7 @@ class HomePage extends Component {
           </Tab>
         </Tabs>
       </div>
-	  </MuiThemeProvider>
+    </MuiThemeProvider>
     );
   }
 }
