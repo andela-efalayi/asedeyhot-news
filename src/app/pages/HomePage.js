@@ -132,7 +132,6 @@ class HomePage extends Component {
             label="Favorites">
             <MuiThemeProvider muiTheme={muiTheme}>
               <div>
-                <MainHeader />
                 <div style={styles.container}>
                   <h1>Coming Soon </h1>
                 </div>
@@ -145,7 +144,6 @@ class HomePage extends Component {
             label="SignOut">
              <MuiThemeProvider muiTheme={muiTheme}>
               <div>
-                <MainHeader />
                 <div style={styles.container}>
                   <h2>Signing user out...</h2>
                 </div>
