@@ -19,7 +19,7 @@ const NewsSources = (props) => {
 				<Card key={source.id}
 					className="item">
 					<CardTitle title={source.name} subtitle={source.category.toUpperCase()}/>
-					<CardText>
+					<CardText className="item-description">
 					{source.description}
 					</CardText>
 					<CardActions>
