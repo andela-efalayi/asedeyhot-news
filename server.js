@@ -2,17 +2,16 @@ var express = require("express");
 var path = require("path");
 var app = express();
 var router = express.Router();
-var fpath = path.join(__dirname,"src/")
+var fpath = path.join(__dirname,"build/");
 
 app.use(express.static(fpath));
 
 router.get("/",function(req,res){
-	res.sendFile(fpath + "index.html")
+	res.sendFile(fpath + "index.html");
 })
 
-
 router.get("*",function(req,res){
-	res.send("404 not found")
+	res.send("404 not found");
 })
 
 app.use("/",router)
