@@ -44,18 +44,7 @@ const config = {
         },
       },
     ],
-  },
-  resolve: {
-    root: __dirname,
-    alias: {
-      Styles: 'src/www/main.scss',
-      Article: 'src/app/components/Article.js',
-      MainHeader: 'src/app/components/MainHeader.js',
-      SubHeader: 'src/app/components/SubHeader.js',
-      UserAvatar: 'src/app/components/UserAvatar.js'
-    },
-    extensions: ['', '.js', '.jsx']
-}
+  }
 };
 
 module.exports = config;
