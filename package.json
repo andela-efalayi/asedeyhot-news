@@ -1,9 +1,10 @@
+
 {
   "name": "asedeyhot-news",
   "version": "1.0.0",
   "description": "\"A news feed application that integrates NewsAPI\"",
   "scripts": {
-    "test": "mocha -r mock-local-storage --compilers js:babel-register --colors ./src/tests/*.spec.js",
+    "test": "-- --coverage jest  --watch",
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors"
   },
@@ -36,6 +37,7 @@
     "loadash": "0.0.1",
     "lodash": "^4.17.4",
     "object-assign": "^4.1.1",
+    "react-addons-test-utils": "^15.5.1",
     "react-test-renderer": "^15.5.4",
     "transfer-webpack-plugin": "^0.1.4",
     "webpack": "^2.4.1",

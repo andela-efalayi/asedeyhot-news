@@ -16,7 +16,7 @@ const config = {
     contentBase: 'src/www', // Relative directory for base of server
     hot: true, // Live-reload
     inline: true,
-    port: 3000, // Port Number
+    port: process.env.PORT || 3000, // Port Number
     host: 'localhost', // Change to '0.0.0.0' for external facing server
     historyApiFallback: true,
   },
@@ -30,7 +30,7 @@ const config = {
     new webpack.HotModuleReplacementPlugin(),
     // Moves files
     new TransferWebpackPlugin([
-      {from: 'www'},
+      { from: 'www' },
     ], path.resolve(__dirname, 'src')),
   ],
   module: {
@@ -45,6 +45,17 @@ const config = {
       },
     ],
   },
+  resolve: {
+    root: __dirname,
+    alias: {
+      Styles: 'src/www/main.scss',
+      Article: 'src/app/components/Article.js',
+      MainHeader: 'src/app/components/MainHeader.js',
+      SubHeader: 'src/app/components/SubHeader.js',
+      UserAvatar: 'src/app/components/UserAvatar.js'
+    },
+    extensions: ['', '.js', '.jsx']
+}
 };
 
 module.exports = config;
