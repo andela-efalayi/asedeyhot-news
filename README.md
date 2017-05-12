@@ -5,12 +5,13 @@
 It consumes the NewsAPI which provides at least 60 news sources - including CNN, BBC, and TechCrunch.]
 
 #### Technology
-This application was developed purely with JavaScript
+This application was developed purely with JavaScript using these technologies:
 - babel
 - material-ui
 - react
 - react-dom
 - webpack
+ECMAScript 6 was strictly adhered to.
 
 #### Testing
 - Testing of React components was performed using Jest and Enzyme.
