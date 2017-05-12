@@ -47,7 +47,7 @@ class Headlines extends Component {
   goToHome() {
     localStorage.removeItem('sourceId');
     localStorage.removeItem('sourceName');
-    localStorage.removeItem('sourceSortBys');
+    localStorage.removeItem('sortBys');
     this.setState({
       sortHeadlines: false
     });
