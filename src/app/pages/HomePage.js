@@ -95,7 +95,6 @@ class HomePage extends Component {
   }
 
   render() {
-    localStorage.removeItem('sortBys');
     let home = null;
     let displayedSources = null;
     if (localStorage.sourceId) {
