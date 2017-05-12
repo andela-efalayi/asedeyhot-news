@@ -14,20 +14,19 @@ const AppActions = {
         sorts: sortBys
       });
     }).catch((error) => {
-      console.log('An error occured: ', error);
+      return error;
     });
   },
   getParticularSort(sourceId, sortParam) {
     const SOURCE_URL = `${BASE_URL + sourceId}&sortBy=${sortParam + API_KEY}`;
-     axios.get(SOURCE_URL).then((response) => {
+    axios.get(SOURCE_URL).then((response) => {
       AppDispatcher.dispatch({
         actionType: 'GET_HEADLINES_BY_A_SORT',
         articles: response.data.articles,
       });
     }).catch((error) => {
-      console.log('An error occured: ', error);
+      return error;
     });
-    console.log(SOURCE_URL);
   }
 };
 

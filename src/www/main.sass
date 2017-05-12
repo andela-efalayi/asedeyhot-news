@@ -16,14 +16,20 @@ body
 
 .item
   width: 45%
-  height: 250px
   float: left
   margin: 15px
   margin-bottom: 15px
 
+.item-description
+  height: 80px
+  overflow: hidden
+  text-overflow: ellipsis
+
 #headlines
   display: flex
   flex-wrap: wrap
+  width: 80%
+  margin: auto
 
 .article
   display: flex
@@ -31,11 +37,21 @@ body
   height: 480px
   float: left
   margin-bottom: 10px
+  img
+    height: 180px !important
+
+.article-description
+  height: 100px
 
 @media all and (min-width: 40em)
   .article
     width: 45%
+    margin-right: 15px
+  .item
+    width: 45%
 
 @media all and (min-width: 60em)
-  .article
-    width: 33.33%
+  .article, .item
+    width: 30%
+
+/*rgb(0, 188, 212)

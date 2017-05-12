@@ -47,7 +47,7 @@ class Headlines extends Component {
   goToHome() {
     localStorage.removeItem('sourceId');
     localStorage.removeItem('sourceName');
-    localStorage.removeItem('sourceSortBys');
+    localStorage.removeItem('sortBys');
     this.setState({
       sortHeadlines: false
     });
@@ -63,7 +63,7 @@ class Headlines extends Component {
       sourceHeadlines = this.state.headlines;
     }
     return (
-      <div>
+      <div >
        <SubHeader
         title={localStorage.sourceName}
         sorts={sourceSorts}
