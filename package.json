@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "\"A news feed application that integrates NewsAPI\"",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
     "build": "webpack --config webpack-production.config.js --progress --colors"
   },
@@ -26,6 +26,7 @@
     "babel-preset-stage-2": "^6.18.0",
     "babel-register": "^6.24.1",
     "chai": "^3.5.0",
+    "coveralls": "^2.13.1",
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.3",
