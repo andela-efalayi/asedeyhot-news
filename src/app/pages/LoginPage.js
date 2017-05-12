@@ -38,7 +38,7 @@ class LoginPage extends Component {
       <div>
         <MainHeader />
         <div style={styles.container}>
-          <h5> Get latest, popular, and top news from around the globe </h5>
+          <h3> Get latest, popular, and top news from around the globe </h3>
           <GoogleLogin
           clientId="126684501762-qf76j1u8hfsqc1lh4emjg2h4s18si0o3.apps.googleusercontent.com"
           buttonText="SignIn With Google+" onSuccess={authSuccess} onFailure={authFail} />
