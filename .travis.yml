@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "7"
 notifications:
-  webhooks: https://coveralls.io/webhook?repo_token=COVERALLS_REPO_TOKEN
+  webhooks: https://coveralls.io/webhook?repo_token=pdrrJBw4i1ZZeE3HRhJNywGR8qqUcogYe
