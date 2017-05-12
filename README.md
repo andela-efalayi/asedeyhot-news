@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/esther216/asedeyhot-news.svg?branch=master)](https://travis-ci.org/esther216/asedeyhot-news)
+[![Build Status](https://travis-ci.org/esther216/asedeyhot-news.svg?branch=master)](https://travis-ci.org/esther216/asedeyhot-news)  [![Coverage Status](https://coveralls.io/repos/github/esther216/asedeyhot-news/badge.svg?branch=master)](https://coveralls.io/github/esther216/asedeyhot-news?branch=master)
 
 # AsEDeyHot 
 [This news feed application gathers latest, popular, and top headlines from around the globe. 
