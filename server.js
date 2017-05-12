@@ -2,7 +2,7 @@ var express = require("express");
 var path = require("path");
 var app = express();
 var router = express.Router();
-var fpath = path.join(__dirname,"src/www");
+var fpath = path.join(__dirname,"build/");
 
 app.use(express.static(fpath));
 
