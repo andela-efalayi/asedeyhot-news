@@ -6,9 +6,6 @@ import InitialiseApp from './actions/initialise';
 InitialiseApp.init();
 
 class Layout extends Component {
-  constructor() {
-    super();
-  }
   render() {
     if (localStorage.userName) {
       return (
@@ -16,7 +13,7 @@ class Layout extends Component {
       );
     }
     return (
-        <LoginPage />
+      <LoginPage />
     );
   }
 }

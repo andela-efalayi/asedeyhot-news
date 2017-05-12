@@ -23,9 +23,8 @@ const NewsSources = (props) => {
 					{source.description}
 					</CardText>
 					<CardActions>
-						 <IconMenu
-							iconButtonElement={<IconButton
-							tooltip="view headlines" touch={true}
+						 <IconMenu iconButtonElement={<IconButton
+							tooltip="options" touch
 							tooltipPosition="top-center"><Public /></IconButton>}
 							onChange={props.showHeadlines}>
 							<MenuItem
@@ -48,4 +47,3 @@ const NewsSources = (props) => {
 };
 
 export default NewsSources;
-

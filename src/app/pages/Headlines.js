@@ -63,7 +63,7 @@ class Headlines extends Component {
       sourceHeadlines = this.state.headlines;
     }
     return (
-      <div>
+      <div >
        <SubHeader
         title={localStorage.sourceName}
         sorts={sourceSorts}

@@ -1,6 +1,6 @@
-import AppDispatcher from '../dispatcher/appDispatcher';
 import { EventEmitter } from 'events';
 import assign from 'object-assign';
+import AppDispatcher from '../dispatcher/appDispatcher';
 
 const CHANGE_EVENT = 'change';
 let sources = [];
@@ -54,21 +54,21 @@ const AppStore = assign({}, EventEmitter.prototype, {
 
 AppDispatcher.register((action) => {
   switch (action.actionType) {
-    case 'INITIALISE_APP':
-      setSources(action.sources);
-      AppStore.emitChange();
-      break;
-    case 'GET_HEADLINES':
-      setHeadlines(action.articles);
-      setSourceSortBys(action.sorts);
-      AppStore.emitChange();
-      break;
-     case 'GET_HEADLINES_BY_A_SORT':
-      setSortResult(action.articles);
-      AppStore.emitChange();
-      break;
-    default:
-    }
+  case 'INITIALISE_APP':
+    setSources(action.sources);
+    AppStore.emitChange();
+    break;
+  case 'GET_HEADLINES':
+    setHeadlines(action.articles);
+    setSourceSortBys(action.sorts);
+    AppStore.emitChange();
+    break;
+  case 'GET_HEADLINES_BY_A_SORT':
+    setSortResult(action.articles);
+    AppStore.emitChange();
+    break;
+  default:
+  }
 });
 
 export default AppStore;
