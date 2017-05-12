@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 const router = express.Router();
-const fpath = path.join(__dirname, 'build/');
+const fpath = path.join(__dirname, 'src/www/');
 
 app.use(express.static(fpath));
 
