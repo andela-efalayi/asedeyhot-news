@@ -64,6 +64,9 @@ class HomePage extends Component {
     if (value === 'signout') {
       localStorage.removeItem('userName');
       localStorage.removeItem('userImg');
+      localStorage.removeItem('sourceId');
+      localStorage.removeItem('sourceName');
+      localStorage.removeItem('sortBys');
       setTimeout(() => {
         window.location.reload();
       }, 3000);
@@ -109,14 +112,12 @@ class HomePage extends Component {
       );
     }
     return (
-<MuiThemeProvider muiTheme={muiTheme}>
-<div>
-  <MainHeader userAvatar={<UserAvatar userName={localStorage.userName}
-    userImg={localStorage.userImg}/>}/>
-      <Tabs
-        value={this.state.value}
-        onChange={this.changeTab}>
-        <Tab icon={<Public />} value="home" label="Home">
+    <MuiThemeProvider muiTheme={muiTheme}>
+      <div>
+        <MainHeader userAvatar={<UserAvatar userName={localStorage.userName}
+        userImg={localStorage.userImg}/>}/>
+        <Tabs value={this.state.value} onChange={this.changeTab}>
+          <Tab icon={<Public />} value="home" label="Home">
           <div>
             {home}
           </div>
@@ -125,7 +126,7 @@ class HomePage extends Component {
             <MuiThemeProvider muiTheme={muiTheme}>
               <div>
                 <div style={styles.container}>
-                  <h1>Coming Soon </h1>
+                  <h1>To be implemented soon...</h1>
                 </div>
               </div>
             </MuiThemeProvider>

@@ -18,46 +18,45 @@ const muiTheme = getMuiTheme({
 
 const styles = {
   select: {
-    width: 100,
+    width: 150,
   }
 };
 
 const SubHeader = (props) => {
   if (props.all) {
     return (
-<MuiThemeProvider muiTheme={muiTheme}>
-<Toolbar>
-<ToolbarGroup firstChild>
-<ToolbarTitle text="News Sources" />
-</ToolbarGroup>
-<ToolbarGroup lastChild>
-<TextField floatingLabelText="Search" type="text"
-onChange={props.displaySearchResult}
-/>
-</ToolbarGroup>
-</Toolbar>
-</MuiThemeProvider>
+    <MuiThemeProvider muiTheme={muiTheme}>
+      <Toolbar>
+        <ToolbarGroup firstChild>
+          <ToolbarTitle text="News Sources" />
+        </ToolbarGroup>
+        <ToolbarGroup lastChild>
+          <TextField floatingLabelText="Search" type="text"
+          onChange={props.displaySearchResult}
+          />
+        </ToolbarGroup>
+      </Toolbar>
+    </MuiThemeProvider>
     );
   }
   return (
-<MuiThemeProvider muiTheme={muiTheme}>
-<Toolbar noGutter={true}>
-<ToolbarGroup>
-<IconButton tooltip="Home" tooltipPosition="bottom-center"
-onClick={props.goToHome}>
-<ActionHome />
-</IconButton>
-<ToolbarTitle text={props.title} />
-</ToolbarGroup>
-<ToolbarGroup>
-<SelectField floatingLabelText="Sort By"
-style={styles.select} onChange={props.showSortedResult}>
-{props.sorts.map(sort => (
-  <MenuItem key={sort} value={sort} primaryText={sort}/>
-))}
-</SelectField>
-</ToolbarGroup>
-</Toolbar>
+  <MuiThemeProvider muiTheme={muiTheme}>
+    <Toolbar noGutter={true}>
+      <ToolbarGroup>
+        <IconButton tooltip="Home" tooltipPosition="bottom-center"
+        onClick={props.goToHome}><ActionHome />
+        </IconButton>
+        <ToolbarTitle text={props.title} />
+      </ToolbarGroup>
+      <ToolbarGroup>
+        <SelectField floatingLabelText="Sort By"
+        style={styles.select} onChange={props.showSortedResult}>
+        {props.sorts.map(sort => (
+          <MenuItem key={sort} value={sort} primaryText={sort}/>
+        ))}
+        </SelectField>
+      </ToolbarGroup>
+    </Toolbar>
 </MuiThemeProvider>
   );
 };

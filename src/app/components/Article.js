@@ -5,14 +5,11 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 const Article = props => (
   <Card className="article">
-    <CardHeader
-      title={props.title}
-    />
-    <CardMedia
-      >
+    <CardHeader title={props.title} />
+    <CardMedia >
       <img src={props.image} />
     </CardMedia>
-    <CardText>
+    <CardText className="article-description">
       {props.description}
     </CardText>
     <CardActions>
