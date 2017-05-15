@@ -1,6 +1,11 @@
 const webpack = require('webpack');
+const DotEnvPlugin = require('dotenv-webpack');
 const path = require('path');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
+
+const dotEnvPlugin = new DotEnvPlugin({
+  path: './.env',
+});
 
 const config = {
   // Entry points to the project
@@ -32,11 +37,12 @@ const config = {
     new TransferWebpackPlugin([
       { from: 'www' },
     ], path.resolve(__dirname, 'src')),
+    dotEnvPlugin
   ],
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
