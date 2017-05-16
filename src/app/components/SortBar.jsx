@@ -3,14 +3,11 @@ import PropTypes from 'prop-types';
 import { Toolbar, ToolbarGroup } from 'material-ui/Toolbar';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
-import { cyan500 } from 'material-ui/styles/colors';
+import { lightBlue500 } from 'material-ui/styles/colors';
 
 const styles = {
   underlineStyle: {
-    borderColor: cyan500,
-  },
-  icon: {
-    fill: cyan500
+    borderColor: lightBlue500,
   }
 };
 
@@ -23,7 +20,7 @@ class SortBar extends Component {
   }
   render() {
     return (
-      <Toolbar id={this.props.id}>
+      <Toolbar id={this.props.id} className="toolbar">
         <ToolbarGroup>
           <h4 className="sortBarTitle">{this.props.title}
             <span> - {this.props.currentSortOption}</span>
@@ -32,7 +29,7 @@ class SortBar extends Component {
         <ToolbarGroup>
           <SelectField underlineStyle={styles.underlineStyle}
           floatingLabelText="SortBy Options"
-          onChange={this.props.filterHeadlines} iconStyle={styles.icon}
+          onChange={this.props.filterHeadlines}
           >
             {this.props.sortOptions.map(option => (
               <MenuItem key={option} value={option} primaryText={option}

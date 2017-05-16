@@ -37,16 +37,23 @@ class Favourites extends Component {
             <h3>Archives</h3>
             <Depth />
             {Object.entries(this.state.archives).map(([key, value]) => (
-              <Card key={key} className="col-md-6 archiveItem">
-                <CardText>
-                  <h5>{value.title}</h5>
-                  <p>Author: {value.author}</p>
-                  <p><a href={value.url}>Go to link</a></p>
-                </CardText>
+              <Card key={key} className="archiveItem">
+                <div className="row">
+                  <div className="col-xs-4 col-sm-4">
+                    <img className="img-responsive" src={value.urlToImage} />
+                  </div>
+                  <div className="col-xs-8 col-sm-8">
+                    <CardText>
+                      <h5>{value.title}</h5>
+                      <p>Author: {value.author}</p>
+                      <p><a href={value.url}>Go to link</a></p>
+                    </CardText>
+                  </div>
+                </div>
               </Card>
             ))}
           </div>
-          <div className="clear-fix col-sm-6 col-md-4">
+          <div className="col-sm-6 col-md-4">
             <h3>Favourite Sources</h3>
             <Card className="col-xs-12">
               <CardText>

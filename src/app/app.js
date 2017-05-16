@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { blue900 } from 'material-ui/styles/colors';
+import { lightBlue500, cyan300, cyan500 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -17,7 +17,10 @@ injectTapEventPlugin();
 
 const muiTheme = getMuiTheme({
   palette: {
-    accent1Color: blue900,
+    accent1Color: cyan500,
+    accent2Color: cyan500,
+    primary1Color: lightBlue500,
+    primary3Color: cyan300
   },
 });
 
@@ -26,7 +29,7 @@ class App extends Component {
     super(props);
     this.state = {
       userInfo: null,
-      view: null
+      tabs: null
     };
   }
   componentWillMount = () => {
@@ -36,10 +39,11 @@ class App extends Component {
         userInfo: (
           <UserAvatar user={user}/>
         ),
-        view: {
-          title: 'home',
-          route: '#/sources'
-        }
+        tabs: (
+          <MuiThemeProvider muiTheme={muiTheme}>
+            <HomeTabs />
+          </MuiThemeProvider>
+        )
       });
     }
   }
@@ -47,9 +51,7 @@ class App extends Component {
     return (
       <div>
         <MainHeader userInfo={this.state.userInfo}/>
-        <MuiThemeProvider muiTheme={muiTheme}>
-          <HomeTabs />
-        </MuiThemeProvider>
+        {this.state.tabs}
         <MuiThemeProvider muiTheme={muiTheme}>
           <Routes />
         </MuiThemeProvider>

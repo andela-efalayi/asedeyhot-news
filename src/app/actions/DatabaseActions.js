@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 import dbConfig from '../../../db.config';
-import Dispatcher from '../dispatcher/AppDispatcher';
+import Dispatcher from '../dispatcher/appDispatcher';
 
 firebase.initializeApp(dbConfig);
 
@@ -10,12 +10,12 @@ const updates = {};
 
 const DatabaseActions = {
   addToFavouriteSources: (source) => {
-    updates[`users/${user.name}/favouriteSources/${source[0]}`] = source[1];
+    updates[`users/${user.googleId}/favouriteSources/${source[0]}`] = source[1];
     db.ref().update(updates);
   },
   addToArchive: (headline) => {
     const newKey = firebase.database().ref().child('users').push().key;
-    updates[`users/${user.name}/archives/${newKey}`] = {
+    updates[`users/${user.googleId}/archives/${newKey}`] = {
       title: headline.title,
       author: headline.author,
       description: headline.description,
@@ -25,7 +25,7 @@ const DatabaseActions = {
     db.ref().update(updates);
   },
   getUserFavourites: () => {
-    db.ref(`users/${user.name}`).once('value')
+    db.ref(`users/${user.googleId}`).once('value')
     .then((snapshot) => {
       Dispatcher.dispatch({
         actionType: 'GET_USER_FAVOURITES',

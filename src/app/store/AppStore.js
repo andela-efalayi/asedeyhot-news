@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events';
 import assign from 'object-assign';
-import Dispatcher from '../dispatcher/AppDispatcher';
+import Dispatcher from '../dispatcher/appDispatcher';
 
 const CHANGE_EVENT = 'change';
 let sources = [];

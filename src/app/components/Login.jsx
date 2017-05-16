@@ -14,10 +14,14 @@ const authFail = (response) => {
 
 const authSuccess = (response) => {
   const user = {
-    name: response.profileObj.name,
-    imageUrl: response.profileObj.imageUrl
+    name: response.profileObj.givenName,
+    imageUrl: response.profileObj.imageUrl,
+    googleId: response.profileObj.googleId,
+    isSignedIn: true
   };
   localStorage.setItem('user', JSON.stringify(user));
+  window.location.href = '#/sources';
+  window.location.reload();
 };
 
 const Login = () => {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Dispatcher from '../dispatcher/AppDispatcher';
+import Dispatcher from '../dispatcher/appDispatcher';
 
 const URL = 'https://newsapi.org/v1/sources?language=en';
 

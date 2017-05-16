@@ -12,15 +12,17 @@ body > div {
 }
 
 footer{
+  margin-top: 1em;
   text-align: center;
   padding: 1em;
   background: rgb(0, 188, 212);
 }
-footer p{
+footer p{ 
   font-size: 14px;
   text-transform: capitalize;
   color: #fff;
 }
+
 .added {
   color: red;
 }
@@ -38,6 +40,9 @@ footer p{
 .card{
   height: 220px;
   margin-bottom: 15px;
+}
+.card .title{
+  padding-left: 18px;
 }
 .card.withImage{
   height: 450px;
@@ -64,5 +69,20 @@ span.readMore{
   height: 150px;
   margin-bottom: 10px;
 }
-
- /*rgb(0, 188, 212)*/
+.archiveItem img {
+  height: 150px;
+  width: auto;
+}
+.signOutPopOver{
+  width: 110px;
+  margin-left: 15px;
+  background-color: #00B8D4 !important;  
+  border-top: none;
+}
+.signOutPopOver div>svg{
+ left: 60px;
+}
+.toolbar{
+  padding-top: 1.2em;
+  padding-bottom: 2em;
+}

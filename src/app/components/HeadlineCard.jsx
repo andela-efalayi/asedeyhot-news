@@ -40,7 +40,7 @@ class HeadlineCard extends Component {
           label="Read more"
           href={this.props.headline.url}
           target="_blank"
-          primary
+          secondary
         />
         </span>
       </CardText>

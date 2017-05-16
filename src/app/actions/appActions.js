@@ -1,12 +1,12 @@
 import axios from 'axios';
-import Dispatcher from '../dispatcher/AppDispatcher';
+import Dispatcher from '../dispatcher/appDispatcher';
 
 const BASE_URL = 'https://newsapi.org/v1/articles?source=';
 const API_KEY = process.env.API_KEY;
 
 const AppActions = {
   getHeadlines: (sourceId) => {
-    const SOURCE_URL = `${BASE_URL + sourceId}&sortBy=top${API_KEY}`;
+    const SOURCE_URL = `${BASE_URL + sourceId}&sortBy=top&apiKey=${API_KEY}`;
     axios.get(SOURCE_URL).then((response) => {
       Dispatcher.dispatch({
         actionType: 'GET_HEADLINES',
@@ -17,7 +17,8 @@ const AppActions = {
     });
   },
   getParticularSort: (sourceId, sortParam) => {
-    const SOURCE_URL = `${BASE_URL + sourceId}&sortBy=${sortParam + API_KEY}`;
+    const SOURCE_URL =
+    `${BASE_URL + sourceId}&sortBy=${sortParam}&apiKey=${API_KEY}`;
     axios.get(SOURCE_URL).then((response) => {
       Dispatcher.dispatch({
         actionType: 'GET_HEADLINES_BY_A_SORT',

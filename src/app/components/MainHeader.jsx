@@ -6,7 +6,6 @@ import AppBar from 'material-ui/AppBar';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { deepOrange500 } from 'material-ui/styles/colors';
-import FlatButton from 'material-ui/FlatButton';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -18,12 +17,9 @@ const styles = {
   title: {
     cursor: 'pointer'
   },
-  signoutBtn: {
-    height: '48px'
-  },
   appBar: {
     paddingTop: '10px',
-    paddingBottom: '15px'
+    paddingBottom: '10px'
   }
 };
 
@@ -33,8 +29,7 @@ const MainHeader = ({ userInfo }) => {
       <AppBar style={styles.appBar}
         title={<span style={styles.title}>AsEDeyHot</span>}
         iconElementLeft={<IconButton><Logo /></IconButton>}
-        iconElementRight={<FlatButton style={styles.signoutBtn}>
-          {userInfo}</FlatButton>}
+        iconElementRight={userInfo}
       />
     </MuiThemeProvider>
   );
