@@ -1,3 +1,4 @@
+/* global localStorage */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -6,7 +7,7 @@ import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 
-import { Card, CardActions, CardTitle, CardText } from 'material-ui/Card';
+import { Card, CardActions, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import FavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import Explore from 'material-ui/svg-icons/action/explore';

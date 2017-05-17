@@ -58,6 +58,8 @@ class UserAvatar extends Component {
       hoverColor="none"
       rightAvatar={
         <IconButton
+          tooltip="click to sign out"
+          tooltipPosition="top-center"
           disableTouchRipple
           iconStyle={avatarStyle}
           onTouchTap={this.handleTouchTap}>

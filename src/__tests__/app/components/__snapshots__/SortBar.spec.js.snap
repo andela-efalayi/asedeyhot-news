@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortBar Component should render a SortBar 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Toolbar
+    className="toolbar"
+    id={null}
+    noGutter={false}
+>
+    <ToolbarGroup
+        firstChild={false}
+        lastChild={false}
+    >
+        <h4
+            className="sortBarTitle"
+        >
+            <span>
+                 - 
+            </span>
+        </h4>
+    </ToolbarGroup>
+    <ToolbarGroup
+        firstChild={false}
+        lastChild={false}
+    >
+        <SelectField
+            autoWidth={false}
+            disabled={false}
+            floatingLabelText="SortBy Options"
+            fullWidth={false}
+            multiple={false}
+            onChange={null}
+            underlineStyle={
+                Object {
+                    "borderColor": "#03a9f4",
+                  }
+            }
+        >
+            
+        </SelectField>
+    </ToolbarGroup>
+</Toolbar>,
+  "nodes": Array [
+    <Toolbar
+      className="toolbar"
+      id={null}
+      noGutter={false}
+>
+      <ToolbarGroup
+            firstChild={false}
+            lastChild={false}
+      >
+            <h4
+                  className="sortBarTitle"
+            >
+                  <span>
+                         - 
+                  </span>
+            </h4>
+      </ToolbarGroup>
+      <ToolbarGroup
+            firstChild={false}
+            lastChild={false}
+      >
+            <SelectField
+                  autoWidth={false}
+                  disabled={false}
+                  floatingLabelText="SortBy Options"
+                  fullWidth={false}
+                  multiple={false}
+                  onChange={null}
+                  underlineStyle={
+                        Object {
+                              "borderColor": "#03a9f4",
+                            }
+                  }
+            >
+                  
+            </SelectField>
+      </ToolbarGroup>
+</Toolbar>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <SortBar
+        currentSortOption={null}
+        filterHeadlines={null}
+        id={null}
+        sortOptions={Array []}
+        title={null}
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": SortBar {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "currentSortOption": null,
+          "filterHeadlines": null,
+          "id": null,
+          "sortOptions": Array [],
+          "title": null,
+        },
+        "refs": Object {},
+        "state": Object {
+          "id": null,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Toolbar
+          className="toolbar"
+          id={null}
+          noGutter={false}
+>
+          <ToolbarGroup
+                    firstChild={false}
+                    lastChild={false}
+          >
+                    <h4
+                              className="sortBarTitle"
+                    >
+                              <span>
+                                         - 
+                              </span>
+                    </h4>
+          </ToolbarGroup>
+          <ToolbarGroup
+                    firstChild={false}
+                    lastChild={false}
+          >
+                    <SelectField
+                              autoWidth={false}
+                              disabled={false}
+                              floatingLabelText="SortBy Options"
+                              fullWidth={false}
+                              multiple={false}
+                              onChange={null}
+                              underlineStyle={
+                                        Object {
+                                                  "borderColor": "#03a9f4",
+                                                }
+                              }
+                    >
+                              
+                    </SelectField>
+          </ToolbarGroup>
+</Toolbar>,
+        "_debugID": 2,
+        "_renderedOutput": <Toolbar
+          className="toolbar"
+          id={null}
+          noGutter={false}
+>
+          <ToolbarGroup
+                    firstChild={false}
+                    lastChild={false}
+          >
+                    <h4
+                              className="sortBarTitle"
+                    >
+                              <span>
+                                         - 
+                              </span>
+                    </h4>
+          </ToolbarGroup>
+          <ToolbarGroup
+                    firstChild={false}
+                    lastChild={false}
+          >
+                    <SelectField
+                              autoWidth={false}
+                              disabled={false}
+                              floatingLabelText="SortBy Options"
+                              fullWidth={false}
+                              multiple={false}
+                              onChange={null}
+                              underlineStyle={
+                                        Object {
+                                                  "borderColor": "#03a9f4",
+                                                }
+                              }
+                    >
+                              
+                    </SelectField>
+          </ToolbarGroup>
+</Toolbar>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <SortBar
+    currentSortOption={null}
+    filterHeadlines={null}
+    id={null}
+    sortOptions={Array []}
+    title={null}
+/>,
+}
+`;

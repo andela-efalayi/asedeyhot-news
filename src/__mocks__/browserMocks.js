@@ -1,0 +1,20 @@
+/* global window */
+const localStorageMock = (() => {
+  let store = {};
+
+  return {
+    getItem(key) {
+     return store[key] || null;
+   },
+    setItem(key, value) {
+     store[key] = value.toString();
+   },
+    removeItem() {
+     store = {};
+   },
+  };
+})();
+
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock,
+});

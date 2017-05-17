@@ -1,0 +1,689 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SourceCard Component should render a SourceCard for a news source 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Card
+    className="col-xs-6 col-sm-6 col-md-3 card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+>
+    <div
+        className="title"
+    >
+        <h3>
+            <a
+                href="http://www.aljazeera.com"
+            >
+                Al Jazeera English
+            </a>
+        </h3>
+        <h6>
+            GENERAL
+        </h6>
+    </div>
+    <CardText
+        className="description"
+    >
+        <span>
+            News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.
+        </span>
+    </CardText>
+    <CardActions
+        style={
+            Object {
+                "float": "right",
+              }
+        }
+    >
+        <FlatButton
+            disabled={false}
+            fullWidth={false}
+            label="options"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            onTouchTap={[Function]}
+            primary={true}
+            secondary={false}
+        />
+        <Popover
+            anchorEl={undefined}
+            anchorOrigin={
+                Object {
+                    "horizontal": "left",
+                    "vertical": "bottom",
+                  }
+            }
+            animated={true}
+            autoCloseWhenOffScreen={true}
+            canAutoPosition={true}
+            onRequestClose={[Function]}
+            open={false}
+            style={
+                Object {
+                    "overflowY": "auto",
+                  }
+            }
+            targetOrigin={
+                Object {
+                    "horizontal": "left",
+                    "vertical": "top",
+                  }
+            }
+            useLayerForClickAway={true}
+            zDepth={1}
+        >
+            <Menu
+                autoWidth={true}
+                desktop={false}
+                disableAutoFocus={false}
+                initiallyKeyboardFocused={false}
+                maxHeight={null}
+                multiple={false}
+                onChange={[Function]}
+                onEscKeyDown={[Function]}
+                onItemTouchTap={[Function]}
+                onKeyDown={[Function]}
+            >
+                <MenuItem
+                    anchorOrigin={
+                        Object {
+                            "horizontal": "right",
+                            "vertical": "top",
+                          }
+                    }
+                    checked={false}
+                    containerElement={
+                        <Link
+                            replace={false}
+                            to="/sources/al-jazeera-english"
+                        />
+                    }
+                    desktop={false}
+                    disabled={false}
+                    focusState="none"
+                    insetChildren={false}
+                    primaryText="View headlines"
+                    rightIcon={<ActionExplore />}
+                    value={
+                        Object {
+                            "category": "general",
+                            "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+                            "id": "al-jazeera-english",
+                            "name": "Al Jazeera English",
+                            "sortBysAvailable": Array [
+                              "top",
+                              "latest",
+                            ],
+                            "url": "http://www.aljazeera.com",
+                          }
+                    }
+                />
+                <MenuItem
+                    anchorOrigin={
+                        Object {
+                            "horizontal": "right",
+                            "vertical": "top",
+                          }
+                    }
+                    checked={false}
+                    desktop={false}
+                    disabled={false}
+                    focusState="none"
+                    insetChildren={false}
+                    primaryText="Add to favourite sources"
+                    rightIcon={<ActionFavoriteBorder />}
+                    value={
+                        Array [
+                            "Al Jazeera English",
+                            "http://www.aljazeera.com",
+                          ]
+                    }
+                />
+            </Menu>
+        </Popover>
+    </CardActions>
+</Card>,
+  "nodes": Array [
+    <Card
+      className="col-xs-6 col-sm-6 col-md-3 card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
+>
+      <div
+            className="title"
+      >
+            <h3>
+                  <a
+                        href="http://www.aljazeera.com"
+                  >
+                        Al Jazeera English
+                  </a>
+            </h3>
+            <h6>
+                  GENERAL
+            </h6>
+      </div>
+      <CardText
+            className="description"
+      >
+            <span>
+                  News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.
+            </span>
+      </CardText>
+      <CardActions
+            style={
+                  Object {
+                        "float": "right",
+                      }
+            }
+      >
+            <FlatButton
+                  disabled={false}
+                  fullWidth={false}
+                  label="options"
+                  labelPosition="after"
+                  labelStyle={Object {}}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchTap={[Function]}
+                  primary={true}
+                  secondary={false}
+            />
+            <Popover
+                  anchorEl={undefined}
+                  anchorOrigin={
+                        Object {
+                              "horizontal": "left",
+                              "vertical": "bottom",
+                            }
+                  }
+                  animated={true}
+                  autoCloseWhenOffScreen={true}
+                  canAutoPosition={true}
+                  onRequestClose={[Function]}
+                  open={false}
+                  style={
+                        Object {
+                              "overflowY": "auto",
+                            }
+                  }
+                  targetOrigin={
+                        Object {
+                              "horizontal": "left",
+                              "vertical": "top",
+                            }
+                  }
+                  useLayerForClickAway={true}
+                  zDepth={1}
+            >
+                  <Menu
+                        autoWidth={true}
+                        desktop={false}
+                        disableAutoFocus={false}
+                        initiallyKeyboardFocused={false}
+                        maxHeight={null}
+                        multiple={false}
+                        onChange={[Function]}
+                        onEscKeyDown={[Function]}
+                        onItemTouchTap={[Function]}
+                        onKeyDown={[Function]}
+                  >
+                        <MenuItem
+                              anchorOrigin={
+                                    Object {
+                                          "horizontal": "right",
+                                          "vertical": "top",
+                                        }
+                              }
+                              checked={false}
+                              containerElement={
+                                    <Link
+                                          replace={false}
+                                          to="/sources/al-jazeera-english"
+                                    />
+                              }
+                              desktop={false}
+                              disabled={false}
+                              focusState="none"
+                              insetChildren={false}
+                              primaryText="View headlines"
+                              rightIcon={<ActionExplore />}
+                              value={
+                                    Object {
+                                          "category": "general",
+                                          "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+                                          "id": "al-jazeera-english",
+                                          "name": "Al Jazeera English",
+                                          "sortBysAvailable": Array [
+                                            "top",
+                                            "latest",
+                                          ],
+                                          "url": "http://www.aljazeera.com",
+                                        }
+                              }
+                        />
+                        <MenuItem
+                              anchorOrigin={
+                                    Object {
+                                          "horizontal": "right",
+                                          "vertical": "top",
+                                        }
+                              }
+                              checked={false}
+                              desktop={false}
+                              disabled={false}
+                              focusState="none"
+                              insetChildren={false}
+                              primaryText="Add to favourite sources"
+                              rightIcon={<ActionFavoriteBorder />}
+                              value={
+                                    Array [
+                                          "Al Jazeera English",
+                                          "http://www.aljazeera.com",
+                                        ]
+                              }
+                        />
+                  </Menu>
+            </Popover>
+      </CardActions>
+</Card>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <SourceCard
+        source={
+                Object {
+                        "category": "general",
+                        "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+                        "id": "al-jazeera-english",
+                        "name": "Al Jazeera English",
+                        "sortBysAvailable": Array [
+                          "top",
+                          "latest",
+                        ],
+                        "url": "http://www.aljazeera.com",
+                      }
+        }
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": SourceCard {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "handleRequestClose": [Function],
+        "handleTouchTap": [Function],
+        "props": Object {
+          "source": Object {
+            "category": "general",
+            "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+            "id": "al-jazeera-english",
+            "name": "Al Jazeera English",
+            "sortBysAvailable": Array [
+              "top",
+              "latest",
+            ],
+            "url": "http://www.aljazeera.com",
+          },
+        },
+        "refs": Object {},
+        "state": Object {
+          "open": false,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Card
+          className="col-xs-6 col-sm-6 col-md-3 card"
+          expandable={false}
+          expanded={null}
+          initiallyExpanded={false}
+>
+          <div
+                    className="title"
+          >
+                    <h3>
+                              <a
+                                        href="http://www.aljazeera.com"
+                              >
+                                        Al Jazeera English
+                              </a>
+                    </h3>
+                    <h6>
+                              GENERAL
+                    </h6>
+          </div>
+          <CardText
+                    className="description"
+          >
+                    <span>
+                              News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.
+                    </span>
+          </CardText>
+          <CardActions
+                    style={
+                              Object {
+                                        "float": "right",
+                                      }
+                    }
+          >
+                    <FlatButton
+                              disabled={false}
+                              fullWidth={false}
+                              label="options"
+                              labelPosition="after"
+                              labelStyle={Object {}}
+                              onKeyboardFocus={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onTouchStart={[Function]}
+                              onTouchTap={[Function]}
+                              primary={true}
+                              secondary={false}
+                    />
+                    <Popover
+                              anchorEl={undefined}
+                              anchorOrigin={
+                                        Object {
+                                                  "horizontal": "left",
+                                                  "vertical": "bottom",
+                                                }
+                              }
+                              animated={true}
+                              autoCloseWhenOffScreen={true}
+                              canAutoPosition={true}
+                              onRequestClose={[Function]}
+                              open={false}
+                              style={
+                                        Object {
+                                                  "overflowY": "auto",
+                                                }
+                              }
+                              targetOrigin={
+                                        Object {
+                                                  "horizontal": "left",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              useLayerForClickAway={true}
+                              zDepth={1}
+                    >
+                              <Menu
+                                        autoWidth={true}
+                                        desktop={false}
+                                        disableAutoFocus={false}
+                                        initiallyKeyboardFocused={false}
+                                        maxHeight={null}
+                                        multiple={false}
+                                        onChange={[Function]}
+                                        onEscKeyDown={[Function]}
+                                        onItemTouchTap={[Function]}
+                                        onKeyDown={[Function]}
+                              >
+                                        <MenuItem
+                                                  anchorOrigin={
+                                                            Object {
+                                                                      "horizontal": "right",
+                                                                      "vertical": "top",
+                                                                    }
+                                                  }
+                                                  checked={false}
+                                                  containerElement={
+                                                            <Link
+                                                                      replace={false}
+                                                                      to="/sources/al-jazeera-english"
+                                                            />
+                                                  }
+                                                  desktop={false}
+                                                  disabled={false}
+                                                  focusState="none"
+                                                  insetChildren={false}
+                                                  primaryText="View headlines"
+                                                  rightIcon={<ActionExplore />}
+                                                  value={
+                                                            Object {
+                                                                      "category": "general",
+                                                                      "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+                                                                      "id": "al-jazeera-english",
+                                                                      "name": "Al Jazeera English",
+                                                                      "sortBysAvailable": Array [
+                                                                        "top",
+                                                                        "latest",
+                                                                      ],
+                                                                      "url": "http://www.aljazeera.com",
+                                                                    }
+                                                  }
+                                        />
+                                        <MenuItem
+                                                  anchorOrigin={
+                                                            Object {
+                                                                      "horizontal": "right",
+                                                                      "vertical": "top",
+                                                                    }
+                                                  }
+                                                  checked={false}
+                                                  desktop={false}
+                                                  disabled={false}
+                                                  focusState="none"
+                                                  insetChildren={false}
+                                                  primaryText="Add to favourite sources"
+                                                  rightIcon={<ActionFavoriteBorder />}
+                                                  value={
+                                                            Array [
+                                                                      "Al Jazeera English",
+                                                                      "http://www.aljazeera.com",
+                                                                    ]
+                                                  }
+                                        />
+                              </Menu>
+                    </Popover>
+          </CardActions>
+</Card>,
+        "_debugID": 2,
+        "_renderedOutput": <Card
+          className="col-xs-6 col-sm-6 col-md-3 card"
+          expandable={false}
+          expanded={null}
+          initiallyExpanded={false}
+>
+          <div
+                    className="title"
+          >
+                    <h3>
+                              <a
+                                        href="http://www.aljazeera.com"
+                              >
+                                        Al Jazeera English
+                              </a>
+                    </h3>
+                    <h6>
+                              GENERAL
+                    </h6>
+          </div>
+          <CardText
+                    className="description"
+          >
+                    <span>
+                              News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.
+                    </span>
+          </CardText>
+          <CardActions
+                    style={
+                              Object {
+                                        "float": "right",
+                                      }
+                    }
+          >
+                    <FlatButton
+                              disabled={false}
+                              fullWidth={false}
+                              label="options"
+                              labelPosition="after"
+                              labelStyle={Object {}}
+                              onKeyboardFocus={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onTouchStart={[Function]}
+                              onTouchTap={[Function]}
+                              primary={true}
+                              secondary={false}
+                    />
+                    <Popover
+                              anchorEl={undefined}
+                              anchorOrigin={
+                                        Object {
+                                                  "horizontal": "left",
+                                                  "vertical": "bottom",
+                                                }
+                              }
+                              animated={true}
+                              autoCloseWhenOffScreen={true}
+                              canAutoPosition={true}
+                              onRequestClose={[Function]}
+                              open={false}
+                              style={
+                                        Object {
+                                                  "overflowY": "auto",
+                                                }
+                              }
+                              targetOrigin={
+                                        Object {
+                                                  "horizontal": "left",
+                                                  "vertical": "top",
+                                                }
+                              }
+                              useLayerForClickAway={true}
+                              zDepth={1}
+                    >
+                              <Menu
+                                        autoWidth={true}
+                                        desktop={false}
+                                        disableAutoFocus={false}
+                                        initiallyKeyboardFocused={false}
+                                        maxHeight={null}
+                                        multiple={false}
+                                        onChange={[Function]}
+                                        onEscKeyDown={[Function]}
+                                        onItemTouchTap={[Function]}
+                                        onKeyDown={[Function]}
+                              >
+                                        <MenuItem
+                                                  anchorOrigin={
+                                                            Object {
+                                                                      "horizontal": "right",
+                                                                      "vertical": "top",
+                                                                    }
+                                                  }
+                                                  checked={false}
+                                                  containerElement={
+                                                            <Link
+                                                                      replace={false}
+                                                                      to="/sources/al-jazeera-english"
+                                                            />
+                                                  }
+                                                  desktop={false}
+                                                  disabled={false}
+                                                  focusState="none"
+                                                  insetChildren={false}
+                                                  primaryText="View headlines"
+                                                  rightIcon={<ActionExplore />}
+                                                  value={
+                                                            Object {
+                                                                      "category": "general",
+                                                                      "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+                                                                      "id": "al-jazeera-english",
+                                                                      "name": "Al Jazeera English",
+                                                                      "sortBysAvailable": Array [
+                                                                        "top",
+                                                                        "latest",
+                                                                      ],
+                                                                      "url": "http://www.aljazeera.com",
+                                                                    }
+                                                  }
+                                        />
+                                        <MenuItem
+                                                  anchorOrigin={
+                                                            Object {
+                                                                      "horizontal": "right",
+                                                                      "vertical": "top",
+                                                                    }
+                                                  }
+                                                  checked={false}
+                                                  desktop={false}
+                                                  disabled={false}
+                                                  focusState="none"
+                                                  insetChildren={false}
+                                                  primaryText="Add to favourite sources"
+                                                  rightIcon={<ActionFavoriteBorder />}
+                                                  value={
+                                                            Array [
+                                                                      "Al Jazeera English",
+                                                                      "http://www.aljazeera.com",
+                                                                    ]
+                                                  }
+                                        />
+                              </Menu>
+                    </Popover>
+          </CardActions>
+</Card>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <SourceCard
+    source={
+        Object {
+            "category": "general",
+            "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+            "id": "al-jazeera-english",
+            "name": "Al Jazeera English",
+            "sortBysAvailable": Array [
+              "top",
+              "latest",
+            ],
+            "url": "http://www.aljazeera.com",
+          }
+    }
+/>,
+}
+`;
