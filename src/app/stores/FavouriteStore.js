@@ -18,7 +18,7 @@ const setFavouriteSources = (payload) => {
 
 const FavouriteStore = assign({}, EventEmitter.prototype, {
   addChangeListener(callback) {
-    this.on(CHANGE_EVENT, callback);
+    return this.on(CHANGE_EVENT, callback);
   },
 
   removeChangeListener(callback) {

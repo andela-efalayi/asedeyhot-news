@@ -6,7 +6,7 @@ const FavouriteSourcesCard = ({ favouriteSources }) => {
   if (Object.keys(favouriteSources).length === 0) {
     return (
       <div>
-        You have no saved sources.
+        <h4>You have no saved sources.</h4>
       </div>
     );
   }
