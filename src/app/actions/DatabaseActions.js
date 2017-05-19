@@ -32,7 +32,7 @@ const DatabaseActions = {
     db.ref().update(updates);
   },
   getUserFavourites: (googleId) => {
-    db.ref(`users/${googleId}`).once('value')
+    db.ref(`users/${googleId}`).on('value')
     .then((snapshot) => {
       Dispatcher.dispatch({
         actionType: 'GET_USER_FAVOURITES',
