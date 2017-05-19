@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardActions, CardHeader,
   CardMedia, CardText } from 'material-ui/Card';
-import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 import IconButton from 'material-ui/IconButton';
 import FavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import Favorite from 'material-ui/svg-icons/action/favorite';
@@ -36,7 +36,7 @@ class HeadlineCard extends Component {
       <CardText className="cardDescription">
         <span>{this.props.headline.description}</span>
         <span className="readMore">
-          <RaisedButton
+          <FlatButton
           label="Read more"
           href={this.props.headline.url}
           target="_blank"
