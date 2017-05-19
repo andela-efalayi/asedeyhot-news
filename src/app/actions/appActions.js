@@ -7,7 +7,7 @@ const API_KEY = process.env.API_KEY;
 const AppActions = {
   getHeadlines: (sourceId) => {
     const SOURCE_URL = `${BASE_URL + sourceId}&sortBy=top&apiKey=${API_KEY}`;
-    axios.get(SOURCE_URL).then((response) => {
+    return axios.get(SOURCE_URL).then((response) => {
       Dispatcher.dispatch({
         actionType: 'GET_HEADLINES',
         articles: response.data.articles,
@@ -19,7 +19,7 @@ const AppActions = {
   getParticularSort: (sourceId, sortParam) => {
     const SOURCE_URL =
     `${BASE_URL + sourceId}&sortBy=${sortParam}&apiKey=${API_KEY}`;
-    axios.get(SOURCE_URL).then((response) => {
+    return axios.get(SOURCE_URL).then((response) => {
       Dispatcher.dispatch({
         actionType: 'GET_HEADLINES_BY_A_SORT',
         articles: response.data.articles,

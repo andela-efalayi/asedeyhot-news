@@ -123,6 +123,7 @@ ShallowWrapper {
       "_compositeType": 0,
       "_context": Object {},
       "_currentElement": <HeadlineCard
+        googleId={null}
         headline={
                 Object {
                         "description": "some description",
@@ -140,6 +141,7 @@ ShallowWrapper {
         "addToArchive": [Function],
         "context": Object {},
         "props": Object {
+          "googleId": null,
           "headline": Object {
             "description": "some description",
             "title": "Testing headline card",
@@ -295,6 +297,7 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <HeadlineCard
+    googleId={null}
     headline={
         Object {
             "description": "some description",

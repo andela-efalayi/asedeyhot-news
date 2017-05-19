@@ -1,0 +1,543 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favourites Component should render Favourites 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <Card
+        className="col-xs-12"
+        expandable={false}
+        expanded={null}
+        initiallyExpanded={false}
+    >
+        <CardText>
+            <p>
+                id
+                : 
+                <a
+                    href="abc-news-au"
+                >
+                    abc-news-au
+                </a>
+            </p>
+            <p>
+                name
+                : 
+                <a
+                    href="ABC News (AU)"
+                >
+                    ABC News (AU)
+                </a>
+            </p>
+            <p>
+                description
+                : 
+                <a
+                    href="Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more."
+                >
+                    Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.
+                </a>
+            </p>
+            <p>
+                url
+                : 
+                <a
+                    href="http://www.abc.net.au/news"
+                >
+                    http://www.abc.net.au/news
+                </a>
+            </p>
+            <p>
+                category
+                : 
+                <a
+                    href="general"
+                >
+                    general
+                </a>
+            </p>
+            <p>
+                language
+                : 
+                <a
+                    href="en"
+                >
+                    en
+                </a>
+            </p>
+            <p>
+                country
+                : 
+                <a
+                    href="au"
+                >
+                    au
+                </a>
+            </p>
+            <p>
+                urlsToLogos
+                : 
+                <a
+                    href={
+                        Object {
+                            "large": "",
+                            "medium": "",
+                            "small": "",
+                          }
+                    }
+                >
+                    Object {
+                        "large": "",
+                        "medium": "",
+                        "small": "",
+                      }
+                </a>
+            </p>
+            <p>
+                sortBysAvailable
+                : 
+                <a
+                    href={
+                        Array [
+                            "top",
+                          ]
+                    }
+                >
+                    top
+                </a>
+            </p>
+        </CardText>
+    </Card>
+</div>,
+  "nodes": Array [
+    <div>
+      <Card
+            className="col-xs-12"
+            expandable={false}
+            expanded={null}
+            initiallyExpanded={false}
+      >
+            <CardText>
+                  <p>
+                        id
+                        : 
+                        <a
+                              href="abc-news-au"
+                        >
+                              abc-news-au
+                        </a>
+                  </p>
+                  <p>
+                        name
+                        : 
+                        <a
+                              href="ABC News (AU)"
+                        >
+                              ABC News (AU)
+                        </a>
+                  </p>
+                  <p>
+                        description
+                        : 
+                        <a
+                              href="Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more."
+                        >
+                              Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.
+                        </a>
+                  </p>
+                  <p>
+                        url
+                        : 
+                        <a
+                              href="http://www.abc.net.au/news"
+                        >
+                              http://www.abc.net.au/news
+                        </a>
+                  </p>
+                  <p>
+                        category
+                        : 
+                        <a
+                              href="general"
+                        >
+                              general
+                        </a>
+                  </p>
+                  <p>
+                        language
+                        : 
+                        <a
+                              href="en"
+                        >
+                              en
+                        </a>
+                  </p>
+                  <p>
+                        country
+                        : 
+                        <a
+                              href="au"
+                        >
+                              au
+                        </a>
+                  </p>
+                  <p>
+                        urlsToLogos
+                        : 
+                        <a
+                              href={
+                                    Object {
+                                          "large": "",
+                                          "medium": "",
+                                          "small": "",
+                                        }
+                              }
+                        >
+                              Object {
+                                    "large": "",
+                                    "medium": "",
+                                    "small": "",
+                                  }
+                        </a>
+                  </p>
+                  <p>
+                        sortBysAvailable
+                        : 
+                        <a
+                              href={
+                                    Array [
+                                          "top",
+                                        ]
+                              }
+                        >
+                              top
+                        </a>
+                  </p>
+            </CardText>
+      </Card>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <FavouriteSourcesCard
+        favouriteSources={
+                Object {
+                        "category": "general",
+                        "country": "au",
+                        "description": "Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.",
+                        "id": "abc-news-au",
+                        "language": "en",
+                        "name": "ABC News (AU)",
+                        "sortBysAvailable": Array [
+                          "top",
+                        ],
+                        "url": "http://www.abc.net.au/news",
+                        "urlsToLogos": Object {
+                          "large": "",
+                          "medium": "",
+                          "small": "",
+                        },
+                      }
+        }
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "favouriteSources": Object {
+            "category": "general",
+            "country": "au",
+            "description": "Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.",
+            "id": "abc-news-au",
+            "language": "en",
+            "name": "ABC News (AU)",
+            "sortBysAvailable": Array [
+              "top",
+            ],
+            "url": "http://www.abc.net.au/news",
+            "urlsToLogos": Object {
+              "large": "",
+              "medium": "",
+              "small": "",
+            },
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <Card
+                    className="col-xs-12"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <CardText>
+                              <p>
+                                        id
+                                        : 
+                                        <a
+                                                  href="abc-news-au"
+                                        >
+                                                  abc-news-au
+                                        </a>
+                              </p>
+                              <p>
+                                        name
+                                        : 
+                                        <a
+                                                  href="ABC News (AU)"
+                                        >
+                                                  ABC News (AU)
+                                        </a>
+                              </p>
+                              <p>
+                                        description
+                                        : 
+                                        <a
+                                                  href="Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more."
+                                        >
+                                                  Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.
+                                        </a>
+                              </p>
+                              <p>
+                                        url
+                                        : 
+                                        <a
+                                                  href="http://www.abc.net.au/news"
+                                        >
+                                                  http://www.abc.net.au/news
+                                        </a>
+                              </p>
+                              <p>
+                                        category
+                                        : 
+                                        <a
+                                                  href="general"
+                                        >
+                                                  general
+                                        </a>
+                              </p>
+                              <p>
+                                        language
+                                        : 
+                                        <a
+                                                  href="en"
+                                        >
+                                                  en
+                                        </a>
+                              </p>
+                              <p>
+                                        country
+                                        : 
+                                        <a
+                                                  href="au"
+                                        >
+                                                  au
+                                        </a>
+                              </p>
+                              <p>
+                                        urlsToLogos
+                                        : 
+                                        <a
+                                                  href={
+                                                            Object {
+                                                                      "large": "",
+                                                                      "medium": "",
+                                                                      "small": "",
+                                                                    }
+                                                  }
+                                        >
+                                                  Object {
+                                                            "large": "",
+                                                            "medium": "",
+                                                            "small": "",
+                                                          }
+                                        </a>
+                              </p>
+                              <p>
+                                        sortBysAvailable
+                                        : 
+                                        <a
+                                                  href={
+                                                            Array [
+                                                                      "top",
+                                                                    ]
+                                                  }
+                                        >
+                                                  top
+                                        </a>
+                              </p>
+                    </CardText>
+          </Card>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div>
+          <Card
+                    className="col-xs-12"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <CardText>
+                              <p>
+                                        id
+                                        : 
+                                        <a
+                                                  href="abc-news-au"
+                                        >
+                                                  abc-news-au
+                                        </a>
+                              </p>
+                              <p>
+                                        name
+                                        : 
+                                        <a
+                                                  href="ABC News (AU)"
+                                        >
+                                                  ABC News (AU)
+                                        </a>
+                              </p>
+                              <p>
+                                        description
+                                        : 
+                                        <a
+                                                  href="Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more."
+                                        >
+                                                  Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.
+                                        </a>
+                              </p>
+                              <p>
+                                        url
+                                        : 
+                                        <a
+                                                  href="http://www.abc.net.au/news"
+                                        >
+                                                  http://www.abc.net.au/news
+                                        </a>
+                              </p>
+                              <p>
+                                        category
+                                        : 
+                                        <a
+                                                  href="general"
+                                        >
+                                                  general
+                                        </a>
+                              </p>
+                              <p>
+                                        language
+                                        : 
+                                        <a
+                                                  href="en"
+                                        >
+                                                  en
+                                        </a>
+                              </p>
+                              <p>
+                                        country
+                                        : 
+                                        <a
+                                                  href="au"
+                                        >
+                                                  au
+                                        </a>
+                              </p>
+                              <p>
+                                        urlsToLogos
+                                        : 
+                                        <a
+                                                  href={
+                                                            Object {
+                                                                      "large": "",
+                                                                      "medium": "",
+                                                                      "small": "",
+                                                                    }
+                                                  }
+                                        >
+                                                  Object {
+                                                            "large": "",
+                                                            "medium": "",
+                                                            "small": "",
+                                                          }
+                                        </a>
+                              </p>
+                              <p>
+                                        sortBysAvailable
+                                        : 
+                                        <a
+                                                  href={
+                                                            Array [
+                                                                      "top",
+                                                                    ]
+                                                  }
+                                        >
+                                                  top
+                                        </a>
+                              </p>
+                    </CardText>
+          </Card>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <FavouriteSourcesCard
+    favouriteSources={
+        Object {
+            "category": "general",
+            "country": "au",
+            "description": "Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.",
+            "id": "abc-news-au",
+            "language": "en",
+            "name": "ABC News (AU)",
+            "sortBysAvailable": Array [
+              "top",
+            ],
+            "url": "http://www.abc.net.au/news",
+            "urlsToLogos": Object {
+              "large": "",
+              "medium": "",
+              "small": "",
+            },
+          }
+    }
+/>,
+}
+`;

@@ -12,12 +12,6 @@ const styles = {
 };
 
 class SortBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: this.props.id
-    };
-  }
   render() {
     return (
       <Toolbar id={this.props.id} className="toolbar">

@@ -1,32 +1,35 @@
 import React, { Component } from 'react';
-import { Card, CardText } from 'material-ui/Card';
 import DatabaseActions from '../actions/DatabaseActions';
-import AppStore from '../store/AppStore';
-import Depth from './Depth.jsx';
+import FavouriteStore from '../store/FavouriteStore';
+import ArchiveCard from './ArchiveCard.jsx';
+import FavouriteSourcesCard from './FavouriteSourcesCard.jsx';
+
 
 class Favourites extends Component {
   constructor() {
     super();
     this.state = {
-      archives: [],
-      favouriteSources: []
+      archives: {},
+      favouriteSources: {},
+      user: JSON.parse(localStorage.getItem('user'))
     };
     this.onChange = this.onChange.bind(this);
   }
 
   componentDidMount = () => {
-    DatabaseActions.getUserFavourites();
-    AppStore.addChangeListener(this.onChange);
+    const googleId = this.state.user.googleId;
+    DatabaseActions.getUserFavourites(googleId);
+    FavouriteStore.addChangeListener(this.onChange);
   }
 
   componentWillUnmount = () => {
-    AppStore.removeChangeListener(this.onChange);
+    FavouriteStore.removeChangeListener(this.onChange);
   }
 
   onChange = () => {
     this.setState({
-      archives: AppStore.getArchives(),
-      favouriteSources: AppStore.getFavouriteSources()
+      archives: FavouriteStore.getArchive(),
+      favouriteSources: FavouriteStore.getFavouriteSources()
     });
   }
   render() {
@@ -35,34 +38,12 @@ class Favourites extends Component {
          <div className="row">
           <div className="col-sm-6 col-md-8">
             <h3>Archives</h3>
-            <Depth />
-            {Object.entries(this.state.archives).map(([key, value]) => (
-              <Card key={key} className="archiveItem">
-                <div className="row">
-                  <div className="col-xs-4 col-sm-4">
-                    <img className="img-responsive" src={value.urlToImage} />
-                  </div>
-                  <div className="col-xs-8 col-sm-8">
-                    <CardText>
-                      <h5>{value.title}</h5>
-                      <p>Author: {value.author}</p>
-                      <p><a href={value.url}>Go to link</a></p>
-                    </CardText>
-                  </div>
-                </div>
-              </Card>
-            ))}
+            <ArchiveCard headlines={this.state.archives}/>
           </div>
           <div className="col-sm-6 col-md-4">
             <h3>Favourite Sources</h3>
-            <Card className="col-xs-12">
-              <CardText>
-                {Object.entries(this.state.favouriteSources)
-                .map(([key, value]) => (
-                  <p key={key}>{key}: <a href={value}>{value}</a></p>
-                ))}
-              </CardText>
-            </Card>
+            <FavouriteSourcesCard
+            favouriteSources={this.state.favouriteSources}/>
           </div>
         </div>
       </div>

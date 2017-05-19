@@ -1,4 +1,3 @@
-/* global localStorage */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -12,18 +11,8 @@ import FlatButton from 'material-ui/FlatButton';
 import FavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
 import Explore from 'material-ui/svg-icons/action/explore';
 
-import DatabaseActions from '../actions/DatabaseActions';
-
 const cardAction = {
   float: 'right',
-};
-
-const loadHeadlines = (event, value) => {
-  if (Array.isArray(value)) {
-    DatabaseActions.addToFavouriteSources(value);
-  } else {
-    localStorage.setItem('source', JSON.stringify(value));
-  }
 };
 
 class SourceCard extends Component {
@@ -74,7 +63,7 @@ class SourceCard extends Component {
             targetOrigin={{ horizontal: 'left', vertical: 'top' }}
             onRequestClose={this.handleRequestClose}
           >
-            <Menu onChange={loadHeadlines}>
+            <Menu onChange={this.props.loadHeadlines}>
               <MenuItem primaryText="View headlines"
               rightIcon={<Explore />} value={source}
               containerElement={
@@ -91,11 +80,13 @@ class SourceCard extends Component {
 }
 
 SourceCard.propTypes = {
-  source: PropTypes.object
+  source: PropTypes.object,
+  loadHeadlines: PropTypes.func
 };
 
 SourceCard.defaultProps = {
-  source: null
+  source: null,
+  loadHeadlines: null
 };
 
 export default SourceCard;

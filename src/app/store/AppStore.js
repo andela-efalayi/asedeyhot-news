@@ -1,21 +1,12 @@
 import { EventEmitter } from 'events';
 import assign from 'object-assign';
 import Dispatcher from '../dispatcher/appDispatcher';
+import AppActionTypes from '../constants/AppActionTypes';
 
 const CHANGE_EVENT = 'change';
 let sources = [];
 let headlines = [];
 let sortResult = [];
-let archives = {};
-let favouriteSources = {};
-
-const setArchives = (payload) => {
-  archives = payload;
-};
-
-const setFavouriteSources = (payload) => {
-  favouriteSources = payload;
-};
 
 const setSources = (payload) => {
   sources = payload;
@@ -50,33 +41,21 @@ const AppStore = assign({}, EventEmitter.prototype, {
   },
   getSortResult() {
     return sortResult;
-  },
-  getArchives() {
-    return archives;
-  },
-
-  getFavouriteSources() {
-    return favouriteSources;
   }
 });
 
 Dispatcher.register((action) => {
   switch (action.actionType) {
-  case 'LOAD_SOURCES':
+  case AppActionTypes.LOAD_SOURCES:
     setSources(action.sources);
     AppStore.emitChange();
     break;
-  case 'GET_HEADLINES':
+  case AppActionTypes.GET_HEADLINES:
     setHeadlines(action.articles);
     AppStore.emitChange();
     break;
-  case 'GET_HEADLINES_BY_A_SORT':
+  case AppActionTypes.GET_HEADLINES_BY_A_SORT:
     setSortResult(action.articles);
-    AppStore.emitChange();
-    break;
-  case 'GET_USER_FAVOURITES':
-    setArchives(action.archives);
-    setFavouriteSources(action.favouriteSources);
     AppStore.emitChange();
     break;
   default:

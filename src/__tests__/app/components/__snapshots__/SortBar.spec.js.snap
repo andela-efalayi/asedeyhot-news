@@ -113,9 +113,7 @@ ShallowWrapper {
           "title": null,
         },
         "refs": Object {},
-        "state": Object {
-          "id": null,
-        },
+        "state": null,
         "updater": Object {
           "enqueueCallback": [Function],
           "enqueueCallbackInternal": [Function],

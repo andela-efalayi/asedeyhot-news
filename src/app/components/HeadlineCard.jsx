@@ -20,7 +20,7 @@ class HeadlineCard extends Component {
     this.addToArchive = this.addToArchive.bind(this);
   }
   addToArchive = () => {
-    DatabaseActions.addToArchive(this.state.value);
+    DatabaseActions.addToArchive(this.props.googleId, this.state.value);
     this.setState({
       favIcon: <Favorite />,
       tooltip: 'added to archives'
@@ -56,11 +56,13 @@ class HeadlineCard extends Component {
 }
 
 HeadlineCard.propTypes = {
-  headline: PropTypes.object
+  headline: PropTypes.object,
+  googleId: PropTypes.string
 };
 
 HeadlineCard.defaultProps = {
-  headline: null
+  headline: null,
+  googleId: null
 };
 
 export default HeadlineCard;

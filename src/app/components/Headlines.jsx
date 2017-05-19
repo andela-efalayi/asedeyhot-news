@@ -13,7 +13,8 @@ class Headlines extends Component {
       currentSortOption: 'top',
       currentSource: JSON.parse(localStorage.getItem('source')),
       topHeadlines: [],
-      sortResult: AppStore.getSortResult()
+      sortResult: AppStore.getSortResult(),
+      user: JSON.parse(localStorage.getItem('user'))
     };
     this.onChange = this.onChange.bind(this);
     this.filterHeadlines = this.filterHeadlines.bind(this);
@@ -55,7 +56,8 @@ class Headlines extends Component {
         <div className="container-fluid">
           <div className="row">
             {headlinesToBeDisplayed.map(headline => (
-              <HeadlineCard key={headline.title} headline={headline}/>
+              <HeadlineCard key={headline.title}
+              headline={headline} googleId={this.state.user.googleId} />
             ))}
           </div>
         </div>

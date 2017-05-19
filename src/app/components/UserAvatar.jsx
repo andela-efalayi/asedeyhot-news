@@ -1,3 +1,5 @@
+/* global localStorage window */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Avatar from 'material-ui/Avatar';
@@ -27,13 +29,12 @@ class UserAvatar extends Component {
     super(props);
 
     this.state = {
-      open: false,
+      open: false
     };
   }
 
   handleTouchTap = (event) => {
     event.preventDefault();
-
     this.setState({
       open: true,
       anchorEl: event.currentTarget,
@@ -62,7 +63,8 @@ class UserAvatar extends Component {
           tooltipPosition="top-center"
           disableTouchRipple
           iconStyle={avatarStyle}
-          onTouchTap={this.handleTouchTap}>
+          onTouchTap={this.handleTouchTap}
+          onClick={this.handleTouchTap}>
           <Avatar src={this.props.user.imageUrl}/>
         </IconButton>
       }>
@@ -76,7 +78,8 @@ class UserAvatar extends Component {
           onRequestClose={this.handleRequestClose}
         >
           <Menu maxHeight={28} desktop={false}
-          onItemTouchTap={this.signOutUser}>
+          onTouchTap={this.signOutUser}
+          onClick={this.signOutUser}>
             <MenuItem primaryText="Sign out"
             style={styles.signoutPopOverMenu}
             rightIcon={<PowerSettingsNew />}
