@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/andela-efalayi/asedeyhot-news.svg?branch=master)](https://travis-ci.org/andela-efalayi/asedeyhot-news) [![Coverage Status](https://coveralls.io/repos/github/andela-efalayi/asedeyhot-news/badge.svg?branch=master)](https://coveralls.io/github/andela-efalayi/asedeyhot-news?branch=master)
+[![Build Status](https://travis-ci.org/andela-efalayi/asedeyhot-news.svg?branch=updates)](https://travis-ci.org/andela-efalayi/asedeyhot-news) [![Coverage Status](https://coveralls.io/repos/github/andela-efalayi/asedeyhot-news/badge.svg?branch=updates)](https://coveralls.io/github/andela-efalayi/asedeyhot-news?branch=updates)
 
 # AsEDeyHot 
 [This news feed application gathers latest, popular, and top headlines from 
