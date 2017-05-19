@@ -17,7 +17,4 @@ router.get('*', (req, res) => {
 
 app.use('/', router);
 
-app.listen(process.env.PORT || 3000, () => {
-  return ('Express server listening on port %d in %s mode',
-  this.address().port, app.settings.env);
-});
+app.listen(process.env.PORT || 3000);
