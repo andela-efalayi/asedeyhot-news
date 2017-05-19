@@ -4,7 +4,8 @@ import GoogleLogin from 'react-google-login';
 const styles = {
   container: {
     textAlign: 'center',
-    paddingTop: 200,
+    paddingTop: 220,
+    paddingBottom: 250,
   },
 };
 
