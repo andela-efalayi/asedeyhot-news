@@ -10,7 +10,7 @@ const demo = {
 };
 
 describe('HeadlineCard Component', () => {
-  it('should render a HeadlineCard for a headline', () => {
+  it('should render a HeadlineCard for a headline/article', () => {
     const wrapper = shallow(
         <HeadlineCard headline={demo}/>
     );

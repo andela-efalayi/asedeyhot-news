@@ -1,3 +1,4 @@
+// LocalStorage Mock
 class LocalStorageMock {
   constructor() {
     this.store = {};

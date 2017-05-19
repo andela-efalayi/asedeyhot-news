@@ -9,7 +9,7 @@ describe('Footer Component', () => {
     );
     expect(wrapper).toMatchSnapshot();
   });
-  it('should render a className', () => {
+  it('should have a className', () => {
     const wrapper = shallow(
         <Footer className="container-fluid" />
     );

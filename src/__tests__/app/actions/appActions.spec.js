@@ -14,7 +14,7 @@ describe('getHeadlines method using Promises', () => {
     dispatchSpy.mockReset();
   });
 
-  it('should get headlines for a source', () =>
+  it('should get headlines for a particular source', () =>
     AppActions.getHeadlines('bbc-news')
     .then(() => {
       const mockDispatchCall = dispatchSpy.mock.calls[0][0];
@@ -24,7 +24,8 @@ describe('getHeadlines method using Promises', () => {
       expect(mockDispatchCall.articles[0].author).toEqual('BBC News');
     }));
 
-  it('should sort headlines for a source by a sort parameter ', () =>
+  it('should sort headlines for a particular source using a sort parameter ',
+   () =>
     AppActions.getParticularSort('bbc-news', 'top')
     .then(() => {
       const mockDispatchCall = dispatchSpy.mock.calls[0][0];

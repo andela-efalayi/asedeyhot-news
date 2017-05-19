@@ -1,3 +1,4 @@
+// Mock function to test axios.
 import testdata from './dataMock.json';
 
 const mockApiCall = {

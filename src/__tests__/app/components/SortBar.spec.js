@@ -17,15 +17,15 @@ describe('SortBar Component', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('renders 2 child nodes', () => {
+  it('should have 2 child nodes', () => {
     expect(wrapper.node.props.children).toHaveLength(2);
   });
 
-  it('renders a h4 element', () => {
+  it('should have an h4 element', () => {
     expect(wrapper.node.props.children[0].props.children.type).toMatch('h4');
   });
 
-  it('renders a title for SortBar', () => {
+  it('have a title for SortBar', () => {
     const wrapperWithProps = shallow(<SortBar
     sortOptions={sortBarDetails.sortOptions}
     id={sortBarDetails.id}

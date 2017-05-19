@@ -6,7 +6,7 @@ import FavouriteSourcesCard from
 const mockData = {
   id: 'abc-news-au',
   name: 'ABC News (AU)',
-  description: "Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.",
+  description: "Australia's most trusted source of local, national news",
   url: 'http://www.abc.net.au/news',
   category: 'general',
   language: 'en',
