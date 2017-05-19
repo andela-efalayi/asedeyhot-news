@@ -31,6 +31,7 @@ describe('SortBar Component', () => {
     id={sortBarDetails.id}
     title={sortBarDetails.title} />);
     expect(wrapperWithProps.nodes[0].props.id).toEqual(sortBarDetails.id);
-    expect(wrapperWithProps.nodes[0].props.children[0].props.children.props.children[0]).toEqual(sortBarDetails.title);
+    expect(wrapperWithProps.nodes[0].props.children[0]
+    .props.children.props.children[0]).toEqual(sortBarDetails.title);
   });
 });
