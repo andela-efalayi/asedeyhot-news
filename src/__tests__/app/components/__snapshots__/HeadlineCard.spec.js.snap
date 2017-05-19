@@ -32,12 +32,17 @@ ShallowWrapper {
         <span
             className="readMore"
         >
-            <RaisedButton
+            <FlatButton
                 disabled={false}
                 fullWidth={false}
                 href="http://www.aljazeera.com"
                 label="Read more"
                 labelPosition="after"
+                labelStyle={Object {}}
+                onKeyboardFocus={[Function]}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                onTouchStart={[Function]}
                 primary={false}
                 secondary={true}
                 target="_blank"
@@ -86,12 +91,17 @@ ShallowWrapper {
             <span
                   className="readMore"
             >
-                  <RaisedButton
+                  <FlatButton
                         disabled={false}
                         fullWidth={false}
                         href="http://www.aljazeera.com"
                         label="Read more"
                         labelPosition="after"
+                        labelStyle={Object {}}
+                        onKeyboardFocus={[Function]}
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                        onTouchStart={[Function]}
                         primary={false}
                         secondary={true}
                         target="_blank"
@@ -202,12 +212,17 @@ ShallowWrapper {
                     <span
                               className="readMore"
                     >
-                              <RaisedButton
+                              <FlatButton
                                         disabled={false}
                                         fullWidth={false}
                                         href="http://www.aljazeera.com"
                                         label="Read more"
                                         labelPosition="after"
+                                        labelStyle={Object {}}
+                                        onKeyboardFocus={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        onTouchStart={[Function]}
                                         primary={false}
                                         secondary={true}
                                         target="_blank"
@@ -256,12 +271,17 @@ ShallowWrapper {
                     <span
                               className="readMore"
                     >
-                              <RaisedButton
+                              <FlatButton
                                         disabled={false}
                                         fullWidth={false}
                                         href="http://www.aljazeera.com"
                                         label="Read more"
                                         labelPosition="after"
+                                        labelStyle={Object {}}
+                                        onKeyboardFocus={[Function]}
+                                        onMouseEnter={[Function]}
+                                        onMouseLeave={[Function]}
+                                        onTouchStart={[Function]}
                                         primary={false}
                                         secondary={true}
                                         target="_blank"
