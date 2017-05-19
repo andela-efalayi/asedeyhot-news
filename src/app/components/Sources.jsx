@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import AppStore from '../store/AppStore';
+import AppStore from '../stores/AppStore';
 import SourceCard from './SourceCard.jsx';
 import SearchBar from './SearchBar.jsx';
 import loadSources from '../actions/LoadSources';

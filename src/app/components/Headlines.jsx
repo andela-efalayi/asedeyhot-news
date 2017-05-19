@@ -1,6 +1,6 @@
 /* global localStorage */
 import React, { Component } from 'react';
-import AppStore from '../store/AppStore';
+import AppStore from '../stores/AppStore';
 import HeadlineCard from './HeadlineCard.jsx';
 import SortBar from './SortBar.jsx';
 import AppActions from '../actions/appActions';

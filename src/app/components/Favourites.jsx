@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DatabaseActions from '../actions/DatabaseActions';
-import FavouriteStore from '../store/FavouriteStore';
+import FavouriteStore from '../stores/FavouriteStore';
 import ArchiveCard from './ArchiveCard.jsx';
 import FavouriteSourcesCard from './FavouriteSourcesCard.jsx';
 
@@ -34,13 +34,13 @@ class Favourites extends Component {
   }
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container">
          <div className="row">
-          <div className="col-sm-6 col-md-8">
+          <div className=" col-md-8 favourites">
             <h3>Archives</h3>
             <ArchiveCard headlines={this.state.archives}/>
           </div>
-          <div className="col-sm-6 col-md-4">
+          <div className="col-md-4 favourites">
             <h3>Favourite Sources</h3>
             <FavouriteSourcesCard
             favouriteSources={this.state.favouriteSources}/>

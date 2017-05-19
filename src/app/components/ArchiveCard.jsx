@@ -6,7 +6,7 @@ const ArchiveCard = ({ headlines }) => {
   if (Object.keys(headlines).length === 0) {
     return (
       <div>
-        You have no saved headlines.
+        <h4>You have no saved headlines.</h4>
       </div>
     );
   }
