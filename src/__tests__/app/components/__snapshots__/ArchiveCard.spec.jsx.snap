@@ -1,0 +1,964 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favourites Component should render Favourites 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <Card
+        className="archiveItem"
+        expandable={false}
+        expanded={null}
+        initiallyExpanded={false}
+    >
+        <div
+            className="row"
+        >
+            <div
+                className="col-xs-4 col-sm-4"
+            >
+                <img
+                    className="img-responsive"
+                    src={undefined}
+                />
+            </div>
+            <div
+                className="col-xs-8 col-sm-8"
+            >
+                <CardText>
+                    <h5 />
+                    <p>
+                        Author: 
+                    </p>
+                    <p>
+                        <a
+                            href={undefined}
+                        >
+                            Go to link
+                        </a>
+                    </p>
+                </CardText>
+            </div>
+        </div>
+    </Card>
+    <Card
+        className="archiveItem"
+        expandable={false}
+        expanded={null}
+        initiallyExpanded={false}
+    >
+        <div
+            className="row"
+        >
+            <div
+                className="col-xs-4 col-sm-4"
+            >
+                <img
+                    className="img-responsive"
+                    src={undefined}
+                />
+            </div>
+            <div
+                className="col-xs-8 col-sm-8"
+            >
+                <CardText>
+                    <h5 />
+                    <p>
+                        Author: 
+                    </p>
+                    <p>
+                        <a
+                            href={undefined}
+                        >
+                            Go to link
+                        </a>
+                    </p>
+                </CardText>
+            </div>
+        </div>
+    </Card>
+    <Card
+        className="archiveItem"
+        expandable={false}
+        expanded={null}
+        initiallyExpanded={false}
+    >
+        <div
+            className="row"
+        >
+            <div
+                className="col-xs-4 col-sm-4"
+            >
+                <img
+                    className="img-responsive"
+                    src={undefined}
+                />
+            </div>
+            <div
+                className="col-xs-8 col-sm-8"
+            >
+                <CardText>
+                    <h5 />
+                    <p>
+                        Author: 
+                    </p>
+                    <p>
+                        <a
+                            href={undefined}
+                        >
+                            Go to link
+                        </a>
+                    </p>
+                </CardText>
+            </div>
+        </div>
+    </Card>
+    <Card
+        className="archiveItem"
+        expandable={false}
+        expanded={null}
+        initiallyExpanded={false}
+    >
+        <div
+            className="row"
+        >
+            <div
+                className="col-xs-4 col-sm-4"
+            >
+                <img
+                    className="img-responsive"
+                    src={undefined}
+                />
+            </div>
+            <div
+                className="col-xs-8 col-sm-8"
+            >
+                <CardText>
+                    <h5 />
+                    <p>
+                        Author: 
+                    </p>
+                    <p>
+                        <a
+                            href={undefined}
+                        >
+                            Go to link
+                        </a>
+                    </p>
+                </CardText>
+            </div>
+        </div>
+    </Card>
+    <Card
+        className="archiveItem"
+        expandable={false}
+        expanded={null}
+        initiallyExpanded={false}
+    >
+        <div
+            className="row"
+        >
+            <div
+                className="col-xs-4 col-sm-4"
+            >
+                <img
+                    className="img-responsive"
+                    src={undefined}
+                />
+            </div>
+            <div
+                className="col-xs-8 col-sm-8"
+            >
+                <CardText>
+                    <h5 />
+                    <p>
+                        Author: 
+                    </p>
+                    <p>
+                        <a
+                            href={undefined}
+                        >
+                            Go to link
+                        </a>
+                    </p>
+                </CardText>
+            </div>
+        </div>
+    </Card>
+    <Card
+        className="archiveItem"
+        expandable={false}
+        expanded={null}
+        initiallyExpanded={false}
+    >
+        <div
+            className="row"
+        >
+            <div
+                className="col-xs-4 col-sm-4"
+            >
+                <img
+                    className="img-responsive"
+                    src={undefined}
+                />
+            </div>
+            <div
+                className="col-xs-8 col-sm-8"
+            >
+                <CardText>
+                    <h5 />
+                    <p>
+                        Author: 
+                    </p>
+                    <p>
+                        <a
+                            href={undefined}
+                        >
+                            Go to link
+                        </a>
+                    </p>
+                </CardText>
+            </div>
+        </div>
+    </Card>
+</div>,
+  "nodes": Array [
+    <div>
+      <Card
+            className="archiveItem"
+            expandable={false}
+            expanded={null}
+            initiallyExpanded={false}
+      >
+            <div
+                  className="row"
+            >
+                  <div
+                        className="col-xs-4 col-sm-4"
+                  >
+                        <img
+                              className="img-responsive"
+                              src={undefined}
+                        />
+                  </div>
+                  <div
+                        className="col-xs-8 col-sm-8"
+                  >
+                        <CardText>
+                              <h5 />
+                              <p>
+                                    Author: 
+                              </p>
+                              <p>
+                                    <a
+                                          href={undefined}
+                                    >
+                                          Go to link
+                                    </a>
+                              </p>
+                        </CardText>
+                  </div>
+            </div>
+      </Card>
+      <Card
+            className="archiveItem"
+            expandable={false}
+            expanded={null}
+            initiallyExpanded={false}
+      >
+            <div
+                  className="row"
+            >
+                  <div
+                        className="col-xs-4 col-sm-4"
+                  >
+                        <img
+                              className="img-responsive"
+                              src={undefined}
+                        />
+                  </div>
+                  <div
+                        className="col-xs-8 col-sm-8"
+                  >
+                        <CardText>
+                              <h5 />
+                              <p>
+                                    Author: 
+                              </p>
+                              <p>
+                                    <a
+                                          href={undefined}
+                                    >
+                                          Go to link
+                                    </a>
+                              </p>
+                        </CardText>
+                  </div>
+            </div>
+      </Card>
+      <Card
+            className="archiveItem"
+            expandable={false}
+            expanded={null}
+            initiallyExpanded={false}
+      >
+            <div
+                  className="row"
+            >
+                  <div
+                        className="col-xs-4 col-sm-4"
+                  >
+                        <img
+                              className="img-responsive"
+                              src={undefined}
+                        />
+                  </div>
+                  <div
+                        className="col-xs-8 col-sm-8"
+                  >
+                        <CardText>
+                              <h5 />
+                              <p>
+                                    Author: 
+                              </p>
+                              <p>
+                                    <a
+                                          href={undefined}
+                                    >
+                                          Go to link
+                                    </a>
+                              </p>
+                        </CardText>
+                  </div>
+            </div>
+      </Card>
+      <Card
+            className="archiveItem"
+            expandable={false}
+            expanded={null}
+            initiallyExpanded={false}
+      >
+            <div
+                  className="row"
+            >
+                  <div
+                        className="col-xs-4 col-sm-4"
+                  >
+                        <img
+                              className="img-responsive"
+                              src={undefined}
+                        />
+                  </div>
+                  <div
+                        className="col-xs-8 col-sm-8"
+                  >
+                        <CardText>
+                              <h5 />
+                              <p>
+                                    Author: 
+                              </p>
+                              <p>
+                                    <a
+                                          href={undefined}
+                                    >
+                                          Go to link
+                                    </a>
+                              </p>
+                        </CardText>
+                  </div>
+            </div>
+      </Card>
+      <Card
+            className="archiveItem"
+            expandable={false}
+            expanded={null}
+            initiallyExpanded={false}
+      >
+            <div
+                  className="row"
+            >
+                  <div
+                        className="col-xs-4 col-sm-4"
+                  >
+                        <img
+                              className="img-responsive"
+                              src={undefined}
+                        />
+                  </div>
+                  <div
+                        className="col-xs-8 col-sm-8"
+                  >
+                        <CardText>
+                              <h5 />
+                              <p>
+                                    Author: 
+                              </p>
+                              <p>
+                                    <a
+                                          href={undefined}
+                                    >
+                                          Go to link
+                                    </a>
+                              </p>
+                        </CardText>
+                  </div>
+            </div>
+      </Card>
+      <Card
+            className="archiveItem"
+            expandable={false}
+            expanded={null}
+            initiallyExpanded={false}
+      >
+            <div
+                  className="row"
+            >
+                  <div
+                        className="col-xs-4 col-sm-4"
+                  >
+                        <img
+                              className="img-responsive"
+                              src={undefined}
+                        />
+                  </div>
+                  <div
+                        className="col-xs-8 col-sm-8"
+                  >
+                        <CardText>
+                              <h5 />
+                              <p>
+                                    Author: 
+                              </p>
+                              <p>
+                                    <a
+                                          href={undefined}
+                                    >
+                                          Go to link
+                                    </a>
+                              </p>
+                        </CardText>
+                  </div>
+            </div>
+      </Card>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <ArchiveCard
+        headlines={
+                Object {
+                        "author": "BBC News",
+                        "description": "The party says it would prioritise jobs and workers' rights, and guarantee the status of EU citizens.",
+                        "publishedAt": "2017-04-25T06:32:28+00:00",
+                        "title": "General Election 2017: Labour to rip up Tory Brexit plan",
+                        "url": "http://www.bbc.co.uk/news/uk-politics-39698465",
+                        "urlToImage": "https://ichef-1.bbci.co.uk/news/1024/cpsprodpb/12509/production/_95771057_mediaitem95771056.jpg",
+                      }
+        }
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "headlines": Object {
+            "author": "BBC News",
+            "description": "The party says it would prioritise jobs and workers' rights, and guarantee the status of EU citizens.",
+            "publishedAt": "2017-04-25T06:32:28+00:00",
+            "title": "General Election 2017: Labour to rip up Tory Brexit plan",
+            "url": "http://www.bbc.co.uk/news/uk-politics-39698465",
+            "urlToImage": "https://ichef-1.bbci.co.uk/news/1024/cpsprodpb/12509/production/_95771057_mediaitem95771056.jpg",
+          },
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+          <Card
+                    className="archiveItem"
+                    expandable={false}
+                    expanded={null}
+                    initiallyExpanded={false}
+          >
+                    <div
+                              className="row"
+                    >
+                              <div
+                                        className="col-xs-4 col-sm-4"
+                              >
+                                        <img
+                                                  className="img-responsive"
+                                                  src={undefined}
+                                        />
+                              </div>
+                              <div
+                                        className="col-xs-8 col-sm-8"
+                              >
+                                        <CardText>
+                                                  <h5 />
+                                                  <p>
+                                                            Author: 
+                                                  </p>
+                                                  <p>
+                                                            <a
+                                                                      href={undefined}
+                                                            >
+                                                                      Go to link
+                                                            </a>
+                                                  </p>
+                                        </CardText>
+                              </div>
+                    </div>
+          </Card>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <ArchiveCard
+    headlines={
+        Object {
+            "author": "BBC News",
+            "description": "The party says it would prioritise jobs and workers' rights, and guarantee the status of EU citizens.",
+            "publishedAt": "2017-04-25T06:32:28+00:00",
+            "title": "General Election 2017: Labour to rip up Tory Brexit plan",
+            "url": "http://www.bbc.co.uk/news/uk-politics-39698465",
+            "urlToImage": "https://ichef-1.bbci.co.uk/news/1024/cpsprodpb/12509/production/_95771057_mediaitem95771056.jpg",
+          }
+    }
+/>,
+}
+`;

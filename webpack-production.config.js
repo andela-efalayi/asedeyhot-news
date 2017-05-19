@@ -1,6 +1,11 @@
 const webpack = require('webpack');
+const DotEnvPlugin = require('dotenv-webpack');
 const path = require('path');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
+
+const dotEnvPlugin = new DotEnvPlugin({
+  path: './.env',
+});
 
 const config = {
   entry: {
@@ -19,7 +24,7 @@ const config = {
     // Define production build to allow React to strip out unnecessary checks
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        NODE_ENV: JSON.stringify('production')
       }
     }),
     // Minify the bundle
@@ -28,13 +33,14 @@ const config = {
     }),
     // Transfer Files
     new TransferWebpackPlugin([
-      {from: 'www'},
+      { from: 'www' },
     ], path.resolve(__dirname, 'src')),
+    dotEnvPlugin
   ],
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
