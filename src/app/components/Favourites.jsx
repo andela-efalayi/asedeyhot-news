@@ -19,7 +19,11 @@ class Favourites extends Component {
   componentDidMount = () => {
     const googleId = this.state.user.googleId;
     DatabaseActions.getUserFavourites(googleId);
-    FavouriteStore.addChangeListener(this.onChange);
+    FavouriteStore.addChangeListener(() => {
+      setTimeout(() => {
+        this.onChange();
+      }, 2000);
+    });
   }
 
   componentWillUnmount = () => {
@@ -36,7 +40,6 @@ class Favourites extends Component {
     return (
       <div className="container">
          <div className="row">
-          <div className="col-md-8 favourites">
           <div className=" col-md-8 favourites">
             <h3>Archives</h3>
             <ArchiveCard headlines={this.state.archives}/>
@@ -46,7 +49,6 @@ class Favourites extends Component {
             <FavouriteSourcesCard
             favouriteSources={this.state.favouriteSources}/>
           </div>
-        </div>
       </div>
     </div>
     );

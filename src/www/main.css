@@ -60,13 +60,13 @@ footer p{
 }
 .favourites{
   margin-top: 15px;
-
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   padding: 1em 1em 1em 2em;
 }
 .favourites:last-child{
   margin-right: 0px;
+  min-height: 300px;
 }
 .favourites h3, h4{
   font-weight: 400;

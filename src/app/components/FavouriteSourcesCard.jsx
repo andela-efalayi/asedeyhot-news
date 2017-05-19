@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Card, CardText } from 'material-ui/Card';
 
 const FavouriteSourcesCard = ({ favouriteSources }) => {
-  if (Object.keys(favouriteSources).length === 0) {
+  if (favouriteSources === null) {
     return (
       <div>
         <h4>You have no saved sources.</h4>

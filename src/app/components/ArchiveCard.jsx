@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Card, CardText } from 'material-ui/Card';
 
 const ArchiveCard = ({ headlines }) => {
-  if (Object.keys(headlines).length === 0) {
+  if (headlines === null) {
     return (
       <div>
         <h4>You have no saved headlines.</h4>
