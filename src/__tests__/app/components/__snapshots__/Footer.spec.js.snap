@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer Component should render a className 1`] = `
+exports[`Footer Component should have a className 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],

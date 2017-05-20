@@ -38,9 +38,9 @@ ShallowWrapper {
                 description
                 : 
                 <a
-                    href="Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more."
+                    href="Australia's most trusted source of local, national news"
                 >
-                    Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.
+                    Australia's most trusted source of local, national news
                 </a>
             </p>
             <p>
@@ -145,9 +145,9 @@ ShallowWrapper {
                         description
                         : 
                         <a
-                              href="Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more."
+                              href="Australia's most trusted source of local, national news"
                         >
-                              Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.
+                              Australia's most trusted source of local, national news
                         </a>
                   </p>
                   <p>
@@ -233,7 +233,7 @@ ShallowWrapper {
                 Object {
                         "category": "general",
                         "country": "au",
-                        "description": "Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.",
+                        "description": "Australia's most trusted source of local, national news",
                         "id": "abc-news-au",
                         "language": "en",
                         "name": "ABC News (AU)",
@@ -259,7 +259,7 @@ ShallowWrapper {
           "favouriteSources": Object {
             "category": "general",
             "country": "au",
-            "description": "Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.",
+            "description": "Australia's most trusted source of local, national news",
             "id": "abc-news-au",
             "language": "en",
             "name": "ABC News (AU)",
@@ -324,9 +324,9 @@ ShallowWrapper {
                                         description
                                         : 
                                         <a
-                                                  href="Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more."
+                                                  href="Australia's most trusted source of local, national news"
                                         >
-                                                  Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.
+                                                  Australia's most trusted source of local, national news
                                         </a>
                               </p>
                               <p>
@@ -431,9 +431,9 @@ ShallowWrapper {
                                         description
                                         : 
                                         <a
-                                                  href="Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more."
+                                                  href="Australia's most trusted source of local, national news"
                                         >
-                                                  Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.
+                                                  Australia's most trusted source of local, national news
                                         </a>
                               </p>
                               <p>
@@ -523,7 +523,7 @@ ShallowWrapper {
         Object {
             "category": "general",
             "country": "au",
-            "description": "Australia's most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.",
+            "description": "Australia's most trusted source of local, national news",
             "id": "abc-news-au",
             "language": "en",
             "name": "ABC News (AU)",

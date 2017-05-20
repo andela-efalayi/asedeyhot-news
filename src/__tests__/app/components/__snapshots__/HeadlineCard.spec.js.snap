@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HeadlineCard Component should render a HeadlineCard for a headline 1`] = `
+exports[`HeadlineCard Component should render a HeadlineCard for a headline/article 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
