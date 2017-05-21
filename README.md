@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.org/andela-efalayi/asedeyhot-news.svg?branch=updates)](https://travis-ci.org/andela-efalayi/asedeyhot-news) [![Coverage Status](https://coveralls.io/repos/github/andela-efalayi/asedeyhot-news/badge.svg?branch=updates)](https://coveralls.io/github/andela-efalayi/asedeyhot-news?branch=updates)
 
 # AsEDeyHot 
-[This news feed application gathers latest, popular, and top headlines from around the globe. 
-It consumes the NewsAPI which provides at least 60 news sources - including CNN,BBC, and TechCrunch.]
+This news feed application gathers latest, popular, and top headlines from around the globe. 
+It consumes the NewsAPI which provides at least 60 news sources - including CNN,BBC, and TechCrunch.
  
 #### Technology
 This application was developed purely with JavaScript using React and the Flux Architecture.
@@ -15,13 +15,12 @@ This application was developed purely with JavaScript using React and the Flux A
 - Webpack
 
 #### Getting Started
-```bash
-- Clone the project from repository (https://github.com/andela-efalayi/asedeyhot-news)
-- In your terminal, cd into the cloned folder and run 'npm install'. This installs all the app's dependencies.
-- Run npm start, open browser, and type 'localhost:3000'. This runs the application on your localhost.
-- Alternatively, you can access the app on (https://asedeyhot-news.herokuapp.com)
-```
+- Clone the project from repository [github.com/andela-efalayi/asedeyhot-news (https://github.com/andela-efalayi/asedeyhot-news)
+- In your terminal, cd into the cloned folder and run `npm install`. This installs all the app's dependencies.
+- Run npm start, open browser, and type `localhost:3000`. This runs the application on your localhost.
+- Alternatively, you can access the app on [asedeyhot-news.herokuapp.com](https://asedeyhot-news.herokuapp.com)
 
+***
 #### App Features
 - A user able to access the full functionalities of the app by loging in with a Google+ account
 - The user can view sources from at least 60 news sites from around the globe
@@ -34,6 +33,7 @@ This application was developed purely with JavaScript using React and the Flux A
 - Presently, this news app can not share articles/headlines. This is a future 
 funcationality that would be implemented.
 
+***
 #### Testing
 - Testing of React components was performed using Jest and Enzyme.
 - Eslint was used to verify ES6
@@ -41,5 +41,7 @@ funcationality that would be implemented.
 - TravisCI
 - CodeClimate
 
+```block
 ###### Author
 Esther Falayi | Andela, Nigeria
+```
