@@ -3,7 +3,8 @@
 # AsEDeyHot 
 This news feed application gathers latest, popular, and top headlines from around the globe. 
 It consumes the NewsAPI which provides at least 60 news sources - including CNN,BBC, and TechCrunch.
- 
+
+***
 #### Technology
 This application was developed purely with JavaScript using React and the Flux Architecture.
 
@@ -15,10 +16,12 @@ This application was developed purely with JavaScript using React and the Flux A
 - Webpack
 
 #### Getting Started
-- Clone the project from repository [github.com/andela-efalayi/asedeyhot-news (https://github.com/andela-efalayi/asedeyhot-news)
-- In your terminal, cd into the cloned folder and run `npm install`. This installs all the app's dependencies.
-- Run npm start, open browser, and type `localhost:3000`. This runs the application on your localhost.
+```block
+- Clone the project from repository [github.com/andela-efalayi/asedeyhot-news](https://github.com/andela-efalayi/asedeyhot-news)
+- In your terminal, cd into the cloned folder and run `**npm install**`. This installs all the app's dependencies.
+- Run npm start, open browser, and type `**localhost:3000**`. This runs the application on your localhost.
 - Alternatively, you can access the app on [asedeyhot-news.herokuapp.com](https://asedeyhot-news.herokuapp.com)
+```
 
 ***
 #### App Features
@@ -41,7 +44,7 @@ funcationality that would be implemented.
 - TravisCI
 - CodeClimate
 
-```block
 ###### Author
+```block
 Esther Falayi | Andela, Nigeria
 ```
