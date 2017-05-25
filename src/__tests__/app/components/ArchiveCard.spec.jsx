@@ -6,9 +6,9 @@ import ArchiveCard from
 const mockData = {
   author: 'BBC News',
   title: 'General Election 2017: Labour to rip up Tory Brexit plan',
-  description: "The party says it would prioritise jobs and workers' rights, and guarantee the status of EU citizens.",
+  description: 'The party says it would prioritise jobs.',
   url: 'http://www.bbc.co.uk/news/uk-politics-39698465',
-  urlToImage: 'https://ichef-1.bbci.co.uk/news/1024/cpsprodpb/12509/production/_95771057_mediaitem95771056.jpg',
+  urlToImage: 'https://ichef-1.bbci.co.uk/news/12509/95771057_mediaitem95771056.jpg',
   publishedAt: '2017-04-25T06:32:28+00:00'
 };
 

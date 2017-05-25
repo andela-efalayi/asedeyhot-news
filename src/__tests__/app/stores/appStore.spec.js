@@ -3,6 +3,7 @@ import AppStore from '../../../app/stores/AppStore';
 
 jest.mock('../../../app/dispatcher/appDispatcher');
 const callback = Dispatcher.register.mock.calls[0][0];
+console.log(callback);
 
 const sortAction = {
   actionType: 'GET_HEADLINES_BY_A_SORT',
