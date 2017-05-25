@@ -8,13 +8,11 @@ import Favourites from './components/Favourites.jsx';
 const Routes = () => (
   <main>
     <Switch>
-      <Route exact path="/" component={Login} />
-      <Route exact path="/sources"
-      component={Sources} />
-      <Route path="/sources/:id"
-      component={Headlines} />
-      <Route path="/favourites"
-      component={Favourites} />
+      <Route exact
+      path="/" component={localStorage.getItem('user') ? Sources : Login} />
+      <Route exact path="/sources" component={Sources} />
+      <Route path="/sources/:id" component={Headlines} />
+      <Route path="/favourites" component={Favourites} />
     </Switch>
   </main>
 );
