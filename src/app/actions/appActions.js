@@ -5,7 +5,7 @@ const BASE_URL = 'https://newsapi.org/v1/articles?source=';
 const API_KEY = process.env.API_KEY;
 
 const AppActions = {
-  getHeadlines: (sourceId) => {
+  getTopHeadlines: (sourceId) => {
     const SOURCE_URL = `${BASE_URL + sourceId}&sortBy=top&apiKey=${API_KEY}`;
     return axios.get(SOURCE_URL).then((response) => {
       Dispatcher.dispatch({

@@ -20,7 +20,7 @@ class Headlines extends Component {
     this.filterHeadlines = this.filterHeadlines.bind(this);
   }
   componentDidMount = () => {
-    AppActions.getHeadlines(this.state.currentSource.id);
+    AppActions.getTopHeadlines(this.state.currentSource.id);
     AppStore.addChangeListener(this.onChange);
   }
   componentWillUnmount = () => {
@@ -28,7 +28,7 @@ class Headlines extends Component {
   }
   onChange = () => {
     this.setState({
-      topHeadlines: AppStore.getHeadlines(),
+      topHeadlines: AppStore.getTopHeadlines(),
       sortResult: AppStore.getSortResult()
     });
   }

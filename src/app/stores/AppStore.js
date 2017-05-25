@@ -5,15 +5,15 @@ import AppActionTypes from '../constants/AppActionTypes';
 
 const CHANGE_EVENT = 'change';
 let sources = [];
-let headlines = [];
+let topHeadlines = [];
 let sortResult = [];
 
 const setSources = (payload) => {
   sources = payload;
 };
 
-const setHeadlines = (payload) => {
-  headlines = payload;
+const setTopHeadlines = (payload) => {
+  topHeadlines = payload;
 };
 
 const setSortResult = (payload) => {
@@ -36,8 +36,8 @@ const AppStore = assign({}, EventEmitter.prototype, {
   getSources() {
     return sources;
   },
-  getHeadlines() {
-    return headlines;
+  getTopHeadlines() {
+    return topHeadlines;
   },
   getSortResult() {
     return sortResult;
@@ -51,7 +51,7 @@ Dispatcher.register((action) => {
     AppStore.emitChange();
     break;
   case AppActionTypes.GET_HEADLINES:
-    setHeadlines(action.articles);
+    setTopHeadlines(action.articles);
     AppStore.emitChange();
     break;
   case AppActionTypes.GET_HEADLINES_BY_A_SORT:
