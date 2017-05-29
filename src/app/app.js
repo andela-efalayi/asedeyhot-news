@@ -2,27 +2,34 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { lightBlue500, cyan300, cyan500 } from 'material-ui/styles/colors';
+import { teal500, teal100, cyan500 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
+import IconButton from 'material-ui/IconButton';
+import Logo from 'material-ui/svg-icons/social/whatshot';
+import AppBar from 'material-ui/AppBar';
 import Routes from './Routes';
-
-import MainHeader from './components/MainHeader.jsx';
 import UserAvatar from './components/UserAvatar.jsx';
 import HomeTabs from './components/HomeTabs.jsx';
-import Footer from './components/Footer.jsx';
 
 injectTapEventPlugin();
 
 const muiTheme = getMuiTheme({
   palette: {
     accent1Color: cyan500,
-    accent2Color: cyan500,
-    primary1Color: lightBlue500,
-    primary3Color: cyan300
+    accent2Color: teal100,
+    primary1Color: teal500,
+    primary3Color: teal500
   },
 });
+
+/**
+ * Entry point to app
+ * @class App
+ * @extends {Component}
+ * @param {object} props
+ * @return {object} react-component
+ */
 
 class App extends Component {
   constructor(props) {
@@ -50,12 +57,26 @@ class App extends Component {
   render() {
     return (
       <div>
-        <MainHeader userInfo={this.state.userInfo}/>
-        {this.state.tabs}
+        <div className="header">
+          <MuiThemeProvider muiTheme={muiTheme}>
+            <AppBar
+              className="app-bar"
+              title={<span>AsEDeyHot</span>}
+              iconElementLeft={<IconButton><Logo /></IconButton>}
+              iconElementRight={this.state.userInfo}
+            />
+          </MuiThemeProvider>
+          {this.state.tabs}
+        </div>
         <MuiThemeProvider muiTheme={muiTheme}>
-          <Routes />
+          <Routes/>
         </MuiThemeProvider>
-        <Footer />
+        <MuiThemeProvider muiTheme={muiTheme} className="container-fluid">
+          <footer>
+            <p>made with<span className="footer-icon">♡</span>
+            by: Esther Falayi | Andela, Nigeria</p>
+          </footer>
+        </MuiThemeProvider>
       </div>
     );
   }

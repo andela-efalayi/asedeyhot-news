@@ -1,56 +1,61 @@
 import React, { Component } from 'react';
-import DatabaseActions from '../actions/DatabaseActions';
-import FavouriteStore from '../stores/FavouriteStore';
-import ArchiveCard from './ArchiveCard.jsx';
-import FavouriteSourcesCard from './FavouriteSourcesCard.jsx';
+import AppFavourites from '../actions/AppFavourites';
+import FavouritesStore from '../stores/FavouritesStore';
+import FavouriteArticles from './FavouriteArticles.jsx';
+import FavouriteSources from './FavouriteSources.jsx';
 
+/**
+ * @class Favourites
+ * @extends {Component}
+ * @method onFavouritesChange
+ */
 
 class Favourites extends Component {
   constructor() {
     super();
     this.state = {
-      archives: {},
-      favouriteSources: {},
-      user: JSON.parse(localStorage.getItem('user'))
+      favouriteArticles: {},
+      favouriteSources: {}
     };
-    this.onChange = this.onChange.bind(this);
+    this.onFavouritesChange = this.onFavouritesChange.bind(this);
+  }
+  componentDidMount() {
+    AppFavourites.getAll();
+    FavouritesStore.addChangeListener(this.onFavouritesChange);
   }
 
-  componentDidMount = () => {
-    const googleId = this.state.user.googleId;
-    DatabaseActions.getUserFavourites(googleId);
-    FavouriteStore.addChangeListener(() => {
-      setTimeout(() => {
-        this.onChange();
-      }, 2000);
-    });
+  componentWillUnmount() {
+    FavouritesStore.removeChangeListener(this.onFavouritesChange);
   }
 
-  componentWillUnmount = () => {
-    FavouriteStore.removeChangeListener(this.onChange);
-  }
-
-  onChange = () => {
+  onFavouritesChange() {
     this.setState({
-      archives: FavouriteStore.getArchive(),
-      favouriteSources: FavouriteStore.getFavouriteSources()
+      favouriteArticles: FavouritesStore.getFavouriteArticles(),
+      favouriteSources: FavouritesStore.getFavouriteSources()
     });
   }
   render() {
+    const favouriteSources = this.state.favouriteSources;
+    const favouriteArticles = this.state.favouriteArticles;
     return (
-      <div className="container">
-         <div className="row">
-          <div className=" col-md-8 favourites">
-            <h3>Archives</h3>
-            <ArchiveCard headlines={this.state.archives}/>
+      <div className="body favourites">
+        <div className="container-fluid">
+        <div className="row">
+          <div className="col-xs-12 col-sm-6 col-md-8">
+          <h3>Favourite Articles</h3>
+          <div className="list">
+            <FavouriteArticles articles={favouriteArticles}/>
           </div>
-          <div className="col-md-4 favourites">
+          </div>
+          <div className="col-xs-12 col-sm-6 col-md-4">
             <h3>Favourite Sources</h3>
-            <FavouriteSourcesCard
-            favouriteSources={this.state.favouriteSources}/>
+            <div className="list">
+              <FavouriteSources sources={favouriteSources}/>
+            </div>
           </div>
+        </div>
       </div>
-    </div>
+      </div>
     );
   }
 }

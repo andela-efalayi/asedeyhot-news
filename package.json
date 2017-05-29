@@ -1,4 +1,4 @@
-  {
+{
   "name": "asedeyhot-news",
   "version": "1.0.0",
   "description": "\"A news feed application that integrates NewsAPI\"",
@@ -22,7 +22,9 @@
       ".*": "<rootDir>/node_modules/babel-jest"
     },
     "collectCoverage": true,
-    "setupTestFrameworkScriptFile": "<rootDir>/src/__mocks__/localStorageMock.js"
+    "globals": {
+      "window": true
+    }
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -85,6 +87,7 @@
     "react-router-dom": "^4.1.1",
     "react-tap-event-plugin": "^2.0.1",
     "react-test-renderer": "^15.5.4",
+    "sweetalert2": "^6.6.4",
     "transfer-webpack-plugin": "^0.1.4",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.2"

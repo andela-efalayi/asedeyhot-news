@@ -6,32 +6,24 @@ jest.dontMock('../../../app/components/SortBar.jsx');
 
 const sortBarDetails = {
   currentSortOption: 'top',
-  id: 'abc-news-au',
   title: 'ABC News (AU)',
   sortOptions: ['top']
 };
 
 describe('SortBar Component', () => {
-  const wrapper = shallow(<SortBar />);
-  it('should render a SortBar', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should have 2 child nodes', () => {
-    expect(wrapper.node.props.children).toHaveLength(2);
-  });
-
-  it('should have an h4 element', () => {
-    expect(wrapper.node.props.children[0].props.children.type).toMatch('h4');
-  });
-
-  it('have a title for SortBar', () => {
-    const wrapperWithProps = shallow(<SortBar
+  const wrapper = shallow(<SortBar
     sortOptions={sortBarDetails.sortOptions}
     id={sortBarDetails.id}
     title={sortBarDetails.title} />);
-    expect(wrapperWithProps.nodes[0].props.id).toEqual(sortBarDetails.id);
-    expect(wrapperWithProps.nodes[0].props.children[0]
-    .props.children.props.children[0]).toEqual(sortBarDetails.title);
+  it('should render a SortBar', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+  it('select field should have 1 item', () => {
+    expect(wrapper.nodes[0]
+  .props.children[1].props.children.props.children.length).toEqual(1);
+  });
+  it('key should be "top"', () => {
+    expect(wrapper.nodes[0].props.children[1].props
+    .children.props.children[0].key).toEqual('top');
   });
 });

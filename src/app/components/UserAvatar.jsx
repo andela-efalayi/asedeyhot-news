@@ -1,5 +1,3 @@
-/* global localStorage window */
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Avatar from 'material-ui/Avatar';
@@ -24,14 +22,29 @@ const styles = {
   }
 };
 
+/**
+ * @class UserAvatar
+ * @extends {Component}
+ * @method handleTouchTap
+ * @method handleRequestClose
+ * @method signOutUser
+ * @param {object} props
+ * @return {object} react-component
+ */
+
 class UserAvatar extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       open: false
     };
   }
+
+/**
+ * Open sign-out popover onTouch event
+ * @memberof UserAvatar
+ * @param {object} event
+ */
 
   handleTouchTap = (event) => {
     event.preventDefault();
@@ -41,16 +54,27 @@ class UserAvatar extends Component {
     });
   };
 
+  /**
+   * Close sign-out popover
+   * @memberof UserAvatar
+   */
+
   handleRequestClose = () => {
     this.setState({
       open: false,
     });
   };
 
+  /**
+   * Sign out user
+   * @memberof UserAvatar
+   */
+
   signOutUser = () => {
     localStorage.clear();
     window.location = '/';
   }
+
   render() {
     return (
       <ListItem
@@ -93,9 +117,6 @@ class UserAvatar extends Component {
 
 UserAvatar.propTypes = {
   user: PropTypes.object
-};
-UserAvatar.defaultProps = {
-  user: null
 };
 
 export default UserAvatar;
