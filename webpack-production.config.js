@@ -10,7 +10,7 @@ const dotEnvPlugin = new DotEnvPlugin({
 const config = {
   entry: {
     main: [
-      './src/app/app.js',
+      './src/app/app.jsx',
     ],
   },
   // Render source-map file for final build

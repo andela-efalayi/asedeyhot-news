@@ -13,7 +13,7 @@ const config = {
     main: [
       // only- means to only hot reload for successful updates
       'webpack/hot/only-dev-server',
-      './src/app/app.js',
+      './src/app/app.jsx',
     ],
   },
   // Server Configuration options
