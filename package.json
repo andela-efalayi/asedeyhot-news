@@ -24,7 +24,8 @@
     "collectCoverage": true,
     "globals": {
       "window": true
-    }
+    },
+    "setupFiles":["<rootDir>/src/__mocks__/localStorageMock.js"]
   },
   "devDependencies": {
     "babel-core": "^6.18.2",

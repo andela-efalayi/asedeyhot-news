@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchBar Component should render a textfield 1`] = `
+exports[`SearchBar.jsx should match SearchBar component snapshot 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -9,6 +9,7 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <Toolbar
+    className="filter"
     noGutter={false}
 >
     <TextField
@@ -22,19 +23,20 @@ ShallowWrapper {
         }
         hintText="Search for a news source"
         multiLine={false}
-        onChange={null}
+        onChange={undefined}
         rows={1}
         type="text"
         underlineShow={true}
         underlineStyle={
             Object {
-                "borderColor": "#2196f3",
+                "borderColor": "#009688",
               }
         }
     />
 </Toolbar>,
   "nodes": Array [
     <Toolbar
+      className="filter"
       noGutter={false}
 >
       <TextField
@@ -48,13 +50,13 @@ ShallowWrapper {
             }
             hintText="Search for a news source"
             multiLine={false}
-            onChange={null}
+            onChange={undefined}
             rows={1}
             type="text"
             underlineShow={true}
             underlineStyle={
                   Object {
-                        "borderColor": "#2196f3",
+                        "borderColor": "#009688",
                       }
             }
       />
@@ -66,20 +68,14 @@ ShallowWrapper {
       "_calledComponentWillUnmount": false,
       "_compositeType": 2,
       "_context": Object {},
-      "_currentElement": <SearchBar
-        searchPage={null}
-        title={null}
-/>,
+      "_currentElement": <SearchBar />,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": StatelessComponent {
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "props": Object {
-          "searchPage": null,
-          "title": null,
-        },
+        "props": Object {},
         "refs": Object {},
         "state": null,
         "updater": Object {
@@ -101,6 +97,7 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <Toolbar
+          className="filter"
           noGutter={false}
 >
           <TextField
@@ -114,19 +111,20 @@ ShallowWrapper {
                     }
                     hintText="Search for a news source"
                     multiLine={false}
-                    onChange={null}
+                    onChange={undefined}
                     rows={1}
                     type="text"
                     underlineShow={true}
                     underlineStyle={
                               Object {
-                                        "borderColor": "#2196f3",
+                                        "borderColor": "#009688",
                                       }
                     }
           />
 </Toolbar>,
         "_debugID": 2,
         "_renderedOutput": <Toolbar
+          className="filter"
           noGutter={false}
 >
           <TextField
@@ -140,13 +138,13 @@ ShallowWrapper {
                     }
                     hintText="Search for a news source"
                     multiLine={false}
-                    onChange={null}
+                    onChange={undefined}
                     rows={1}
                     type="text"
                     underlineShow={true}
                     underlineStyle={
                               Object {
-                                        "borderColor": "#2196f3",
+                                        "borderColor": "#009688",
                                       }
                     }
           />
@@ -162,9 +160,6 @@ ShallowWrapper {
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <SearchBar
-    searchPage={null}
-    title={null}
-/>,
+  "unrendered": <SearchBar />,
 }
 `;

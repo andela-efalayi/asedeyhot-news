@@ -10,19 +10,19 @@ const sortBarDetails = {
   sortOptions: ['top']
 };
 
-describe('SortBar Component', () => {
+describe('SortBar.jsx', () => {
   const wrapper = shallow(<SortBar
     sortOptions={sortBarDetails.sortOptions}
     id={sortBarDetails.id}
     title={sortBarDetails.title} />);
-  it('should render a SortBar', () => {
+  it('should match SortBar component snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-  it('select field should have 1 item', () => {
+  it('should have a select field with one option item', () => {
     expect(wrapper.nodes[0]
   .props.children[1].props.children.props.children.length).toEqual(1);
   });
-  it('key should be "top"', () => {
+  it('should have have option item with key "top"', () => {
     expect(wrapper.nodes[0].props.children[1].props
     .children.props.children[0].key).toEqual('top');
   });

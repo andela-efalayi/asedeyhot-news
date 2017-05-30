@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SortBar Component should render a SortBar 1`] = `
+exports[`SortBar.jsx should match SortBar component snapshot 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -9,7 +9,7 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <Toolbar
-    className="toolbar"
+    className="filter"
     noGutter={false}
 >
     <ToolbarGroup
@@ -27,6 +27,7 @@ ShallowWrapper {
         </h4>
     </ToolbarGroup>
     <ToolbarGroup
+        className="select"
         firstChild={false}
         lastChild={false}
     >
@@ -37,11 +38,6 @@ ShallowWrapper {
             fullWidth={false}
             multiple={false}
             onChange={undefined}
-            underlineStyle={
-                Object {
-                    "borderColor": "#03a9f4",
-                  }
-            }
         >
             <MenuItem
                 anchorOrigin={
@@ -63,7 +59,7 @@ ShallowWrapper {
 </Toolbar>,
   "nodes": Array [
     <Toolbar
-      className="toolbar"
+      className="filter"
       noGutter={false}
 >
       <ToolbarGroup
@@ -81,6 +77,7 @@ ShallowWrapper {
             </h4>
       </ToolbarGroup>
       <ToolbarGroup
+            className="select"
             firstChild={false}
             lastChild={false}
       >
@@ -91,11 +88,6 @@ ShallowWrapper {
                   fullWidth={false}
                   multiple={false}
                   onChange={undefined}
-                  underlineStyle={
-                        Object {
-                              "borderColor": "#03a9f4",
-                            }
-                  }
             >
                   <MenuItem
                         anchorOrigin={
@@ -165,7 +157,7 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <Toolbar
-          className="toolbar"
+          className="filter"
           noGutter={false}
 >
           <ToolbarGroup
@@ -183,6 +175,7 @@ ShallowWrapper {
                     </h4>
           </ToolbarGroup>
           <ToolbarGroup
+                    className="select"
                     firstChild={false}
                     lastChild={false}
           >
@@ -193,11 +186,6 @@ ShallowWrapper {
                               fullWidth={false}
                               multiple={false}
                               onChange={undefined}
-                              underlineStyle={
-                                        Object {
-                                                  "borderColor": "#03a9f4",
-                                                }
-                              }
                     >
                               <MenuItem
                                         anchorOrigin={
@@ -219,7 +207,7 @@ ShallowWrapper {
 </Toolbar>,
         "_debugID": 2,
         "_renderedOutput": <Toolbar
-          className="toolbar"
+          className="filter"
           noGutter={false}
 >
           <ToolbarGroup
@@ -237,6 +225,7 @@ ShallowWrapper {
                     </h4>
           </ToolbarGroup>
           <ToolbarGroup
+                    className="select"
                     firstChild={false}
                     lastChild={false}
           >
@@ -247,11 +236,6 @@ ShallowWrapper {
                               fullWidth={false}
                               multiple={false}
                               onChange={undefined}
-                              underlineStyle={
-                                        Object {
-                                                  "borderColor": "#03a9f4",
-                                                }
-                              }
                     >
                               <MenuItem
                                         anchorOrigin={

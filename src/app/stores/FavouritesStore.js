@@ -17,7 +17,7 @@ const CHANGE_EVENT = 'change';
 class FavouritesStore extends EventEmitter {
   constructor() {
     super();
-    this.favouriteSources = {};
+    this.sources = {};
     this.articles = {};
   }
 

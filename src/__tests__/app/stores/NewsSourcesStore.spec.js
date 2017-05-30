@@ -8,7 +8,7 @@ const callback = AppDispatcher.register.mock.calls[0][0];
 
 describe('ArticlesStore', () => {
   const payload = {
-    actionType: AppActionTypes.LOAD_NEWS_SOURCES,
+    actionType: AppActionTypes.GET_NEWS_SOURCES,
     sources: [{
       id: 'abc-news-au',
       name: 'ABC News (AU)',
@@ -40,12 +40,27 @@ describe('ArticlesStore', () => {
       sortBysAvailable: ['top']
     }]
   };
+
+  const listenerCb = () => {
+    return 'listenerCb';
+  };
+
   it('initial sources array should be empty', () => {
     expect(NewsSourcesStore.sources.length).toEqual(0);
   });
   it('registers payload', () => {
     callback(payload);
-    expect(NewsSourcesStore.getAllSources().length)
+    expect(NewsSourcesStore.loadAllSources().length)
     .toEqual(payload.sources.length);
+  });
+  it('addChangeListener works', () => {
+    NewsSourcesStore.addChangeListener(listenerCb);
+    const events = NewsSourcesStore._events;
+    expect(Object.keys(events).length).toEqual(1);
+  });
+  it('removeChangeListener works', () => {
+    NewsSourcesStore.removeChangeListener(listenerCb);
+    const events = NewsSourcesStore._events;
+    expect(Object.keys(events).length).toEqual(0);
   });
 });

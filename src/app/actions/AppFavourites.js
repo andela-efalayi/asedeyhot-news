@@ -32,6 +32,8 @@ const updates = {};
 const AppFavourites = {
   /**
    * Returns the user's googleId
+   * @method AppFavourites
+   * @return {string} currentUser.gooleId
    */
 
   getGoogleId() {
@@ -43,6 +45,9 @@ const AppFavourites = {
 
   /**
    * Saves a new favourite article to the database
+   * @method AppFavourites
+   * @param {object} article
+   * @return {object} promise
    */
 
   saveToFavouriteArticles(article) {
@@ -66,7 +71,11 @@ const AppFavourites = {
   },
 
   /**
+   * @memberof AppFavourites
    * Saves a new favourite source to the database
+   * @method AppFavourites
+   * @param {object} source
+   * @return {object} promise
    */
 
   saveToFavouriteSources(source) {
@@ -86,12 +95,16 @@ const AppFavourites = {
 
   /**
    * Gets all the user's favourites from database
+   * @memberof AppFavourites
    */
 
   getAll() {
     const googleId = this.getGoogleId();
     db.ref(`users/${googleId}`).once('value')
     .then((snapshot) => {
+      /**
+       * Calls dispatcher if successful
+       */
       AppDispatcher.dispatch({
         actionType: 'GET_ALL_FAVOURITES',
         favouriteArticles: snapshot.val().favouriteArticles,

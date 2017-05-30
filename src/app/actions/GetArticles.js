@@ -9,6 +9,13 @@ import AppDispatcher from '../dispatcher/AppDispatcher';
 const BASE_URL = 'https://newsapi.org/v1/articles?source=';
 const API_KEY = process.env.API_KEY;
 
+/**
+ * @function getArticles
+ * @param {string} sourceId
+ * @param {string} sortBy
+ * @return {func} axios
+ */
+
 const getArticles = (sourceId, sortBy) => {
   /**
    * Url used to get the articles

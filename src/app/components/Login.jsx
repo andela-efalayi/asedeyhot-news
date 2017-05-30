@@ -37,6 +37,7 @@ const Login = () => {
      <div className="body login-page">
       <h3> Get latest, popular, and top news from around the globe </h3>
       <GoogleLogin
+      className="login-btn"
       clientId=
       "126684501762-qf76j1u8hfsqc1lh4emjg2h4s18si0o3.apps.googleusercontent.com"
       buttonText="SignIn With Google+"

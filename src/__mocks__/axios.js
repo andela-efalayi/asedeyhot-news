@@ -1,4 +1,9 @@
-// Mock function to test axios.
+/**
+ * Mock function to test axios
+ * @function mockApiCall
+ * @return {object} promise
+ */
+
 import testdata from './dataMock.json';
 
 const mockApiCall = {

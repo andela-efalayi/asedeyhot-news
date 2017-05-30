@@ -76,8 +76,9 @@ class SourceCard extends Component {
     const source = this.props.source;
     const setCurrentSource = () => this.setCurrentSource(source);
     const setChar = (word, limit, endChar) => {
-      if (word.length > limit) {
-        return `${word.substring(0, limit) + endChar}`;
+      const newWord = word;
+      if (newWord.length > limit) {
+        return `${newWord.substring(0, limit) + endChar}`;
       }
       return word;
     };

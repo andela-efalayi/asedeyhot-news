@@ -8,7 +8,7 @@ const callback = AppDispatcher.register.mock.calls[0][0];
 
 describe('ArticlesStore', () => {
   const payload = {
-    actionType: AppActionTypes.LOAD_ARTICLES,
+    actionType: AppActionTypes.GET_ARTICLES,
     articles: [{
       title: 'some title',
       description: 'some description',
@@ -22,11 +22,26 @@ describe('ArticlesStore', () => {
       sortBy: 'latest'
     }]
   };
+
+  const listenerCb = () => {
+    return 'listenerCb';
+  };
   it('initial articles array should be empty', () => {
     expect(ArticlesStore.articles.length).toEqual(0);
   });
   it('registers payload', () => {
     callback(payload);
-    expect(ArticlesStore.getArticles().length).toEqual(payload.articles.length);
+    expect(ArticlesStore.loadArticles().length)
+    .toEqual(payload.articles.length);
+  });
+  it('addChangeListener works', () => {
+    ArticlesStore.addChangeListener(listenerCb);
+    const events = ArticlesStore._events;
+    expect(Object.keys(events).length).toEqual(1);
+  });
+  it('removeChangeListener works', () => {
+    ArticlesStore.removeChangeListener(listenerCb);
+    const events = ArticlesStore._events;
+    expect(Object.keys(events).length).toEqual(0);
   });
 });

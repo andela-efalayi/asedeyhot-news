@@ -13,7 +13,12 @@ import AppActionTypes from '../constants/AppActionTypes';
 
 const URL = 'https://newsapi.org/v1/sources?language=en';
 
-const loadNewsSources = () => {
+/**
+ * @function getNewsSources
+ * @return {func} axios
+ */
+
+const getNewsSources = () => {
   return axios.get(URL).then((response) => {
     /**
      * Calls disaptcher if request is successful
@@ -32,4 +37,4 @@ const loadNewsSources = () => {
   });
 };
 
-export default loadNewsSources;
+export default getNewsSources;
