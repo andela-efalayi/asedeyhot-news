@@ -37,12 +37,13 @@ funcationality that would be implemented.
 
 ***
 #### Testing
-- Testing of React components was performed using Jest and Enzyme.
-- Eslint was used to verify ES6
-- HoundCI was used to test pull requests
-- TravisCI
-- CodeClimate
+All app components, actions, and stores were tested using [Facebook's Jest](https://facebook.github.io/jest/)
 
+```block
+- To run the tests, run `npm test` on the command line
+```
+
+***
 ###### Author
 ```block
 Esther Falayi | Andela, Nigeria
