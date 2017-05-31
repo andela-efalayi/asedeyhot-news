@@ -11,6 +11,8 @@ import ArticleCard from './ArticleCard.jsx';
  * @extends {Component}
  * @method onArticlesChange
  * @method updateArticles
+ * @method componentDidMount
+ * @method componentWillUnmount
  * @param {object} props
  */
 
@@ -29,20 +31,32 @@ class Articles extends Component {
     this.updateArticles = this.updateArticles.bind(this);
   }
 
+  /**
+   * @memberof Articles
+   * @method componentDidMount
+   * @return {void}
+   */
   componentDidMount() {
     const sortOption = '';
     GetArticles(this.state.sourceId, sortOption);
     ArticlesStore.addChangeListener(this.onArticlesChange);
   }
+
+  /**
+   * @method componentWillUnmount
+   * @memberof Articles
+   * @return {void}
+   */
   componentWillUnmount() {
     ArticlesStore.removeChangeListener(this.onArticlesChange);
   }
 
   /**
-   * Sets state when ArticlesStore emites a change
+   * Sets state when ArticlesStore emits a change
    * @memberof Articles
+   * @method onArticlesChange
+   * @return {void}
    */
-
   onArticlesChange() {
     this.setState({
       articles: ArticlesStore.loadArticles()
@@ -52,11 +66,12 @@ class Articles extends Component {
   /**
    * Updates state when user indicates a sort parameter
    * @memberof Articles
+   * @method updateArticles
    * @param {object} event
    * @param {number} index
    * @param {string} value
+   * @return {void}
    */
-
   updateArticles(event, index, value) {
     GetArticles(this.state.sourceId, value);
     this.setState({

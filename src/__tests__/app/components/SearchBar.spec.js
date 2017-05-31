@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import SearchBar from '../../../app/components/SearchBar.jsx';
 
 describe('SearchBar.jsx', () => {
-  it('should match SearchBar component snapshot', () => {
+  it('should match component snapshot', () => {
     const wrapper = shallow(
         <SearchBar />
     );

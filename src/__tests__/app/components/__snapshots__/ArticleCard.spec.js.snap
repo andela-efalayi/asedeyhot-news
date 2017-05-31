@@ -405,7 +405,7 @@ ShallowWrapper {
         article={
                 Object {
                         "author": "BBC News",
-                        "description": null,
+                        "description": undefined,
                         "publishedAt": "2017-04-25T02:59:53+00:00",
                         "title": "US submarine arrives in South Korea",
                         "url": "http://www.bbc.co.uk/news/world-asia-39701481",
@@ -422,7 +422,7 @@ ShallowWrapper {
         "props": Object {
           "article": Object {
             "author": "BBC News",
-            "description": null,
+            "description": undefined,
             "publishedAt": "2017-04-25T02:59:53+00:00",
             "title": "US submarine arrives in South Korea",
             "url": "http://www.bbc.co.uk/news/world-asia-39701481",
@@ -436,7 +436,7 @@ ShallowWrapper {
           "tooltip": "Add to favourite articles",
           "value": Object {
             "author": "BBC News",
-            "description": null,
+            "description": undefined,
             "publishedAt": "2017-04-25T02:59:53+00:00",
             "title": "US submarine arrives in South Korea",
             "url": "http://www.bbc.co.uk/news/world-asia-39701481",
@@ -571,7 +571,7 @@ ShallowWrapper {
     article={
         Object {
             "author": "BBC News",
-            "description": null,
+            "description": undefined,
             "publishedAt": "2017-04-25T02:59:53+00:00",
             "title": "US submarine arrives in South Korea",
             "url": "http://www.bbc.co.uk/news/world-asia-39701481",

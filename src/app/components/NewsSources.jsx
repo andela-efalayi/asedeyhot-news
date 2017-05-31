@@ -26,20 +26,46 @@ class Sources extends Component {
     this.handleSearch = this.handleSearch.bind(this);
   }
 
+  /**
+   * Listens for a change event when the component is mounted and sets state
+   * @memberof Sources
+   * @method componentDidMount
+   * @return {void}
+   */
   componentDidMount() {
     NewsSourcesStore.addChangeListener(this.onSourcesChange);
   }
 
+  /**
+   * Removes change listener
+   * @memberof Sources
+   * @method componentWillUnmount
+   * @return {void}
+   */
   componentWillUnmount() {
     NewsSourcesStore.removeChangeListener(this.onSourcesChange);
   }
 
+  /**
+   * Sets state when store emits a change
+   * @memberof Sources
+   * @method componentWillUnmount
+   * @return {void}
+  */
   onSourcesChange() {
     this.setState({
       sources: NewsSourcesStore.loadAllSources()
     });
   }
 
+  /**
+   * Filters sources and updates searchResult
+   * @memberof Sources
+   * @method handleSearch
+   * @param {object} event
+   * @param {string} value
+   * @return {void}
+  */
   handleSearch(event, value) {
     const searchKey = value.toLowerCase();
     const filteredSources = _.filter(this.state.sources,
@@ -51,6 +77,8 @@ class Sources extends Component {
 
   render() {
     let displayedSources;
+
+    // Check if searchResult array is empty
     if (this.state.searchResult.length === 0) {
       displayedSources = this.state.sources;
     } else {

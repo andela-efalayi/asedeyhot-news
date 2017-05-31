@@ -10,10 +10,11 @@ import { Card, CardText } from 'material-ui/Card';
  */
 
 const FavouriteSources = ({ sources }) => {
-  if (sources === null) {
+  // Checks if favourite sources gotten from database is undefined
+  if (sources === undefined) {
     return (
       <div>
-        <h4>You have no saved sources.</h4>
+        <p>You have no saved sources.</p>
       </div>
     );
   }

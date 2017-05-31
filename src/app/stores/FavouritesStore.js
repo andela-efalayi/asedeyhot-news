@@ -21,22 +21,45 @@ class FavouritesStore extends EventEmitter {
     this.articles = {};
   }
 
-  getFavouriteSources() {
+
+  /**
+   * @memberof FavouritesStore
+   * @return {void}
+   */
+  loadFavouriteSources() {
     return this.sources;
   }
 
-  getFavouriteArticles() {
+  /**
+   * @memberof FavouritesStore
+   * @return {void}
+   */
+  loadFavouriteArticles() {
     return this.articles;
   }
 
+  /**
+   * @memberof FavouritesStore
+   * @param {func} callback
+   * @return {void}
+   */
   addChangeListener(callback) {
     this.on(CHANGE_EVENT, callback);
   }
 
+  /**
+   * @memberof FavouritesStore
+   * @param {func} callback
+   * @return {void}
+   */
   removeChangeListener(callback) {
     this.removeListener(CHANGE_EVENT, callback);
   }
 
+  /**
+   * @memberof FavouritesStore
+   * @return {void}
+   */
   emitChange() {
     this.emit(CHANGE_EVENT);
   }
@@ -44,10 +67,7 @@ class FavouritesStore extends EventEmitter {
 
 const favouritesStore = new FavouritesStore();
 
-/**
- * Register dispatcher
- * @param {object} payload
- */
+// Registers AppDispatcher with payload
 AppDispatcher.register((payload) => {
   switch (payload.actionType) {
   case AppActionTypes.GET_ALL_FAVOURITES:

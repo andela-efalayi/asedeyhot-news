@@ -7,7 +7,6 @@ import FavouriteSources from './FavouriteSources.jsx';
 /**
  * @class Favourites
  * @extends {Component}
- * @method onFavouritesChange
  */
 
 class Favourites extends Component {
@@ -19,19 +18,38 @@ class Favourites extends Component {
     };
     this.onFavouritesChange = this.onFavouritesChange.bind(this);
   }
+
+  /**
+   * Calls the getAll function from AppFavourites when the component is mounted
+   * @memberof Favourites
+   * @method componentDidMount
+   * @return {void}
+   */
   componentDidMount() {
     AppFavourites.getAll();
     FavouritesStore.addChangeListener(this.onFavouritesChange);
   }
 
+  /**
+   * Removes the listener when the component is unmounted
+   * @memberof Favourites
+   * @method componentWillUnmount
+   * @return {void}
+   */
   componentWillUnmount() {
     FavouritesStore.removeChangeListener(this.onFavouritesChange);
   }
 
+  /**
+   * Sets state when FavouritesStore is updated
+   * @memberof Favourites
+   * @method onFavouritesChange
+   * @return {void}
+   */
   onFavouritesChange() {
     this.setState({
-      favouriteArticles: FavouritesStore.getFavouriteArticles(),
-      favouriteSources: FavouritesStore.getFavouriteSources()
+      favouriteArticles: FavouritesStore.loadFavouriteArticles(),
+      favouriteSources: FavouritesStore.loadFavouriteSources()
     });
   }
   render() {

@@ -11,7 +11,6 @@ import AppFavourites from '../actions/AppFavourites';
 /**
  * @class ArticleCard
  * @extends {Component}
- * @method saveToFavouriteArticles
  * @param {object} props
  */
 
@@ -29,6 +28,8 @@ class ArticleCard extends Component {
   /**
    * Save a user's favourite article to the database
    * @memberof ArticleCard
+   * @method saveToFavouriteArticles
+   * @return {void}
    */
 
   saveToFavouriteArticles() {
@@ -56,16 +57,17 @@ class ArticleCard extends Component {
   }
 
   /**
+   * Truncates  a very long article description or title
+   * @memberof ArticleCard
    * @param {string} word
    * @param {number} limit
    * @param {string} endChar
    * @return {string} newText
-   * @memberof ArticleCard
    */
 
   setChar(word, limit, endChar) {
     const newText = word;
-    if (newText === null) {
+    if (newText === null || newText === undefined) {
       return 'No text available';
     }
     return `${newText.substring(0, limit) + endChar}`;

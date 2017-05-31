@@ -11,6 +11,7 @@ import AppBar from 'material-ui/AppBar';
 import Routes from './Routes';
 import UserAvatar from './components/UserAvatar.jsx';
 import HomeTabs from './components/HomeTabs.jsx';
+import '../www/main.scss';
 
 injectTapEventPlugin();
 
@@ -39,7 +40,14 @@ class App extends Component {
       tabs: null
     };
   }
+
+  /**
+   * @memberof App
+   * @method componentWillMount
+   * @return {void}
+   */
   componentWillMount = () => {
+    // Sets state for userInfo and tabs if localStorage.user is true
     if (localStorage.user) {
       const user = JSON.parse(localStorage.getItem('user'));
       this.setState({

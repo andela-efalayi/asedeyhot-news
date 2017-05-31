@@ -19,18 +19,36 @@ class NewsSourcesStore extends EventEmitter {
     this.sources = [];
   }
 
+  /**
+   * @memberof NewsSourcesStore
+   * @return {void}
+   */
   loadAllSources() {
     return this.sources;
   }
 
+  /**
+   * @memberof NewsSourcesStore
+   * @param {func} callback
+   * @return {void}
+   */
   addChangeListener(callback) {
     this.on(CHANGE_EVENT, callback);
   }
 
+  /**
+   * @memberof NewsSourcesStore
+   * @param {func} callback
+   * @return {void}
+   */
   removeChangeListener(callback) {
     this.removeListener(CHANGE_EVENT, callback);
   }
 
+  /**
+   * @memberof NewsSourcesStore
+   * @return {void}
+   */
   emitChange() {
     this.emit(CHANGE_EVENT);
   }
@@ -38,10 +56,7 @@ class NewsSourcesStore extends EventEmitter {
 
 const newsSourcesStore = new NewsSourcesStore();
 
-/**
- * Register dispatcher
- * @param {object} payload
- */
+// Registers AppDispatcher with payload
 AppDispatcher.register((payload) => {
   switch (payload.actionType) {
   case AppActionTypes.GET_NEWS_SOURCES:

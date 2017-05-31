@@ -6,26 +6,27 @@ jest.mock('../../../app/dispatcher/AppDispatcher');
 jest.dontMock('../../../app/stores/ArticlesStore');
 const callback = AppDispatcher.register.mock.calls[0][0];
 
-describe('ArticlesStore', () => {
-  const payload = {
-    actionType: AppActionTypes.GET_ARTICLES,
-    articles: [{
-      title: 'some title',
-      description: 'some description',
-      url: 'some url',
-      sortBy: 'top'
-    },
-    {
-      title: 'some other title',
-      description: 'some other description',
-      url: 'some other url',
-      sortBy: 'latest'
-    }]
-  };
+const listenerCb = () => (
+  'listenerCb'
+);
 
-  const listenerCb = () => {
-    return 'listenerCb';
-  };
+const payload = {
+  actionType: AppActionTypes.GET_ARTICLES,
+  articles: [{
+    title: 'some title',
+    description: 'some description',
+    url: 'some url',
+    sortBy: 'top'
+  },
+  {
+    title: 'some other title',
+    description: 'some other description',
+    url: 'some other url',
+    sortBy: 'latest'
+  }]
+};
+
+describe('ArticlesStore', () => {
   it('initial articles array should be empty', () => {
     expect(ArticlesStore.articles.length).toEqual(0);
   });

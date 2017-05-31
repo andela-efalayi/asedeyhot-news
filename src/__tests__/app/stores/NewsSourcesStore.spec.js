@@ -6,45 +6,45 @@ jest.mock('../../../app/dispatcher/AppDispatcher');
 jest.dontMock('../../../app/stores/NewsSourcesStore');
 const callback = AppDispatcher.register.mock.calls[0][0];
 
-describe('ArticlesStore', () => {
-  const payload = {
-    actionType: AppActionTypes.GET_NEWS_SOURCES,
-    sources: [{
-      id: 'abc-news-au',
-      name: 'ABC News (AU)',
-      description: "Australia's most trusted source",
-      url: 'http://www.abc.net.au/news',
-      category: 'general',
-      language: 'en',
-      country: 'au',
-      urlsToLogos: {
-        small: '',
-        medium: '',
-        large: ''
-      },
-      sortBysAvailable: ['top']
+const payload = {
+  actionType: AppActionTypes.GET_NEWS_SOURCES,
+  sources: [{
+    id: 'abc-news-au',
+    name: 'ABC News (AU)',
+    description: "Australia's most trusted source",
+    url: 'http://www.abc.net.au/news',
+    category: 'general',
+    language: 'en',
+    country: 'au',
+    urlsToLogos: {
+      small: '',
+      medium: '',
+      large: ''
     },
-    {
-      id: 'bbc-news',
-      name: 'BBC News',
-      description: 'Use BBC News for up-to-the-minute news',
-      url: 'http://www.bbc.co.uk/news',
-      category: 'general',
-      language: 'en',
-      country: 'gb',
-      urlsToLogos: {
-        small: '',
-        medium: '',
-        large: ''
-      },
-      sortBysAvailable: ['top']
-    }]
-  };
+    sortBysAvailable: ['top']
+  },
+  {
+    id: 'bbc-news',
+    name: 'BBC News',
+    description: 'Use BBC News for up-to-the-minute news',
+    url: 'http://www.bbc.co.uk/news',
+    category: 'general',
+    language: 'en',
+    country: 'gb',
+    urlsToLogos: {
+      small: '',
+      medium: '',
+      large: ''
+    },
+    sortBysAvailable: ['top']
+  }]
+};
 
-  const listenerCb = () => {
-    return 'listenerCb';
-  };
+const listenerCb = () => (
+  'listenerCb'
+);
 
+describe('ArticlesStore', () => {
   it('initial sources array should be empty', () => {
     expect(NewsSourcesStore.sources.length).toEqual(0);
   });

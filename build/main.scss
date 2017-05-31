@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   line-height: 20px;
   > div {
@@ -10,15 +11,61 @@ body {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Slabo 27px', serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.app-bar {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  span, div:last-child {
+    font-family: 'Open Sans', serif !important;
+  }
+}
+
+.home-tabs button {
+  font-family: 'Open Sans', serif !important;
+}
+
+.body {
+  padding-top: 18em;
+  &.favourites {
+    padding-top: 12em;
+  }
+}
+
+.login-page {
+  text-align: center;
+  padding: 235px 0px;
+  h3 {
+    margin-bottom: 40px;
+  }
+  p {
+    margin-top: 20px;
+  }
+}
+
 footer {
-  margin-top: 1em;
+  margin-top: 2em;
   text-align: center;
   padding: 1em;
-  background: rgb(0, 188, 212);
+  background: rgb(0, 150, 136);
+  color: #795548;
   p {
     font-size: 14px;
     text-transform: capitalize;
-    color: #fff;
+  }
+  .footer-icon {
+    margin: 0px 4px;
   }
 }
 
@@ -26,9 +73,27 @@ footer {
   color: red;
 }
 
+.filter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  top: 151px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.select > div {
+  padding-top: 0px;
+}
+
+.filter label {
+  font-family: 'Slabo 27px', serif;
+}
+
 .searchBar {
   padding: 0.3em 15px;
-  background: fff;
+  background: #fff;
 }
 
 .sortBarTitle {
@@ -41,68 +106,72 @@ footer {
 }
 
 .card {
-  height: 220px;
-  margin-bottom: 15px;
+  height: 290px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+
+.favourites .card {
+  margin-bottom: 20px;
+  padding-top: 15px;
+}
+
+.card {
+  &:hover {
+    border: 2px solid #009688;
+  }
   .title {
     padding-left: 18px;
   }
-  &.withImage {
-    height: 450px;
-    img {
-      height: 200px;
+  &.with-image {
+    height: 510px;
+    .article-title {
+      height: 80px;
     }
+    img {
+      height: 220px;
+    }
+  }
+  .card-description {
+    height: 80px;
+    margin-bottom: 10px;
   }
 }
 
-.description {
-  height: 80px;
-  overflow: hidden;
-  > span {
-    overflow: hidden;
-    max-height: 25ch;
+.card-description .read-more {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.card-actions > button {
+  float: right;
+  > div > svg {
+    color: red !important;
   }
+}
+
+.source-actions > button > div > svg {
+  color: red !important;
 }
 
 .favourites {
-  margin-top: 15px;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  padding: 1em 1em 1em 2em;
-  &:last-child {
-    margin-right: 0px;
-    min-height: 300px;
+  p {
+    font-size: 12px;
   }
-  h3 {
-    font-weight: 400;
-    text-align: center;
+  .card {
+    height: 300px;
   }
-}
-
-h4 {
-  font-weight: 400;
-  text-align: center;
-}
-
-.favourites h3 {
-  margin-bottom: 25px;
+  img {
+    height: 150px;
+  }
+  .list {
+    margin-top: 25px;
+  }
 }
 
 span.readMore {
   float: right;
   margin-bottom: 10px;
-}
-
-.cardActions > button > div > svg {
-  color: red !important;
-}
-
-.archiveItem {
-  height: 150px;
-  margin-bottom: 10px;
-  img {
-    height: 150px;
-    width: auto;
-  }
 }
 
 .signOutPopOver {

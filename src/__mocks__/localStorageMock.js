@@ -1,3 +1,9 @@
+
+/**
+ * A mock function for localSrorage
+ * @function localStorageMock
+ * @return {object} localStorage methods
+ */
 const localStorageMock = (() => {
   let store = {};
 

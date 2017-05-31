@@ -19,9 +19,9 @@ const payload = {
   }
 };
 
-const listenerCb = () => {
-  return 'listenerCb';
-};
+const listenerCb = () => (
+  'listenerCb'
+);
 
 describe('FavouriteStore', () => {
   it('should have a addChangeListener method', () => {
@@ -38,9 +38,9 @@ describe('FavouriteStore', () => {
   });
   it('should should update store favourite articles and sources', () => {
     callback(payload);
-    expect(FavouritesStore.getFavouriteArticles())
+    expect(FavouritesStore.loadFavouriteArticles())
       .toEqual(payload.favouriteArticles);
-    expect(FavouritesStore.getFavouriteSources())
+    expect(FavouritesStore.loadFavouriteSources())
       .toEqual(payload.favouriteSources);
   });
   it('addChangeListener works', () => {

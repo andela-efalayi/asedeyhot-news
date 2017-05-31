@@ -1,7 +1,7 @@
 import mockedAxios from '../../../__mocks__/axios';
 import AppActionTypes from '../../../app/constants/AppActionTypes';
 import AppDispatcher from '../../../app/dispatcher/AppDispatcher';
-import LoadArticles from '../../../app/actions/GetArticles';
+import GetArticles from '../../../app/actions/GetArticles';
 
 describe('GetSources.js', () => {
   let dispatchSpy;
@@ -15,7 +15,7 @@ describe('GetSources.js', () => {
   });
 
   it('should get articles from NewsAPI when called', () =>
-    LoadArticles().then(() => {
+    GetArticles().then(() => {
       const mockDispatchCall = dispatchSpy.mock.calls[0][0];
       expect(dispatchSpy).toHaveBeenCalled();
       expect(mockDispatchCall.actionType).toEqual(AppActionTypes.GET_ARTICLES);

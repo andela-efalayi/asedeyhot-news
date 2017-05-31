@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchBar.jsx should match SearchBar component snapshot 1`] = `
+exports[`SearchBar.jsx should match component snapshot 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -16,22 +16,12 @@ ShallowWrapper {
         disabled={false}
         floatingLabelFixed={false}
         fullWidth={true}
-        hintStyle={
-            Object {
-                "color": "white",
-              }
-        }
         hintText="Search for a news source"
         multiLine={false}
         onChange={undefined}
         rows={1}
         type="text"
         underlineShow={true}
-        underlineStyle={
-            Object {
-                "borderColor": "#009688",
-              }
-        }
     />
 </Toolbar>,
   "nodes": Array [
@@ -43,22 +33,12 @@ ShallowWrapper {
             disabled={false}
             floatingLabelFixed={false}
             fullWidth={true}
-            hintStyle={
-                  Object {
-                        "color": "white",
-                      }
-            }
             hintText="Search for a news source"
             multiLine={false}
             onChange={undefined}
             rows={1}
             type="text"
             underlineShow={true}
-            underlineStyle={
-                  Object {
-                        "borderColor": "#009688",
-                      }
-            }
       />
 </Toolbar>,
   ],
@@ -104,22 +84,12 @@ ShallowWrapper {
                     disabled={false}
                     floatingLabelFixed={false}
                     fullWidth={true}
-                    hintStyle={
-                              Object {
-                                        "color": "white",
-                                      }
-                    }
                     hintText="Search for a news source"
                     multiLine={false}
                     onChange={undefined}
                     rows={1}
                     type="text"
                     underlineShow={true}
-                    underlineStyle={
-                              Object {
-                                        "borderColor": "#009688",
-                                      }
-                    }
           />
 </Toolbar>,
         "_debugID": 2,
@@ -131,22 +101,12 @@ ShallowWrapper {
                     disabled={false}
                     floatingLabelFixed={false}
                     fullWidth={true}
-                    hintStyle={
-                              Object {
-                                        "color": "white",
-                                      }
-                    }
                     hintText="Search for a news source"
                     multiLine={false}
                     onChange={undefined}
                     rows={1}
                     type="text"
                     underlineShow={true}
-                    underlineStyle={
-                              Object {
-                                        "borderColor": "#009688",
-                                      }
-                    }
           />
 </Toolbar>,
       },

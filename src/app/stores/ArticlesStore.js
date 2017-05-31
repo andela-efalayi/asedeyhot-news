@@ -19,18 +19,36 @@ class ArticlesStore extends EventEmitter {
     this.articles = [];
   }
 
+  /**
+   * @memberof ArticlesStore
+   * @return {void}
+   */
   loadArticles() {
     return this.articles;
   }
 
+  /**
+   * @memberof ArticlesStore
+   * @param {func} callback
+   * @return {void}
+   */
   addChangeListener(callback) {
     this.on(CHANGE_EVENT, callback);
   }
 
+  /**
+   * @memberof ArticlesStore
+   * @param {func} callback
+   * @return {void}
+   */
   removeChangeListener(callback) {
     this.removeListener(CHANGE_EVENT, callback);
   }
 
+  /**
+   * @memberof ArticlesStore
+   * @return {void}
+   */
   emitChange() {
     this.emit(CHANGE_EVENT);
   }
@@ -38,10 +56,7 @@ class ArticlesStore extends EventEmitter {
 
 const articlesStore = new ArticlesStore();
 
-/**
- * Register dispatcher
- * @param {object} payload
- */
+// Register AppDispatcher with payload
 AppDispatcher.register((payload) => {
   switch (payload.actionType) {
   case AppActionTypes.GET_ARTICLES:

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FavouriteArticles.jsx should match FavouritesArticles component snapshot 1`] = `
+exports[`FavouriteArticles.jsx should match component snapshot 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],

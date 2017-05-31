@@ -2,15 +2,14 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import FavouriteSources from '../../../app/components/FavouriteSources.jsx';
 
-const emptyResponseFromFirebase = null;
+let emptyResponseFromFirebase;
 
 const favouriteSources = {
   'Associated Press': 'http://bigstory.ap.org'
 };
 
 describe('FavouriteSources.jsx', () => {
-  it('should match FavouriteSources component snapshot',
-  () => {
+  it('should match FavouriteSources component snapshot', () => {
     const wrapper = shallow(
         <FavouriteSources sources={favouriteSources}/>
     );
@@ -21,7 +20,7 @@ describe('FavouriteSources.jsx', () => {
         <FavouriteSources sources={emptyResponseFromFirebase}/>
     );
     expect(wrapper.containsMatchingElement(
-      <h4>You have no saved sources.</h4>)
+      <p>You have no saved sources.</p>)
     ).toEqual(true);
   });
 });

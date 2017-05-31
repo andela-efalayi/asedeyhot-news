@@ -29,18 +29,22 @@ describe('SourceCard.jsx', () => {
     <SourceCard source={sourceWithShortDescription}/>
   );
 
-  describe('Component with long source description', () => {
-    it('should be truncated to 123 characters', () => {
+  describe('Component', () => {
+    it('should match match snaphots', () => {
       expect(wrapper).toMatchSnapshot();
+      expect(anotherWrapper).toMatchSnapshot();
+    });
+  });
+
+  describe('Component with long source description', () => {
+    it('should have a description truncated to 123 characters', () => {
       expect(wrapper.find('.card-description').childAt(0).node.length)
       .toEqual(123);
     });
   });
 
-  describe('Component with short source description should not be truncated',
-  () => {
-    it('should match a SourceCard component snapshot', () => {
-      expect(anotherWrapper).toMatchSnapshot();
+  describe('Component with short source description', () => {
+    it('should not be truncated', () => {
       expect(anotherWrapper.find('.card-description').childAt(0).node.length)
       .toEqual(sourceWithShortDescription.description.length);
     });

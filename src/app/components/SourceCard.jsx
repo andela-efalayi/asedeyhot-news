@@ -30,26 +30,24 @@ class SourceCard extends Component {
   }
 
   /**
-   * Save a new favourite source to the database
+   * Saves a new favourite source to the database
    * @memberof SourceCard
+   * @method saveToFavouriteSources
+   * @return {void}
    */
 
   saveToFavouriteSources() {
     const source = this.props.source;
     AppFavourites.saveToFavouriteSources(source)
     .then((status) => {
-      /**
-     * Update view if successful
-     */
+      // Update view if successful
       this.setState({
         favIcon: <Favorite />,
         tooltip: status
       });
     })
     .catch((error) => {
-      /**
-     * Update view if successful
-     */
+      // Update view if successful
       swal(
         'Sorry',
          error,
@@ -61,6 +59,8 @@ class SourceCard extends Component {
   /**
    * Save a currently selected source to localStorage
    * @memberof SourceCard
+   * @method setCurrentSource
+   * @return {void}
    */
 
   setCurrentSource(source) {

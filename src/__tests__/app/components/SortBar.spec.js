@@ -15,7 +15,7 @@ describe('SortBar.jsx', () => {
     sortOptions={sortBarDetails.sortOptions}
     id={sortBarDetails.id}
     title={sortBarDetails.title} />);
-  it('should match SortBar component snapshot', () => {
+  it('should match component snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('should have a select field with one option item', () => {

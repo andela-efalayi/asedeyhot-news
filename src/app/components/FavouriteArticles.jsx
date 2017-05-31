@@ -10,10 +10,11 @@ import { Card, CardMedia, CardText } from 'material-ui/Card';
  */
 
 const FavouriteArticles = ({ articles }) => {
-  if (articles === null) {
+  // Checks if favourite articles gotten form database is undefined
+  if (articles === undefined) {
     return (
       <div>
-        <h4>You have no saved articles.</h4>
+        <p>You have no saved articles.</p>
       </div>
     );
   }

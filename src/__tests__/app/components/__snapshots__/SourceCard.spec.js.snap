@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SourceCard.jsx Component with long source description should be truncated to 123 characters 1`] = `
+exports[`SourceCard.jsx Component should match match snaphots 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -369,7 +369,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`SourceCard.jsx Component with short source description should not be truncated should match a SourceCard component snapshot 1`] = `
+exports[`SourceCard.jsx Component should match match snaphots 2`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
