@@ -35,9 +35,11 @@ I welcome any form of contribution. If you feel something can be done better or 
 or you are just interested in a specific part of the project, but not sure where to begin, feel free to ask.
 On the other hand if the contribution you wish to make has not been documented in an existing issue, please [create new issue](https://github.com/andela-efalayi/asedeyhot-news/issues/new) before submitting your [pull request](https://help.github.com/articles/about-pull-requests/).
 
+```block
 #### Limitations
 - Presently, this news app can not share articles/headlines. This is a future 
 funcationality that would be implemented.
+```
 
 ***
 #### Testing
