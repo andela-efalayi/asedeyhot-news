@@ -42,13 +42,12 @@ funcationality that would be implemented.
 ***
 #### Testing
 All app components, actions, and stores were tested using [Facebook's Jest](https://facebook.github.io/jest/)
-The test files can be found in the [__tests__ folder](github.com/andela-efalayi/asedeyhot-news/tree/feedback-branch/src/__tests__).
+The test files can be found in the [__tests__ folder](src/__tests__).
 
 - To run the tests, run `npm test` on the command line. This automatically runs `jest` on all test files.
 - You can also run `jest` directly. However, [jest-cli](https://www.npmjs.com/package/jest-cli) needs to be globally installed on your machine.
 
 ***
-###### Licence
-```block
-[MIT](github.com/andela-efalayi/asedeyhot-news/tree/feedback-branch/LICENSE.txt) | [Esther Falayi](github.com/andela-efalayi/) | Andela, Nigeria
-```
+##### License
+[MIT](LICENSE.txt) © 2017 | [Esther Falayi](github.com/andela-efalayi/) | Andela, Nigeria
+
