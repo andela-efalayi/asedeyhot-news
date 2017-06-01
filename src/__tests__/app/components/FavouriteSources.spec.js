@@ -1,17 +1,14 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import FavouriteSources from '../../../app/components/FavouriteSources.jsx';
+import * as mockValue from '../../../__mocks__/mockValues';
 
 let emptyResponseFromFirebase;
-
-const favouriteSources = {
-  'Associated Press': 'http://bigstory.ap.org'
-};
 
 describe('FavouriteSources.jsx', () => {
   it('should match FavouriteSources component snapshot', () => {
     const wrapper = shallow(
-        <FavouriteSources sources={favouriteSources}/>
+        <FavouriteSources sources={mockValue.favouriteSources}/>
     );
     expect(wrapper).toMatchSnapshot();
   });

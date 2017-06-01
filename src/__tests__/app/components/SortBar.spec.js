@@ -1,14 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import SortBar from '../../../app/components/SortBar.jsx';
+import * as mockValue from '../../../__mocks__/mockValues';
 
 jest.dontMock('../../../app/components/SortBar.jsx');
 
-const sortBarDetails = {
-  currentSortOption: 'top',
-  title: 'ABC News (AU)',
-  sortOptions: ['top']
-};
+const sortBarDetails = mockValue.sortBarDetails;
 
 describe('SortBar.jsx', () => {
   const wrapper = shallow(<SortBar

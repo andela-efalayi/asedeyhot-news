@@ -14,7 +14,7 @@ const changeTab = (tab) => {
 
 const HomeTabs = () => {
   return (
-    <Tabs className="home-tabs">
+    <Tabs className="home-tabs" >
       <Tab icon={<Public />} data-route="#/sources"
       label="sources" onActive={changeTab}/>
       <Tab icon={<FavoriteBorder />} data-route="#/favourites"

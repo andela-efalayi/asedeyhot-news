@@ -1,32 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import SourceCard from '../../../app/components/SourceCard.jsx';
-
-const sourceWithLongDescription = {
-  id: 'al-jazeera-english',
-  name: 'Al Jazeera English',
-  category: 'general',
-  description: 'News, analysis from the Middle East and worldwide,' +
-    'multimedia and interactives, opinions, documentaries, podcasts,' +
-    'long reads and broadcast schedule.',
-  url: 'http://www.aljazeera.com',
-  sortBysAvailable: ['top', 'latest']
-};
-const sourceWithShortDescription = {
-  id: 'al-jazeera-english',
-  name: 'Al Jazeera English',
-  category: 'general',
-  description: 'News, analysis from the Middle East',
-  url: 'http://www.aljazeera.com',
-  sortBysAvailable: ['top', 'latest']
-};
+import * as mockValue from '../../../__mocks__/mockValues';
 
 describe('SourceCard.jsx', () => {
   const wrapper = shallow(
-    <SourceCard source={sourceWithLongDescription}/>
+    <SourceCard source={mockValue.sourceWithLongDescription}/>
   );
   const anotherWrapper = shallow(
-    <SourceCard source={sourceWithShortDescription}/>
+    <SourceCard source={mockValue.sourceWithShortDescription}/>
   );
 
   describe('Component', () => {
@@ -46,7 +28,7 @@ describe('SourceCard.jsx', () => {
   describe('Component with short source description', () => {
     it('should not be truncated', () => {
       expect(anotherWrapper.find('.card-description').childAt(0).node.length)
-      .toEqual(sourceWithShortDescription.description.length);
+      .toEqual(mockValue.sourceWithShortDescription.description.length);
     });
   });
 

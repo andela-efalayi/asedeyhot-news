@@ -1,22 +1,15 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import FavouriteArticles from '../../../app/components/FavouriteArticles.jsx';
+import * as mockValue from '../../../__mocks__/mockValues';
 
 let emptyResponseFromFirebase;
-
-const favouriteArticles = {
-  title: {
-    author: 'BBC News',
-    description: 'The party says it would prioritise',
-    url: 'http://www.bbc.co.uk/news/uk-politics-39698465'
-  }
-};
 
 describe('FavouriteArticles.jsx', () => {
   it('should match component snapshot',
     () => {
       const wrapper = shallow(
-          <FavouriteArticles articles={favouriteArticles}/>
+          <FavouriteArticles articles={mockValue.favouriteArticles}/>
       );
       expect(wrapper).toMatchSnapshot();
     });

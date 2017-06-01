@@ -3,7 +3,7 @@
  * @function mockApiCall
  * @return {object} promise
  */
-import testdata from './dataMock.json';
+import testdata from './axiosData.json';
 
 const mockApiCall = {
   get() {
