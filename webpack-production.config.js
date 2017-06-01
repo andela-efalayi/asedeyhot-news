@@ -22,7 +22,7 @@ const config = {
     filename: 'app.js', // Name of output file
   },
   plugins: [
-    new ExtractTextPlugin('../src/www/main.css'),
+    new ExtractTextPlugin('main.css'),
     // Define production build to allow React to strip out unnecessary checks
     new webpack.DefinePlugin({
       'process.env': {
