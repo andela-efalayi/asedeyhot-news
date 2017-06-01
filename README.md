@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/andela-efalayi/asedeyhot-news.svg?branch=updates)](https://travis-ci.org/andela-efalayi/asedeyhot-news) [![Coverage Status](https://coveralls.io/repos/github/andela-efalayi/asedeyhot-news/badge.svg?branch=updates)](https://coveralls.io/github/andela-efalayi/asedeyhot-news?branch=updates)
+[![Build Status](https://travis-ci.org/andela-efalayi/asedeyhot-news.svg?branch=feedback-branch)](https://travis-ci.org/andela-efalayi/asedeyhot-news)[![Coverage Status][![Coverage Status](https://coveralls.io/repos/github/andela-efalayi/asedeyhot-news/badge.svg?branch=feedback-branch)](https://coveralls.io/github/andela-efalayi/asedeyhot-news?branch=feedback-branch)
+[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
 
 # AsEDeyHot 
 This news feed application gathers latest, popular, and top headlines from around the globe. 
