@@ -4,7 +4,8 @@
   "description": "\"A news feed application that integrates NewsAPI\"",
   "scripts": {
     "test": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "start": "webpack && webpack-dev-server --config webpack.config.js --progress --inline --colors",
+    "start:dev": "webpack && webpack-dev-server --config webpack.config.js --progress --inline --colors",
+    "start": "npm run build && node server.js",
     "build": "webpack --config webpack-production.config.js --progress --colors",
     "update": "jest --updateSnapshot"
   },
