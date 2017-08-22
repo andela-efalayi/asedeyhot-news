@@ -1,0 +1,739 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SourceCard.jsx Component should match match snaphots 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Card
+    className="card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+>
+    <div
+        className="title"
+    >
+        <h3
+            onClick={[Function]}
+        >
+            <Link
+                replace={false}
+                to={
+                    Object {
+                        "pathname": "/sources/al-jazeera-english",
+                      }
+                }
+            >
+                Al Jazeera English
+                 
+            </Link>
+        </h3>
+        <h6>
+            GENERAL
+        </h6>
+    </div>
+    <CardText
+        className="card-description"
+    >
+        News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long re...
+    </CardText>
+    <CardActions
+        className="source-actions"
+    >
+        <IconButton
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltip="Add to favourite sources"
+            tooltipPosition="bottom-right"
+            touch={true}
+        >
+            <ActionFavoriteBorder />
+        </IconButton>
+        <IconButton
+            containerElement={
+                <Link
+                    replace={false}
+                    to="/sources/al-jazeera-english"
+                />
+            }
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltip="View headlines"
+            tooltipPosition="bottom-right"
+            touch={true}
+        >
+            <ActionZoomIn />
+        </IconButton>
+    </CardActions>
+</Card>,
+  "nodes": Array [
+    <Card
+      className="card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
+>
+      <div
+            className="title"
+      >
+            <h3
+                  onClick={[Function]}
+            >
+                  <Link
+                        replace={false}
+                        to={
+                              Object {
+                                    "pathname": "/sources/al-jazeera-english",
+                                  }
+                        }
+                  >
+                        Al Jazeera English
+                         
+                  </Link>
+            </h3>
+            <h6>
+                  GENERAL
+            </h6>
+      </div>
+      <CardText
+            className="card-description"
+      >
+            News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long re...
+      </CardText>
+      <CardActions
+            className="source-actions"
+      >
+            <IconButton
+                  disableTouchRipple={false}
+                  disabled={false}
+                  iconStyle={Object {}}
+                  onClick={[Function]}
+                  tooltip="Add to favourite sources"
+                  tooltipPosition="bottom-right"
+                  touch={true}
+            >
+                  <ActionFavoriteBorder />
+            </IconButton>
+            <IconButton
+                  containerElement={
+                        <Link
+                              replace={false}
+                              to="/sources/al-jazeera-english"
+                        />
+                  }
+                  disableTouchRipple={false}
+                  disabled={false}
+                  iconStyle={Object {}}
+                  onClick={[Function]}
+                  tooltip="View headlines"
+                  tooltipPosition="bottom-right"
+                  touch={true}
+            >
+                  <ActionZoomIn />
+            </IconButton>
+      </CardActions>
+</Card>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <SourceCard
+        source={
+                Object {
+                        "category": "general",
+                        "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+                        "id": "al-jazeera-english",
+                        "name": "Al Jazeera English",
+                        "sortBysAvailable": Array [
+                          "top",
+                          "latest",
+                        ],
+                        "url": "http://www.aljazeera.com",
+                      }
+        }
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": SourceCard {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "source": Object {
+            "category": "general",
+            "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+            "id": "al-jazeera-english",
+            "name": "Al Jazeera English",
+            "sortBysAvailable": Array [
+              "top",
+              "latest",
+            ],
+            "url": "http://www.aljazeera.com",
+          },
+        },
+        "refs": Object {},
+        "saveToFavouriteSources": [Function],
+        "setCurrentSource": [Function],
+        "state": Object {
+          "favIcon": <ActionFavoriteBorder />,
+          "tooltip": "Add to favourite sources",
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Card
+          className="card"
+          expandable={false}
+          expanded={null}
+          initiallyExpanded={false}
+>
+          <div
+                    className="title"
+          >
+                    <h3
+                              onClick={[Function]}
+                    >
+                              <Link
+                                        replace={false}
+                                        to={
+                                                  Object {
+                                                            "pathname": "/sources/al-jazeera-english",
+                                                          }
+                                        }
+                              >
+                                        Al Jazeera English
+                                         
+                              </Link>
+                    </h3>
+                    <h6>
+                              GENERAL
+                    </h6>
+          </div>
+          <CardText
+                    className="card-description"
+          >
+                    News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long re...
+          </CardText>
+          <CardActions
+                    className="source-actions"
+          >
+                    <IconButton
+                              disableTouchRipple={false}
+                              disabled={false}
+                              iconStyle={Object {}}
+                              onClick={[Function]}
+                              tooltip="Add to favourite sources"
+                              tooltipPosition="bottom-right"
+                              touch={true}
+                    >
+                              <ActionFavoriteBorder />
+                    </IconButton>
+                    <IconButton
+                              containerElement={
+                                        <Link
+                                                  replace={false}
+                                                  to="/sources/al-jazeera-english"
+                                        />
+                              }
+                              disableTouchRipple={false}
+                              disabled={false}
+                              iconStyle={Object {}}
+                              onClick={[Function]}
+                              tooltip="View headlines"
+                              tooltipPosition="bottom-right"
+                              touch={true}
+                    >
+                              <ActionZoomIn />
+                    </IconButton>
+          </CardActions>
+</Card>,
+        "_debugID": 2,
+        "_renderedOutput": <Card
+          className="card"
+          expandable={false}
+          expanded={null}
+          initiallyExpanded={false}
+>
+          <div
+                    className="title"
+          >
+                    <h3
+                              onClick={[Function]}
+                    >
+                              <Link
+                                        replace={false}
+                                        to={
+                                                  Object {
+                                                            "pathname": "/sources/al-jazeera-english",
+                                                          }
+                                        }
+                              >
+                                        Al Jazeera English
+                                         
+                              </Link>
+                    </h3>
+                    <h6>
+                              GENERAL
+                    </h6>
+          </div>
+          <CardText
+                    className="card-description"
+          >
+                    News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long re...
+          </CardText>
+          <CardActions
+                    className="source-actions"
+          >
+                    <IconButton
+                              disableTouchRipple={false}
+                              disabled={false}
+                              iconStyle={Object {}}
+                              onClick={[Function]}
+                              tooltip="Add to favourite sources"
+                              tooltipPosition="bottom-right"
+                              touch={true}
+                    >
+                              <ActionFavoriteBorder />
+                    </IconButton>
+                    <IconButton
+                              containerElement={
+                                        <Link
+                                                  replace={false}
+                                                  to="/sources/al-jazeera-english"
+                                        />
+                              }
+                              disableTouchRipple={false}
+                              disabled={false}
+                              iconStyle={Object {}}
+                              onClick={[Function]}
+                              tooltip="View headlines"
+                              tooltipPosition="bottom-right"
+                              touch={true}
+                    >
+                              <ActionZoomIn />
+                    </IconButton>
+          </CardActions>
+</Card>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <SourceCard
+    source={
+        Object {
+            "category": "general",
+            "description": "News, analysis from the Middle East and worldwide,multimedia and interactives, opinions, documentaries, podcasts,long reads and broadcast schedule.",
+            "id": "al-jazeera-english",
+            "name": "Al Jazeera English",
+            "sortBysAvailable": Array [
+              "top",
+              "latest",
+            ],
+            "url": "http://www.aljazeera.com",
+          }
+    }
+/>,
+}
+`;
+
+exports[`SourceCard.jsx Component should match match snaphots 2`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <Card
+    className="card"
+    expandable={false}
+    expanded={null}
+    initiallyExpanded={false}
+>
+    <div
+        className="title"
+    >
+        <h3
+            onClick={[Function]}
+        >
+            <Link
+                replace={false}
+                to={
+                    Object {
+                        "pathname": "/sources/al-jazeera-english",
+                      }
+                }
+            >
+                Al Jazeera English
+                 
+            </Link>
+        </h3>
+        <h6>
+            GENERAL
+        </h6>
+    </div>
+    <CardText
+        className="card-description"
+    >
+        News, analysis from the Middle East
+    </CardText>
+    <CardActions
+        className="source-actions"
+    >
+        <IconButton
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltip="Add to favourite sources"
+            tooltipPosition="bottom-right"
+            touch={true}
+        >
+            <ActionFavoriteBorder />
+        </IconButton>
+        <IconButton
+            containerElement={
+                <Link
+                    replace={false}
+                    to="/sources/al-jazeera-english"
+                />
+            }
+            disableTouchRipple={false}
+            disabled={false}
+            iconStyle={Object {}}
+            onClick={[Function]}
+            tooltip="View headlines"
+            tooltipPosition="bottom-right"
+            touch={true}
+        >
+            <ActionZoomIn />
+        </IconButton>
+    </CardActions>
+</Card>,
+  "nodes": Array [
+    <Card
+      className="card"
+      expandable={false}
+      expanded={null}
+      initiallyExpanded={false}
+>
+      <div
+            className="title"
+      >
+            <h3
+                  onClick={[Function]}
+            >
+                  <Link
+                        replace={false}
+                        to={
+                              Object {
+                                    "pathname": "/sources/al-jazeera-english",
+                                  }
+                        }
+                  >
+                        Al Jazeera English
+                         
+                  </Link>
+            </h3>
+            <h6>
+                  GENERAL
+            </h6>
+      </div>
+      <CardText
+            className="card-description"
+      >
+            News, analysis from the Middle East
+      </CardText>
+      <CardActions
+            className="source-actions"
+      >
+            <IconButton
+                  disableTouchRipple={false}
+                  disabled={false}
+                  iconStyle={Object {}}
+                  onClick={[Function]}
+                  tooltip="Add to favourite sources"
+                  tooltipPosition="bottom-right"
+                  touch={true}
+            >
+                  <ActionFavoriteBorder />
+            </IconButton>
+            <IconButton
+                  containerElement={
+                        <Link
+                              replace={false}
+                              to="/sources/al-jazeera-english"
+                        />
+                  }
+                  disableTouchRipple={false}
+                  disabled={false}
+                  iconStyle={Object {}}
+                  onClick={[Function]}
+                  tooltip="View headlines"
+                  tooltipPosition="bottom-right"
+                  touch={true}
+            >
+                  <ActionZoomIn />
+            </IconButton>
+      </CardActions>
+</Card>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <SourceCard
+        source={
+                Object {
+                        "category": "general",
+                        "description": "News, analysis from the Middle East",
+                        "id": "al-jazeera-english",
+                        "name": "Al Jazeera English",
+                        "sortBysAvailable": Array [
+                          "top",
+                          "latest",
+                        ],
+                        "url": "http://www.aljazeera.com",
+                      }
+        }
+/>,
+      "_debugID": 3,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": SourceCard {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "source": Object {
+            "category": "general",
+            "description": "News, analysis from the Middle East",
+            "id": "al-jazeera-english",
+            "name": "Al Jazeera English",
+            "sortBysAvailable": Array [
+              "top",
+              "latest",
+            ],
+            "url": "http://www.aljazeera.com",
+          },
+        },
+        "refs": Object {},
+        "saveToFavouriteSources": [Function],
+        "setCurrentSource": [Function],
+        "state": Object {
+          "favIcon": <ActionFavoriteBorder />,
+          "tooltip": "Add to favourite sources",
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 2,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <Card
+          className="card"
+          expandable={false}
+          expanded={null}
+          initiallyExpanded={false}
+>
+          <div
+                    className="title"
+          >
+                    <h3
+                              onClick={[Function]}
+                    >
+                              <Link
+                                        replace={false}
+                                        to={
+                                                  Object {
+                                                            "pathname": "/sources/al-jazeera-english",
+                                                          }
+                                        }
+                              >
+                                        Al Jazeera English
+                                         
+                              </Link>
+                    </h3>
+                    <h6>
+                              GENERAL
+                    </h6>
+          </div>
+          <CardText
+                    className="card-description"
+          >
+                    News, analysis from the Middle East
+          </CardText>
+          <CardActions
+                    className="source-actions"
+          >
+                    <IconButton
+                              disableTouchRipple={false}
+                              disabled={false}
+                              iconStyle={Object {}}
+                              onClick={[Function]}
+                              tooltip="Add to favourite sources"
+                              tooltipPosition="bottom-right"
+                              touch={true}
+                    >
+                              <ActionFavoriteBorder />
+                    </IconButton>
+                    <IconButton
+                              containerElement={
+                                        <Link
+                                                  replace={false}
+                                                  to="/sources/al-jazeera-english"
+                                        />
+                              }
+                              disableTouchRipple={false}
+                              disabled={false}
+                              iconStyle={Object {}}
+                              onClick={[Function]}
+                              tooltip="View headlines"
+                              tooltipPosition="bottom-right"
+                              touch={true}
+                    >
+                              <ActionZoomIn />
+                    </IconButton>
+          </CardActions>
+</Card>,
+        "_debugID": 4,
+        "_renderedOutput": <Card
+          className="card"
+          expandable={false}
+          expanded={null}
+          initiallyExpanded={false}
+>
+          <div
+                    className="title"
+          >
+                    <h3
+                              onClick={[Function]}
+                    >
+                              <Link
+                                        replace={false}
+                                        to={
+                                                  Object {
+                                                            "pathname": "/sources/al-jazeera-english",
+                                                          }
+                                        }
+                              >
+                                        Al Jazeera English
+                                         
+                              </Link>
+                    </h3>
+                    <h6>
+                              GENERAL
+                    </h6>
+          </div>
+          <CardText
+                    className="card-description"
+          >
+                    News, analysis from the Middle East
+          </CardText>
+          <CardActions
+                    className="source-actions"
+          >
+                    <IconButton
+                              disableTouchRipple={false}
+                              disabled={false}
+                              iconStyle={Object {}}
+                              onClick={[Function]}
+                              tooltip="Add to favourite sources"
+                              tooltipPosition="bottom-right"
+                              touch={true}
+                    >
+                              <ActionFavoriteBorder />
+                    </IconButton>
+                    <IconButton
+                              containerElement={
+                                        <Link
+                                                  replace={false}
+                                                  to="/sources/al-jazeera-english"
+                                        />
+                              }
+                              disableTouchRipple={false}
+                              disabled={false}
+                              iconStyle={Object {}}
+                              onClick={[Function]}
+                              tooltip="View headlines"
+                              tooltipPosition="bottom-right"
+                              touch={true}
+                    >
+                              <ActionZoomIn />
+                    </IconButton>
+          </CardActions>
+</Card>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <SourceCard
+    source={
+        Object {
+            "category": "general",
+            "description": "News, analysis from the Middle East",
+            "id": "al-jazeera-english",
+            "name": "Al Jazeera English",
+            "sortBysAvailable": Array [
+              "top",
+              "latest",
+            ],
+            "url": "http://www.aljazeera.com",
+          }
+    }
+/>,
+}
+`;

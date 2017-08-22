@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import Dispatcher from '../dispatcher/appDispatcher';
+import Dispatcher from '../dispatcher/AppDispatcher';
 
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,

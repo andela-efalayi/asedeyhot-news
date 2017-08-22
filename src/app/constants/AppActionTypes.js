@@ -1,11 +1,13 @@
 import keyMirror from 'keymirror';
 
-// Define action constants
+/**
+ * All app action-types
+ */
+
 const AppActionTypes = keyMirror({
-  GET_HEADLINES: null,   // get news headlines based on sources
-  GET_HEADLINES_BY_A_SORT: null,  // get news
-  GET_USER_FAVOURITES: null,
-  LOAD_SOURCES: null
+  GET_ALL_FAVOURITES: null,
+  GET_ARTICLES: null,
+  GET_NEWS_SOURCES: null
 });
 
 export default AppActionTypes;

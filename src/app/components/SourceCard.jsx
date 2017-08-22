@@ -2,77 +2,114 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import Popover from 'material-ui/Popover';
-import Menu from 'material-ui/Menu';
-import MenuItem from 'material-ui/MenuItem';
-
 import { Card, CardActions, CardText } from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import swal from 'sweetalert2';
+import IconButton from 'material-ui/IconButton';
 import FavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
-import Explore from 'material-ui/svg-icons/action/explore';
+import Favorite from 'material-ui/svg-icons/action/favorite';
+import ZoomIn from 'material-ui/svg-icons/action/zoom-in';
+import AppFavourites from '../actions/AppFavourites';
 
-const cardAction = {
-  float: 'right',
-};
+/**
+ * @class SourceCard
+ * @extends {Component}
+ * @method saveToFavouriteSources
+ * @method setCurrentSource
+ * @param {object} props
+ */
 
 class SourceCard extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      open: false,
+      favIcon: <FavoriteBorder />,
+      tooltip: 'Add to favourite sources'
     };
+    this.setCurrentSource = this.setCurrentSource.bind(this);
+    this.saveToFavouriteSources = this.saveToFavouriteSources.bind(this);
   }
 
-  handleTouchTap = (event) => {
-    // This prevents ghost click.
-    event.preventDefault();
+  /**
+   * Saves a new favourite source to the database
+   * @memberof SourceCard
+   * @method saveToFavouriteSources
+   * @return {void}
+   */
 
-    this.setState({
-      open: true,
-      anchorEl: event.currentTarget,
+  saveToFavouriteSources() {
+    const source = this.props.source;
+    AppFavourites.saveToFavouriteSources(source)
+    .then((status) => {
+      // Update view if successful
+      this.setState({
+        favIcon: <Favorite />,
+        tooltip: status
+      });
+    })
+    .catch((error) => {
+      // Update view if successful
+      swal(
+        'Sorry',
+         error,
+        'error'
+      );
     });
-  };
+  }
 
-  handleRequestClose = () => {
-    this.setState({
-      open: false,
-    });
-  };
+  /**
+   * Save a currently selected source to localStorage
+   * @memberof SourceCard
+   * @method setCurrentSource
+   * @return {void}
+   */
+
+  setCurrentSource(source) {
+    const sourceDetails = {
+      id: source.id,
+      name: source.name,
+      sortOptions: source.sortBysAvailable
+    };
+    localStorage.setItem('currentSource', JSON.stringify(sourceDetails));
+  }
 
   render() {
     const source = this.props.source;
+    const setCurrentSource = () => this.setCurrentSource(source);
+    const setChar = (word, limit, endChar) => {
+      const newWord = word;
+      if (newWord.length > limit) {
+        return `${newWord.substring(0, limit) + endChar}`;
+      }
+      return word;
+    };
     return (
-      <Card className="col-xs-6 col-sm-6 col-md-3 card">
+      <Card className="card">
         <div className="title">
-          <h3><a href={source.url}>{source.name}</a></h3>
+          <h3 onClick={setCurrentSource}>
+            <Link to={{
+              pathname: `/sources/${source.id}`
+            }}>
+          {source.name} </Link></h3>
           <h6>{source.category.toUpperCase()}</h6>
         </div>
-        <CardText className="description">
-          <span>{source.description}</span>
+        <CardText className="card-description">
+          {setChar(this.props.source.description,
+            120,
+            '...'
+          )}
         </CardText>
-        <CardActions style={cardAction}>
-           <FlatButton
-            onTouchTap={this.handleTouchTap}
-            label="options" primary
-           />
-           <Popover
-            open={this.state.open}
-            anchorEl={this.state.anchorEl}
-            anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-            targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-            onRequestClose={this.handleRequestClose}
-          >
-            <Menu onChange={this.props.loadHeadlines}>
-              <MenuItem primaryText="View headlines"
-              rightIcon={<Explore />} value={source}
-              containerElement={
-                <Link to={`/sources/${source.id}`}/>}/>
-              <MenuItem primaryText="Add to favourite sources"
-              rightIcon={<FavoriteBorder />}
-              value={[source.name, source.url]} />
-            </Menu>
-        </Popover>
+        <CardActions className="source-actions">
+          <IconButton tooltip={this.state.tooltip} touch
+            onClick={this.saveToFavouriteSources}
+            tooltipPosition="bottom-right">
+            {this.state.favIcon}
+          </IconButton>
+          <IconButton tooltip="View headlines" touch
+            onClick={setCurrentSource}
+            containerElement={<Link to={`/sources/${source.id}`}/>}
+            tooltipPosition="bottom-right">
+            <ZoomIn/>
+          </IconButton>
         </CardActions>
       </Card>
     );
@@ -80,13 +117,7 @@ class SourceCard extends Component {
 }
 
 SourceCard.propTypes = {
-  source: PropTypes.object,
-  loadHeadlines: PropTypes.func
-};
-
-SourceCard.defaultProps = {
-  source: null,
-  loadHeadlines: null
+  source: PropTypes.object
 };
 
 export default SourceCard;

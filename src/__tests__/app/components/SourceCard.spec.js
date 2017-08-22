@@ -1,42 +1,46 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import SourceCard from '../../../app/components/SourceCard.jsx';
+import * as mockValue from '../../../__mocks__/mockValues';
 
-jest.dontMock('../../../app/components/SourceCard.jsx');
-
-const source = {
-  id: 'al-jazeera-english',
-  name: 'Al Jazeera English',
-  category: 'general',
-  description: 'News, analysis from the Middle East and worldwide,' +
-    'multimedia and interactives, opinions, documentaries, podcasts,' +
-    'long reads and broadcast schedule.',
-  url: 'http://www.aljazeera.com',
-  sortBysAvailable: ['top', 'latest']
-};
-
-describe('SourceCard Component', () => {
+describe('SourceCard.jsx', () => {
   const wrapper = shallow(
-        <SourceCard source={source}/>
-    );
-  it('renders a SourceCard for a news source', () => {
-    expect(wrapper.name()).toEqual('Card');
+    <SourceCard source={mockValue.sourceWithLongDescription}/>
+  );
+  const anotherWrapper = shallow(
+    <SourceCard source={mockValue.sourceWithShortDescription}/>
+  );
+
+  describe('Component', () => {
+    it('should match match snaphots', () => {
+      expect(wrapper).toMatchSnapshot();
+      expect(anotherWrapper).toMatchSnapshot();
+    });
   });
 
-  it('should render 2 elements in CardActions', () => {
-    expect(wrapper.node.props.children[2]
-    .props.children).toHaveLength(2);
+  describe('Component with long source description', () => {
+    it('should have a description truncated to 123 characters', () => {
+      expect(wrapper.find('.card-description').childAt(0).node.length)
+      .toEqual(123);
+    });
   });
-  it('should render an h3 tag with the required props', () => {
-    expect(wrapper.nodes[0].props.children[0]
-    .props.children[0].props.children
-    .props.href).toEqual(source.url);
-    expect(wrapper.nodes[0].props.children[0]
-    .props.children[0].props.children
-    .props.children).toEqual(source.name);
+
+  describe('Component with short source description', () => {
+    it('should not be truncated', () => {
+      expect(anotherWrapper.find('.card-description').childAt(0).node.length)
+      .toEqual(mockValue.sourceWithShortDescription.description.length);
+    });
   });
-  it('should render an h6 tag with the category of news source', () => {
-    expect(wrapper.nodes[0].props.children[0]
-    .props.children[1].props.children).toEqual(source.category.toUpperCase());
+
+  describe('.card-actions', () => {
+    it('should trigger an onClick event when an icon is clicked', () => {
+      wrapper.find('.source-actions').childAt(0).simulate('click');
+      expect(wrapper.find('.source-actions').childAt(0)
+      .node.props.onClick).toBeDefined();
+
+      wrapper.find('.source-actions').childAt(1).simulate('click');
+      expect(wrapper.find('.source-actions').childAt(1)
+      .node.props.onClick).toBeDefined();
+    });
   });
 });

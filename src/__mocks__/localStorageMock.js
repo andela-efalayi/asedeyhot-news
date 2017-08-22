@@ -1,19 +1,25 @@
-class LocalStorageMock {
-  constructor() {
-    this.store = {};
-  }
 
-  clear() {
-    this.store = {};
-  }
+/**
+ * A mock function for localSrorage
+ * @function localStorageMock
+ * @return {object} localStorage methods
+ */
+const localStorageMock = (() => {
+  let store = {};
 
-  getItem(key) {
-    return this.store[key];
-  }
+  return {
+    getItem(key) {
+      return store[key] || null;
+    },
+    setItem(key, value) {
+      store[key] = value.toString();
+    },
+    clear() {
+      store = {};
+    }
+  };
+})();
 
-  setItem(key, value) {
-    this.store[key] = value.toString();
-  }
-}
-
-global.localStorage = new LocalStorageMock();
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock
+});

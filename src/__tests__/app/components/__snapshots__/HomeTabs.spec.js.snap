@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomeTabs Component should render hometabs 1`] = `
+exports[`HomeTabs.jsx should match HomeTabs component snapshot 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -9,6 +9,7 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <Tabs
+    className="home-tabs"
     initialSelectedIndex={0}
     onChange={[Function]}
 >
@@ -27,6 +28,7 @@ ShallowWrapper {
 </Tabs>,
   "nodes": Array [
     <Tabs
+      className="home-tabs"
       initialSelectedIndex={0}
       onChange={[Function]}
 >
@@ -79,6 +81,7 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <Tabs
+          className="home-tabs"
           initialSelectedIndex={0}
           onChange={[Function]}
 >
@@ -97,6 +100,7 @@ ShallowWrapper {
 </Tabs>,
         "_debugID": 2,
         "_renderedOutput": <Tabs
+          className="home-tabs"
           initialSelectedIndex={0}
           onChange={[Function]}
 >
