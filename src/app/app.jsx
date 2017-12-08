@@ -5,15 +5,15 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import { teal500, teal100, cyan500 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import IconButton from 'material-ui/IconButton';
-import Logo from 'material-ui/svg-icons/social/whatshot';
-import AppBar from 'material-ui/AppBar';
+import GetNewsSources from './actions/GetNewsSources';
 import Routes from './Routes';
+import Header from './components/Header.jsx';
 import UserAvatar from './components/UserAvatar.jsx';
 import HomeTabs from './components/HomeTabs.jsx';
 import '../www/main.scss';
 
 injectTapEventPlugin();
+GetNewsSources();
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -24,6 +24,14 @@ const muiTheme = getMuiTheme({
   },
 });
 
+const headerTabs = getMuiTheme({
+  palette: {
+    accent1Color: '#159588',
+    primary1Color: '#000000',
+  },
+});
+
+// 21 149 136
 /**
  * Entry point to app
  * @class App
@@ -65,26 +73,19 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="header">
-          <MuiThemeProvider muiTheme={muiTheme}>
-            <AppBar
-              className="app-bar"
-              title={<span>AsEDeyHot</span>}
-              iconElementLeft={<IconButton><Logo /></IconButton>}
-              iconElementRight={this.state.userInfo}
-            />
-          </MuiThemeProvider>
-          {this.state.tabs}
-        </div>
+        <MuiThemeProvider muiTheme={headerTabs}>
+          <Header />
+        </MuiThemeProvider>
+        {/* {this.state.tabs} */}
         <MuiThemeProvider muiTheme={muiTheme}>
           <Routes/>
         </MuiThemeProvider>
-        <MuiThemeProvider muiTheme={muiTheme} className="container-fluid">
+        {/* <MuiThemeProvider muiTheme={muiTheme} className="container-fluid">
           <footer>
             <p>made with<span className="footer-icon">♡</span>
             by: Esther Falayi | Andela, Nigeria</p>
           </footer>
-        </MuiThemeProvider>
+        </MuiThemeProvider> */}
       </div>
     );
   }
