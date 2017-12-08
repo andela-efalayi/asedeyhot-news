@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import GetArticles from '../actions/GetArticles';
 import ArticlesStore from '../stores/ArticlesStore';
-import SortBar from './SortBar.jsx';
+// import SortBar from './SortBar.jsx';
 import ArticleCard from './ArticleCard.jsx';
 
 /**
@@ -81,13 +81,13 @@ class Articles extends Component {
   }
   render() {
     const articles = this.state.articles;
-    const currentSource = this.state.currentSource;
+    // const currentSource = 'some name';
     return (
        <div>
-        <SortBar title={currentSource.name}
+        {/* <SortBar title={currentSource.name}
         sortOptions={currentSource.sortOptions}
         currentSortOption={this.state.currentSortOption}
-        updateArticles={this.updateArticles}/>
+        updateArticles={this.updateArticles}/> */}
          <div className="container body">
           <div className="row">
             {articles.map(article => (

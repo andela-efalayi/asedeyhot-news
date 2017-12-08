@@ -4,7 +4,7 @@
   "description": "\"A news feed application that integrates NewsAPI\"",
   "scripts": {
     "test": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "start:dev": "webpack && webpack-dev-server --config webpack.config.js --progress --inline --colors",
+    "start:dev": "webpack-dev-server --watch",
     "start": "npm run build && node server.js",
     "build": "webpack --config webpack-production.config.js --progress --colors",
     "update": "jest --updateSnapshot"
@@ -90,6 +90,7 @@
     "firebase": "^3.9.0",
     "flux": "^2.0.3",
     "html-webpack-plugin": "^2.24.1",
+    "image-webpack-loader": "^3.4.2",
     "json-loader": "^0.5.4",
     "keymirror": "^0.1.1",
     "lodash": "^4.17.4",
