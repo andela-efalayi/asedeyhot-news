@@ -47,7 +47,7 @@ class Header extends Component {
         <Tab
           label="Home"
           value="home"
-          data-route="#/category/general"
+          data-route="/"
           onActive={this.changeTab}
         />
         <Tab
@@ -66,34 +66,54 @@ class Header extends Component {
         <Tab
           label="Sports"
           value="sports"
-          data-route="#/category/sports"
+          data-route="#/category/sport"
           onActive={this.changeTab}
         />
-        {/* <Tab label="Entertainment" value="entertainment" /> */}
-        {/* <Tab label="Music" value="business" /> */}
+        {/* <Tab
+          label="Entertainment"
+          value="entertainment"
+          data-route="#/category/entertainment"
+          onActive={this.changeTab}
+          /> */}
+        {/* <Tab
+          label="Music"
+          value="business"
+          data-route="#/category/music"
+          onActive={this.changeTab}
+          /> */}
 
-        <Tab
+        {/* <Tab
           label="Politics"
           value="politics"
           data-route="#/category/politics"
           onActive={this.changeTab}
-        />
+        /> */}
 
-        <Tab
+        {/* <Tab
           label="Health"
           value="health"
           data-route="#/category/health"
           onActive={this.changeTab}
-        />
-        {/* <Tab label="Science" value="science" /> */}
+        /> */}
+        {/* <Tab
+          label="Science"
+          value="science"
+          data-route="#/category/science-and-nature"
+          onActive={this.changeTab}
+        /> */}
 
         <Tab
           label="Tech"
           value="technology"
-          data-route="#/category/tech"
+          data-route="#/category/technology"
           onActive={this.changeTab}
         />
-        {/* <Tab label="Gaming" value="gaming" /> */}
+        {/* <Tab
+          label="Gaming"
+          value="gaming"
+          data-route="#/category/gaming"
+          onActive={this.changeTab}
+        /> */}
 
         <Tab
           label="More"

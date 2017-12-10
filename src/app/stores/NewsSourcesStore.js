@@ -1,6 +1,8 @@
 import { EventEmitter } from 'events';
 import AppDispatcher from '../dispatcher/AppDispatcher';
 import AppActionTypes from '../constants/AppActionTypes';
+import { categoryFilter,
+  setCategoryNewsSources } from '../helpers/categoryNews';
 
 const CHANGE_EVENT = 'change';
 
@@ -26,6 +28,11 @@ class NewsSourcesStore extends EventEmitter {
   loadAllSources() {
     return this.sources;
   }
+
+  loadCategoryNewsSources(categoryName) {
+    return setCategoryNewsSources(categoryFilter(this.sources, categoryName));
+  }
+
 
   /**
    * @memberof NewsSourcesStore
