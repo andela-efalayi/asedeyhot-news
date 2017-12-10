@@ -17,6 +17,8 @@ class ArticlesStore extends EventEmitter {
   constructor() {
     super();
     this.articles = [];
+    this.topArticles = [];
+    this.featuredCategoryArticle = {};
   }
 
   /**
@@ -25,6 +27,14 @@ class ArticlesStore extends EventEmitter {
    */
   loadArticles() {
     return this.articles;
+  }
+
+  loadFeaturedCategoryArticle() {
+    return this.featuredCategoryArticle;
+  }
+
+  loadTopArticles() {
+    return this.topArticles;
   }
 
   /**
@@ -61,6 +71,14 @@ AppDispatcher.register((payload) => {
   switch (payload.actionType) {
   case AppActionTypes.GET_ARTICLES:
     articlesStore.articles = payload.articles;
+    articlesStore.emitChange();
+    break;
+  case AppActionTypes.GET_FEATURED_CATEGORY_ARTICLE:
+    articlesStore.featuredCategoryArticle = payload.featuredCategoryArticle;
+    articlesStore.emitChange();
+    break;
+  case AppActionTypes.GET_TOP_CATEGORY_ARTICLES:
+    articlesStore.topArticles = payload.topArticles;
     articlesStore.emitChange();
     break;
   default:
