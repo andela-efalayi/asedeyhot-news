@@ -17,12 +17,14 @@ const API_KEY = process.env.API_KEY;
  * @return {func} axios
  */
 
-const getFeaturedCategoryArticle = (sourceId, sortBy) => {
+const getFeaturedCategoryArticle = (featuredSource) => {
+  const { id, name, sortBysAvailable } = featuredSource;
   /**
    * Url used to get the articles
    */
 
-  const URL = `${BASE_URL + sourceId}&sortBy=${sortBy}&apiKey=${API_KEY}`;
+  const URL =
+  `${BASE_URL + id}&sortBy=${sortBysAvailable[0]}&apiKey=${API_KEY}`;
 
   return axios.get(URL).then((response) => {
     /**
@@ -31,7 +33,10 @@ const getFeaturedCategoryArticle = (sourceId, sortBy) => {
 
     AppDispatcher.dispatch({
       actionType: AppActionTypes.GET_FEATURED_CATEGORY_ARTICLE,
-      featuredCategoryArticle: response.data.articles[0],
+      featuredCategoryArticle: {
+        info: response.data.articles[0],
+        source: name
+      }
     });
 
     /**

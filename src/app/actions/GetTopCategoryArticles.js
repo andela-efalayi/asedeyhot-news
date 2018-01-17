@@ -37,7 +37,7 @@ const resolveArticles = (topSources) => {
   });
 };
 
-const getCategoryArticles = (topSources) => {
+const getTopCategoryArticles = (topSources) => {
   return resolveArticles(topSources).then((response) => {
     AppDispatcher.dispatch({
       actionType: AppActionTypes.GET_TOP_CATEGORY_ARTICLES,
@@ -46,4 +46,4 @@ const getCategoryArticles = (topSources) => {
   });
 };
 
-export default getCategoryArticles;
+export default getTopCategoryArticles;

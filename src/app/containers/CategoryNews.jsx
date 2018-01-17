@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import NewsSourcesStore from '../stores/NewsSourcesStore';
-import FeaturedCategoryArticle from './FeaturedCategoryArticle.jsx';
-import TopCategoryArticles from './TopCategoryArticles.jsx';
 import { getCategoryImage } from '../helpers/categoryNews';
+import CategoryArticles from './CategoryArticles.jsx';
 
 class CategoryNews extends Component {
   constructor(props) {
@@ -12,11 +11,10 @@ class CategoryNews extends Component {
     this.state = {
       categoryName,
       categoryNewsSources: NewsSourcesStore
-      .loadCategoryNewsSources(categoryName)
+        .loadCategoryNewsSources(categoryName)
     };
     this.onSourcesChange = this.onSourcesChange.bind(this);
-    this.renderFeaturedSource = this.renderFeaturedSource.bind(this);
-    this.renderTopArticles = this.renderTopArticles.bind(this);
+    this.renderArticles = this.renderArticles.bind(this);
   }
 
   componentDidMount() {
@@ -24,8 +22,8 @@ class CategoryNews extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { name } = nextProps.match.params;
     if (nextProps !== this.props) {
+      const { name } = nextProps.match.params;
       this.setState({
         categoryName: name,
         categoryNewsSources: NewsSourcesStore.loadCategoryNewsSources(name)
@@ -40,30 +38,14 @@ class CategoryNews extends Component {
   onSourcesChange() {
     this.setState({
       categoryNewsSources: NewsSourcesStore
-      .loadCategoryNewsSources(this.state.categoryName)
+        .loadCategoryNewsSources(this.state.categoryName)
     });
   }
 
-  renderFeaturedSource(categoryNewsSources) {
-    if (categoryNewsSources.featuredSource) {
-      return (
-        <FeaturedCategoryArticle
-          featuredSource={categoryNewsSources.featuredSource}
-        />
-      );
-    }
-    return null;
-  }
-
-  renderTopArticles(categoryNewsSources) {
-    if (categoryNewsSources.topSources.length) {
-      return (
-        <TopCategoryArticles
-          topSources={categoryNewsSources.topSources}
-        />
-      );
-    }
-    return null;
+  renderArticles() {
+    return (
+      <CategoryArticles sources={this.state.categoryNewsSources} />
+    );
   }
 
   render() {
@@ -72,19 +54,12 @@ class CategoryNews extends Component {
     return (
       <div className="category-news">
         <div className="banner">
-          <img src={imageUrl} alt="sports"/>
+          <img src={imageUrl} alt="sports" />
           <div className="image-overlay">
             <h1 className="category-name">{this.state.categoryName}</h1>
-        </div>
-        </div>
-        <div className="flex-container category-articles">
-          <div className="col col-span-4 featured-category-article">
-            {this.renderFeaturedSource(categoryNewsSources)}
-          </div>
-          <div className="col col-span-8">
-            {this.renderTopArticles(categoryNewsSources)}
           </div>
         </div>
+        {this.renderArticles(categoryNewsSources)}
       </div>
     );
   }
